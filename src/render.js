@@ -8,8 +8,9 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const FPS = 30;
-const CHROME = fs.existsSync('/opt/pw-browsers/chromium-1194/chrome-linux/chrome')
-  ? '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' : undefined;
+// headless_shell renders noticeably faster; fall back to Playwright's default
+const CHROME = ['/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell',
+  '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].find(p => fs.existsSync(p));
 const FFMPEG = require('child_process').execSync(
   'python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"').toString().trim();
 
@@ -37,12 +38,14 @@ async function openPage(browser) {
 
 async function renderRange(browser, f0, f1, out) {
   const page = await openPage(browser);
+  const cdp = await page.context().newCDPSession(page);
   const ff = spawn(FFMPEG, ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(FPS),
     '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
     '-pix_fmt', 'yuv420p', out], { stdio: ['pipe', 'inherit', 'inherit'] });
   for (let f = f0; f < f1; f++) {
     await page.evaluate(t => window.render(t), f / FPS);
-    const buf = await page.screenshot({ type: 'jpeg', quality: 93 });
+    const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 93, optimizeForSpeed: true });
+    const buf = Buffer.from(data, 'base64');
     if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r));
     if (f % 900 === 0) console.log(`${lang} ${out.split('/').pop()} ${f - f0}/${f1 - f0}`);
   }

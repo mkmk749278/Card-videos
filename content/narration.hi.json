@@ -1,195 +1,303 @@
 {
- "_voice": "hi-IN-MadhurNeural",
- "_rate": "+10%",
+ "_engine": "svara",
+ "_lang": "Hindi",
+ "_styles": {"opendisc": "clear", "secured": "clear", "rates": "clear", "stack": "clear", "norule": "clear", "stages": "clear", "amounts": "clear", "property": "clear", "rbiagents": "clear", "rbicards": "clear", "ladder": "clear", "cancant": "clear", "disclaimer": "clear"},
+ "cold": [
+  {"q": "भैया... तीन महीने से मेरा credit card bill नहीं भरा। रोज़ calls आ रहे हैं। कह रहे हैं कल police आएगी। मुझे बहुत डर लग रहा है।", "style": "fear"},
+  "रुकिए, पहले एक गहरी साँस लीजिए। आप अकेले नहीं हैं, बहुत से लोग इसी हालत में हैं।",
+  "इस video में, असल में क्या होता है, bank क्या कर सकता है, क्या नहीं, और settlement कैसे करें — सब कुछ शुरू से आख़िर तक, आराम से समझते हैं।"
+ ],
  "opendisc": [
   "शुरू करने से पहले, एक ज़रूरी बात।",
-  "ये video सिर्फ़ शिक्षा और जानकारी के लिए है — ताकि आप RBI के rules और अपने अधिकार अच्छे से समझ सकें।",
-  "हम किसी को भी credit card का bill न भरने की सलाह नहीं देते। अगर आप pay कर सकते हैं, तो पूरा और समय पर pay कीजिए — यही हमेशा सबसे सस्ता रास्ता है।",
-  "ये video उन लोगों के लिए है, जो सच में pay करने की हालत में नहीं हैं।"
+  "ये video सिर्फ़ जानकारी के लिए है — RBI के rules और अपने अधिकार समझने के लिए।",
+  "हम किसी को bill न भरने की सलाह नहीं देते। अगर आप भर सकते हैं, तो पूरा और समय पर भरिए। यही हमेशा सबसे सस्ता रास्ता है।",
+  "ये video उनके लिए है, जो सच में pay करने की हालत में नहीं हैं।"
  ],
  "intro": [
-  "अगर आपका credit card bill pay नहीं हुआ, तो आगे actually क्या होता है?",
-  "Bank क्या कर सकता है, recovery agents कैसे pressure डालते हैं, और RBI के rules आपको कौन-सी protection देते हैं?",
-  "आज इस video में हम सब कुछ step by step, day by day समझेंगे — बिना डर के, सिर्फ़ facts के साथ।"
+  "Credit card का bill नहीं भर पाए, तो आगे actually क्या होता है?",
+  "Bank क्या कर सकता है? Recovery agents कैसे pressure डालते हैं? RBI के rules आपको क्या protection देते हैं?",
+  "एक-एक करके, बिना डर के, facts के साथ देखते हैं।"
  ],
  "why": [
-  "हम ये video क्यों बना रहे हैं?",
-  "बहुत से लोग एक card से दूसरा card भरते-भरते rotation में फँस जाते हैं, और क़र्ज़ हर महीने बढ़ता ही जाता है।",
-  "फिर default होता है, recovery agents का pressure शुरू होता है, और इंसान ख़ुद को अकेला और बेबस महसूस करने लगता है।",
-  "कुछ लोग इस दबाव में अपनी ज़िंदगी ख़त्म करने जैसा क़दम तक उठा लेते हैं। ऐसा नहीं होना चाहिए।",
-  "याद रखिए — क़र्ज़ पैसे की problem है, और उसका हल निकलता है। आपकी ज़िंदगी अनमोल है।",
-  "अगर आप बहुत परेशान महसूस कर रहे हैं, तो सरकार की Tele-MANAS helpline, एक चार चार एक छह, पर free में, चौबीसों घंटे बात कर सकते हैं।"
+  "हम ये video क्यों बना रहे हैं...",
+  "बहुत से लोग एक card से दूसरा card भरते-भरते rotation में फँस जाते हैं। क़र्ज़ हर महीने बढ़ता ही जाता है।",
+  "फिर default, recovery calls, धमकियाँ... इंसान अकेला और बेबस महसूस करने लगता है।",
+  {"t": "कुछ लोग इस दबाव में, अपनी ज़िंदगी ख़त्म करने जैसा क़दम तक उठा लेते हैं। ऐसा नहीं होना चाहिए।", "style": "sad"},
+  "याद रखिए — क़र्ज़ पैसे की problem है, उसका हल निकलता है। आपकी ज़िंदगी अनमोल है।",
+  "अगर बहुत परेशान हैं, तो सरकार की Tele-MANAS helpline, एक चार चार एक छह पर, free में, कभी भी call कर सकते हैं।"
  ],
  "agenda": [
-  "इस video के सात हिस्से हैं।",
-  "पहले interest का trap, फिर due date से लेकर एक साल तक का पूरा timeline।",
-  "फिर bank की असली legal power, agents की tactics, और RBI के rules।",
-  "और आख़िर में एक practical action plan, और settlement का सही तरीक़ा।"
+  "आज हम दस बातें करेंगे।",
+  "Secured और unsecured loan का फ़र्क़, interest trap, day by day timeline, और bank जो amount दिखाता है उसका सच।",
+  "Settlement में कितना कम होता है, आपकी property और family का क्या, bank की हदें, agents, और RBI के rules।",
+  "आख़िर में आपके सवालों के quick answers, और एक action plan। आख़िर तक ज़रूर देखिए।"
+ ],
+ "sec_dlg": [
+  {"q": "भैया, credit card loan भी home loan जैसा है क्या? नहीं भरा तो हमारा घर ले लेंगे?", "style": "fear"},
+  "बहुत अच्छा सवाल। ये एक फ़र्क़ समझ गए, तो आधा डर वहीं ख़त्म। देखिए।"
+ ],
+ "secured": [
+  "Loans दो तरह के होते हैं। Secured, और unsecured।",
+  "Secured loan में आप कोई asset गिरवी रखते हैं। Home loan में घर, gold loan में सोना, car loan में गाड़ी।",
+  "इसलिए secured loan नहीं भरा, तो bank वही asset ले सकता है। बड़े loans में तो court के बिना भी, SARFAESI law के तहत।",
+  "Credit card, personal loan, app loans — ये सब unsecured हैं। आपने कुछ गिरवी नहीं रखा, सिर्फ़ आपके भरोसे पर दिया गया।",
+  "इसलिए unsecured क़र्ज़ के लिए, bank सीधे आपका घर या ज़मीन, कुछ भी नहीं ले सकता। पहले court जाना होगा, case जीतना होगा। ये बहुत लंबा process है।"
  ],
  "rates": [
-  "सबसे पहले ये समझिए कि credit card सबसे महँगा loan है।",
-  "ज़्यादातर cards पर interest लगभग साढ़े तीन से पौने चार percent per month होता है, यानी साल का बयालीस से पैंतालीस percent।",
-  "और इस interest पर, और हर fee पर, अठारह percent GST अलग से लगता है।"
+  "अब interest की बात। Credit card सबसे महँगा loan है।",
+  "ज़्यादातर cards पर interest हर महीने साढ़े तीन से पौने चार percent। यानी साल का बयालीस से पैंतालीस percent!",
+  "उसके ऊपर, हर fee पर, अठारह percent GST अलग।"
  ],
  "mad": [
-  "आपके statement में दो amounts होते हैं — Total Amount Due, और Minimum Amount Due।",
-  "अगर आप सिर्फ़ minimum pay करते हैं, तो late fee नहीं लगेगी, account regular रहेगा — लेकिन बाक़ी पूरे balance पर interest चलता रहेगा।",
-  "और जब तक पूरा bill clear नहीं होता, नई purchases पर भी interest-free period नहीं मिलता — interest हर transaction की date से लगने लगता है।"
+  "आपके statement में दो amounts होते हैं। Total Amount Due, और Minimum Amount Due।",
+  "सिर्फ़ minimum भरा, तो late fee नहीं लगेगी, account regular रहेगा। लेकिन... बाक़ी पूरे balance पर interest चलता रहेगा।",
+  "एक और trap — जब तक पूरा bill नहीं भरते, नई ख़रीदारी पर भी interest-free period नहीं मिलता। ख़रीदने वाले दिन से ही interest।"
  ],
  "growth": [
-  "एक example देखिए। मान लीजिए एक लाख रुपये का बकाया है, और एक साल तक कुछ भी pay नहीं हुआ।",
-  "Interest, late fee और GST मिलाकर ये रक़म लगभग एक लाख अट्ठासी हज़ार तक पहुँच सकती है।",
-  "यानी सिर्फ़ एक साल में, बिना कुछ नया ख़रीदे, क़र्ज़ लगभग दोगुना।"
+  "एक example देखिए। एक लाख रुपये बकाया। एक साल तक कुछ नहीं भरा, मान लीजिए।",
+  "Interest, late fees और GST मिलाकर... ये लगभग एक लाख अस्सी हज़ार हो जाता है।",
+  "यानी बिना एक रुपया नया ख़र्च किए, क़र्ज़ लगभग दोगुना।"
  ],
  "rotation": [
-  "कई लोग एक card का bill दूसरे card से भरते हैं — इसे card rotation कहते हैं।",
-  "हर rotation पर एक से तीन percent fee कटती है, और क़र्ज़ घटता नहीं, बस एक card से दूसरे card पर shift होता है।",
-  "और card भरने के लिए loan apps से पैसा लेना इससे भी ख़तरनाक है — वहाँ interest भी ज़्यादा है, और harassment भी।"
+  "अब card rotation। एक card का bill दूसरे card से भरना।",
+  "हर बार एक से तीन percent fee कटती है। क़र्ज़ घटता नहीं, बस एक card से दूसरे पर चला जाता है।",
+  "Card भरने के लिए loan apps से पैसा लेना और भी ख़तरनाक। वहाँ interest ज़्यादा, और harassment उससे भी ज़्यादा।"
  ],
  "t0": [
-  "Due date निकल गई — अब क्या?",
-  "RBI के rule के मुताबिक़, अगर आप due date के तीन दिन के अंदर pay कर देते हैं, तो bank late fee नहीं लगा सकता, और CIBIL में past due report नहीं कर सकता।",
-  "हाँ, interest फिर भी लग सकता है, और reminder messages आने शुरू हो जाते हैं।"
+  "अच्छा, अब timeline। Due date निकल गई। अब क्या?",
+  "RBI के rule के हिसाब से, due date के तीन दिन के अंदर भर दिया, तो late fee नहीं लग सकती, और CIBIL में past due report नहीं हो सकता।",
+  "हाँ, interest लग सकता है। Reminder messages शुरू हो जाते हैं।"
  ],
  "t1": [
-  "चौथे दिन से late fee लगती है — bill amount के हिसाब से सौ रुपये से लेकर तेरह सौ रुपये या उससे ज़्यादा, plus GST।",
-  "अब पूरे balance पर interest लगता है, और bank के reminder calls आने लगते हैं।",
-  "Bank हर महीने credit bureaus को data भेजता है, इसलिए आपकी report में DPD, यानी days past due, दिखने लगता है, और score गिरना शुरू हो जाता है।"
+  "चौथे दिन से late fee। Bill के हिसाब से सौ से तेरह सौ तक, plus GST।",
+  "पूरे balance पर interest, और bank के reminder calls।",
+  "Bank हर महीने data भेजता है, इसलिए आपकी credit report में DPD, यानी days past due, दिखने लगता है। Score गिरना शुरू।"
  ],
  "t2": [
-  "एक महीने बाद दूसरी due date भी miss हो जाती है।",
-  "अब bank की in-house collection team दिन में कई बार call करती है, और ज़्यादातर cases में card पर नया खर्च block कर दिया जाता है।",
-  "Report में thirty plus DPD दिखता है, और score तेज़ी से नीचे जाता है।"
+  "महीने भर बाद, दूसरी due date भी miss।",
+  "अब bank की collection team दिन में कई बार call करती है। ज़्यादातर cases में card block कर देते हैं।",
+  "Report में thirty plus DPD। Score तेज़ी से नीचे।"
  ],
  "t3": [
-  "साठ दिन के बाद account SMA-2 category में आ जाता है — यानी NPA बनने से ठीक पहले का stage।",
-  "इस stage पर case अक्सर बाहर की recovery agency को दे दिया जाता है।",
-  "अब final reminder जैसे letters, WhatsApp messages, और कभी-कभी घर पर visit भी शुरू हो सकती है।"
+  "साठ दिन के बाद account SMA-2 में चला जाता है। यानी NPA से ठीक पहले का stage।",
+  "यहाँ case अक्सर बाहर की recovery agency को दे दिया जाता है।",
+  "Final reminder letters, WhatsApp messages, कभी-कभी घर पर visit भी शुरू हो सकती है।"
  ],
  "t4": [
-  "नब्बे दिन पूरे होते ही account NPA बन जाता है — Non-Performing Asset।",
-  "Card हमेशा के लिए block हो जाता है, और ये default आपकी credit report में सात साल तक दिख सकता है।",
-  "दिलचस्प बात ये है कि इसी stage से banks settlement offers देना शुरू करते हैं।"
+  "नब्बे दिन पूरे होते ही, account NPA। Non-Performing Asset।",
+  "Card हमेशा के लिए block। ये default आपकी credit report में सात साल तक दिख सकता है।",
+  "दिलचस्प बात — ठीक यहीं से settlement offers आने शुरू होते हैं।"
  ],
  "t5": [
-  "छह महीने के आसपास कई banks account को अपनी books में write-off कर देते हैं।",
-  "लेकिन ध्यान दीजिए — write-off का मतलब माफ़ी नहीं है। Bank recovery का हक़ नहीं छोड़ता।",
-  "इस stage पर legal notice, Lok Adalat या arbitration का notice आ सकता है, और settlement में discount भी ज़्यादा मिल सकता है।"
+  "छह महीने के आसपास, कई banks account को अपनी books में write-off कर देते हैं।",
+  "लेकिन write-off का मतलब माफ़ी नहीं! Bank recovery का हक़ नहीं छोड़ता।",
+  "इस stage पर legal notice, Lok Adalat, या arbitration notice आ सकता है। Settlement में discount भी ज़्यादा मिल सकता है।"
  ],
  "t6": [
-  "Bank civil court में recovery suit भी file कर सकता है, हालाँकि छोटे amounts में ये कम होता है।",
-  "Law में recovery के लिए तीन साल की limitation होती है, लेकिन कोई भी part-payment, या लिखित में क़र्ज़ मानना, ये clock फिर से शुरू कर देता है।",
-  "और सबसे ज़रूरी — court का summons आए, तो उसे कभी ignore मत कीजिए, वरना आपकी ग़ैर-हाज़िरी में ही फ़ैसला हो सकता है।"
+  "Bank civil court में recovery suit भी कर सकता है। छोटे amounts में ये बहुत कम होता है।",
+  "Recovery के लिए law में तीन साल की limitation है। लेकिन छोटा सा part-payment भी, या लिखित में क़र्ज़ मानना, ये clock फिर से शुरू कर देता है।",
+  "सबसे ज़रूरी — court का summons आए, तो कभी ignore मत कीजिए। वरना आपकी ग़ैर-हाज़िरी में ही फ़ैसला हो जाएगा।"
+ ],
+ "shows_dlg": [
+  {"q": "भैया, मैंने ख़र्च तो एक लाख ही किया था। लेकिन statement में एक लाख अस्सी हज़ार दिखा रहे हैं। ये कैसे?", "style": "surprise"},
+  "यही बात ज़्यादातर लोग नहीं समझ पाते। चलिए उस amount को खोलकर देखते हैं।"
+ ],
+ "stack": [
+  "Bank जो total दिखाता है, उसे चार हिस्सों में देखिए।",
+  "पहला है principal। यानी आपने सच में जितना ख़र्च किया, उसमें से जितना भरा वो घटाकर। यहाँ एक लाख।",
+  "बाक़ी सब ऊपर से बढ़ा है। Interest पर interest, हर महीने late fee, और इन सब पर GST। यही अस्सी हज़ार हैं।",
+  "इसलिए settlement की बात, उनके total से नहीं, आपके principal से शुरू कीजिए। अपना principal पुराने statements से ख़ुद गिन लीजिए।"
+ ],
+ "afternpa": [
+  "NPA के बाद भी, उनके system में interest और charges जुड़ते रहते हैं। Statement बढ़ता ही रहता है।",
+  "Write-off हो भी जाए, वो सिर्फ़ bank की books में है। आप पर claim वैसे ही रहता है।",
+  "Agents हमेशा बढ़ा हुआ total ही बताते हैं। Court जाने पर भी, bank आमतौर पर interest जोड़कर ही claim करता है।",
+  "लेकिन settlement एक negotiation है। वहाँ आपकी ताक़त है — अपना principal पता होना।"
+ ],
+ "set_dlg": [
+  {"q": "अच्छा भैया, settlement में कितना कम करते हैं? सबसे ज़्यादा discount कब मिलता है?"},
+  "ये सबसे ज़्यादा पूछा जाने वाला सवाल है। ईमानदारी से बताता हूँ।"
+ ],
+ "norule": [
+  "पहला सच — settlement के लिए RBI ने कोई fixed percentage तय नहीं किया।",
+  "हर bank की अपनी board approved policy होती है। RBI का दो हज़ार तेईस का framework यही कहता है।",
+  "Discount इस पर depend करता है — default कितना पुराना है, amount कितना है, और आपकी मजबूरी कितनी सच्ची है।",
+  "Agent कितना भी promise करे, approve करने का अधिकार उसके पास नहीं। जो भी final हो, bank के letterhead पर ही आना चाहिए।"
+ ],
+ "stages": [
+  "Market में आमतौर पर दिखने वाली ranges देखते हैं। ये rules नहीं, सिर्फ़ अनुभव हैं।",
+  "नब्बे दिन से पहले, ज़्यादातर late fees और कुछ interest ही माफ़ होता है। या EMI plan मिलता है।",
+  "नब्बे दिन से एक साल तक, total पर बीस से पैंतीस percent तक कम हो सकता है।",
+  "एक से तीन साल के बीच, चालीस से पैंसठ percent तक कम हो सकता है।",
+  "तीन साल के बाद, कभी-कभी सत्तर से नब्बे percent तक भी। लेकिन तब तक case का risk और CIBIL की मार बनी रहती है।"
+ ],
+ "amounts": [
+  "अब amounts के साथ example। क़रीब एक साल बाद की स्थिति।",
+  "मान लीजिए आपने दस हज़ार ख़र्च किए। Fees की वजह से bank लगभग तीस हज़ार दिखा सकता है। Settlement आमतौर पर ग्यारह से अठारह हज़ार के बीच। इतने छोटे amount पर court case लगभग नहीं होता।",
+  "बीस हज़ार हो, तो लगभग सैंतालीस हज़ार दिखाएँगे। Settlement सत्रह से अट्ठाईस हज़ार।",
+  "एक लाख हो, तो लगभग एक लाख अस्सी हज़ार। Settlement तिरसठ हज़ार से एक लाख आठ हज़ार तक। यहाँ legal notice या Lok Adalat आ सकता है।",
+  "दो लाख हो, तो लगभग तीन लाख चालीस हज़ार। Settlement एक लाख बीस हज़ार से दो लाख छह हज़ार। इस size पर arbitration या case की संभावना ज़्यादा है।",
+  "Simple सा याद रखिए — एक साल बाद, अपने principal के आसपास या उससे कम में settle करना, यही target है।"
+ ],
+ "settletips": [
+  "Negotiation के लिए कुछ tips।",
+  "पहला offer कभी मत मानिए। वो हमेशा ज़्यादा ही होता है।",
+  "एक साथ lump sum दें, तो ज़्यादा discount। दो से छह installments भी मान लेते हैं, पर discount कम।",
+  "Lok Adalat का notice आए, तो डरिए मत। वो free है, आपकी मर्ज़ी से settlement, और वहाँ का award final होता है।",
+  "कोई भी offer, bank के official email से, लिखित में माँगिए।"
+ ],
+ "prop_dlg": [
+  {"q": "भैया, मेरे नाम पर थोड़ी ज़मीन है। मम्मी-पापा का घर भी है। क्या वो ले लेंगे?", "style": "fear"},
+  "ये सवाल बहुत लोगों की नींद उड़ा देता है। एक-एक करके बताता हूँ।"
+ ],
+ "property": [
+  "Card का क़र्ज़ unsecured है, तो देखिए किसका क्या होगा।",
+  "आपकी पत्नी, माँ-बाप, भाई-बहन की property — उसे कोई छू नहीं सकता। जब तक उन्होंने co-borrower या guarantor के तौर पर sign न किया हो।",
+  "Joint property हो, तो सिर्फ़ आपका हिस्सा। वो भी court decree के बाद ही।",
+  "आपके नाम की ज़मीन या property — bank court जाए, case जीते, decree ले, और execution करवाए, तभी। जिस एक घर में आप रहते हैं, उसे law में आमतौर पर सुरक्षा मिलती है।",
+  "Salary हो, तो court order के बाद, सिर्फ़ कुछ हिस्सा। बाक़ी को law बचाता है।",
+  "Bank accounts — दूसरे banks में हों, तो court order चाहिए। उसी bank में हो, तो set-off का risk है।"
+ ],
+ "heirs": [
+  "Family को लेकर कुछ और doubts।",
+  "Cardholder की मौत हो जाए, तो वारिस सिर्फ़ विरासत में मिली संपत्ति तक ही ज़िम्मेदार हैं। अपनी जेब से भरने की ज़रूरत नहीं।",
+  "Add-on card हो, तो ज़िम्मेदारी primary cardholder की है।",
+  "एक बड़ी चेतावनी — card भरने के लिए ज़मीन या सोना कभी गिरवी मत रखिए। ऐसा किया, तो unsecured क़र्ज़ secured बन जाता है।"
  ],
  "cancant": [
-  "अब साफ़-साफ़ समझिए कि bank क्या कर सकता है, और क्या नहीं।",
-  "Bank interest और fees लगा सकता है, CIBIL में report कर सकता है, सुबह आठ से शाम सात के बीच call कर सकता है, authorised agent भेज सकता है, और court भी जा सकता है।",
-  "अगर उसी bank में आपका savings account है, तो agreement के तहत वो उसमें से पैसा adjust कर सकता है — इसे set-off कहते हैं।",
-  "लेकिन bank आपको गिरफ़्तार नहीं करवा सकता, बिना court order के property नहीं ले सकता, धमका नहीं सकता, और आपके रिश्तेदारों या office वालों को आपका क़र्ज़ नहीं बता सकता।"
+  "अब साफ़-साफ़ — bank क्या कर सकता है, क्या नहीं।",
+  "Bank interest और fees लगा सकता है, CIBIL में report कर सकता है, सुबह आठ से शाम सात के बीच call कर सकता है, authorised agent भेज सकता है, और court जा सकता है।",
+  "उसी bank में आपका savings account है, तो उसमें से adjust कर सकता है। इसे set-off कहते हैं।",
+  "लेकिन bank आपको गिरफ़्तार नहीं करवा सकता। Court order के बिना property नहीं ले सकता। धमका नहीं सकता। आपके रिश्तेदारों या office वालों को आपका क़र्ज़ नहीं बता सकता।"
  ],
  "civil": [
-  "सबसे बड़ा सच: credit card का bill न भर पाना crime नहीं है — ये civil मामला है।",
-  "Criminal case तभी बन सकता है जब आपका दिया cheque bounce हो, bank account से auto-debit यानी NACH bounce हो, या शुरू से ही fraud किया गया हो।",
-  "इसलिए अगर card के लिए आपने कोई cheque या auto-debit दिया है, तो उस पर ख़ास ध्यान रखिए।"
+  "सबसे बड़ा सच — credit card का bill न भर पाना crime नहीं है। ये civil मामला है।",
+  "Criminal case सिर्फ़ तीन हालात में बनता है। आपका दिया cheque bounce हो, bank account से NACH auto-debit bounce हो, या शुरू से ही fraud किया गया हो।",
+  "इसलिए card के लिए cheque या auto-debit दिया है, तो उस पर ध्यान रखिए।"
  ],
  "tactics": [
-  "अब बात recovery agents की — क्योंकि असली डर यहीं से शुरू होता है।",
-  "अलग-अलग numbers से लगातार calls, आपकी family, दोस्तों और office में calls, WhatsApp पर नकली legal notice, और 'कल police आएगी' जैसी धमकियाँ।",
-  "कुछ लोग ख़ुद को advocate, police या court officer बताते हैं, और कभी-कभी group में घर या office आकर शर्मिंदा करने की कोशिश करते हैं।",
-  "याद रखिए — इनमें से ज़्यादातर चीज़ें RBI के rules के ख़िलाफ़ हैं।"
+  "अब recovery agents। असली डर यहीं से शुरू होता है, है ना?",
+  "अलग-अलग numbers से लगातार calls। Family, दोस्तों, office में calls। WhatsApp पर fake legal notice। कल police आएगी जैसी धमकियाँ।",
+  "कुछ लोग ख़ुद को advocate, police या court officer बताते हैं। Group में घर आकर शर्मिंदा करने की कोशिश करते हैं।",
+  "याद रखिए — इनमें से ज़्यादातर बातें RBI के rules के बिल्कुल ख़िलाफ़ हैं।"
  ],
  "chat": [
-  "ऐसे messages शायद आपने भी देखे होंगे।",
-  "चौबीस घंटे में legal action, arrest warrant, कल घर और office पर team आएगी, contacts को photo भेज देंगे।",
-  "ये सब pressure tactics हैं — मक़सद सिर्फ़ इतना है कि आप डरकर आज ही कुछ पैसा दे दें।"
+  "ऐसे messages आपको भी आए होंगे।",
+  "चौबीस घंटे में legal action। Arrest warrant निकल गया। कल घर और office पर team आएगी। Contacts को photo भेज देंगे।",
+  "ये सब pressure tactics हैं। मक़सद बस इतना — आप डरकर आज ही कुछ पैसा दे दें।"
  ],
  "myths": [
-  "Myth नंबर एक: police आपको गिरफ़्तार करेगी। सच: सिर्फ़ bill न भरने पर police case नहीं बनता।",
-  "Myth दो: आपके नाम arrest warrant निकल गया है। सच: warrant सिर्फ़ court जारी करता है, और उससे पहले proper summons आता है — WhatsApp पर नहीं।",
-  "Myth तीन: आज ही आपका घर seize करेंगे। सच: agent के पास ऐसी कोई power नहीं, ये सिर्फ़ court के decree से हो सकता है।",
-  "Myth चार: आपकी salary रुकवा देंगे। सच: ये सिर्फ़ court order से हो सकता है, और agent आपके employer के सामने आपको शर्मिंदा नहीं कर सकता।",
-  "Myth पाँच: अभी थोड़ा pay करो, case बंद हो जाएगा। सच: छोटा payment कुछ बंद नहीं करता — पैसा सिर्फ़ bank के official account में, और लिखित plan के साथ ही दीजिए।"
+  "Myth एक: police गिरफ़्तार करेगी। सच: सिर्फ़ bill न भरने पर police case नहीं बनता।",
+  "Myth दो: arrest warrant निकल गया। सच: warrant सिर्फ़ court देता है। उससे पहले proper summons आता है, WhatsApp पर नहीं।",
+  "Myth तीन: आज ही घर seize करेंगे। सच: agent के पास ऐसी कोई power नहीं। सिर्फ़ court decree से।",
+  "Myth चार: salary रुकवा देंगे। सच: सिर्फ़ court order से, वो भी कुछ हिस्सा। Agent आपके office जाकर शर्मिंदा नहीं कर सकता।",
+  "Myth पाँच: अभी थोड़ा भरो, case बंद। सच: छोटा payment कुछ बंद नहीं करता। पैसा सिर्फ़ bank के official account में, लिखित plan के साथ।"
  ],
  "rbiagents": [
-  "अब देखते हैं कि RBI actually क्या कहता है।",
-  "बारह August दो हज़ार बाईस के RBI circular के मुताबिक़, recovery के लिए सुबह आठ बजे से पहले, या शाम सात बजे के बाद call नहीं किया जा सकता।",
-  "किसी भी तरह की धमकी, गाली, सबके सामने बेइज़्ज़ती, या आपकी family, दोस्तों और referees की privacy में दख़ल — सब मना है।",
-  "Anonymous या धमकी वाली calls, social media पर ग़लत messages, और झूठी बातें कहना भी मना है।",
-  "और सबसे important — agent की हर ग़लती की ज़िम्मेदारी bank की होती है।"
+  "अब देखते हैं RBI actually क्या कहता है।",
+  "बारह August दो हज़ार बाईस के RBI circular के मुताबिक़, recovery के लिए सुबह आठ से पहले, या शाम सात के बाद call नहीं कर सकते।",
+  "धमकी, गाली, सबके सामने बेइज़्ज़ती, आपकी family और दोस्तों की privacy में दख़ल — सब मना है।",
+  "Anonymous calls, social media पर ग़लत messages, और झूठ बोलना भी मना है।",
+  "और सबसे ज़रूरी — agent की हर ग़लती की ज़िम्मेदारी bank की है।"
  ],
  "rbicards": [
-  "Credit cards के लिए RBI का अलग Master Direction है — दो हज़ार बाईस वाला।",
-  "इसके मुताबिक़ due date के तीन दिन बाद तक, ना late fee लग सकती है, ना past due reporting हो सकती है।",
-  "Unpaid fees और charges पर interest नहीं लगाया जा सकता, और आपकी explicit consent के बिना over-limit charges नहीं लग सकते।",
+  "Credit cards के लिए RBI का अलग Master Direction है। दो हज़ार बाईस वाला।",
+  "Due date के तीन दिन बाद तक, ना late fee, ना past due reporting।",
+  "Unpaid fees और charges पर interest नहीं लग सकता। आपकी consent के बिना over-limit charges नहीं लग सकते।",
   "Minimum amount due ऐसा होना चाहिए कि क़र्ज़ लगातार बढ़ता न रहे।",
-  "और settlement के बाद, bank को तीस दिन के अंदर CIBIL में status update करना होता है।"
+  "Settlement के बाद, bank को तीस दिन में CIBIL update करना होता है।"
  ],
  "ladder": [
-  "अगर harassment हो, तो शिकायत का सही रास्ता ये है।",
-  "पहला — bank के customer care पर written complaint कीजिए, और complaint number लीजिए।",
-  "दूसरा — जवाब ना मिले, तो bank के Grievance या Principal Nodal Officer को email कीजिए।",
-  "तीसरा — तीस दिन में जवाब ना आए, या जवाब ठीक ना लगे, तो RBI Ombudsman में cms dot rbi dot org dot in पर free complaint कीजिए। Helpline है — एक चार चार चार आठ।",
-  "और अगर धमकी, गाली, या morph की हुई photos भेजी जाएँ, तो सीधे police या cybercrime dot gov dot in पर complaint कीजिए।"
+  "Harassment हो, तो complaint का रास्ता ये है।",
+  "एक — bank के customer care पर written complaint, और complaint number लीजिए।",
+  "दो — जवाब ना आए, तो bank के Grievance या Principal Nodal Officer को email।",
+  "तीन — तीस दिन में जवाब ना आए, या जवाब ठीक ना लगे, तो RBI Ombudsman में cms dot rbi dot org dot in पर free complaint। Helpline है एक चार चार चार आठ।",
+  "धमकी, गाली, या morph की हुई photos आएँ, तो सीधे police में, या cybercrime dot gov dot in पर complaint।"
  ],
  "evidence": [
-  "किसी भी complaint की असली ताक़त होती है — सबूत।",
-  "हर message का screenshot लीजिए, हर call की date, time और number नोट कीजिए, और हो सके तो calls record कीजिए।",
-  "घर आए agent से उसका ID card और bank का authorisation letter माँगिए।",
-  "और bank से हर बात email पर कीजिए, ताकि सब कुछ लिखित में रहे।"
+  "किसी भी complaint की असली ताक़त — सबूत।",
+  "हर message का screenshot, हर call की date, time और number नोट कीजिए। हो सके तो calls record कीजिए।",
+  "घर आए agent से ID card और bank का authorisation letter माँगिए।",
+  "Bank से हर बात email पर। सब कुछ लिखित में रहना चाहिए।"
  ],
  "scripts": [
   "अब कुछ ready-made lines, जो आप बोल सकते हैं।",
-  "Agent के call पर: कृपया सारी बात मेरे registered email पर लिखित में भेजिए, मैं वहीं जवाब दूँगा।",
-  "अगर वो रिश्तेदारों को call करें, तो रिश्तेदार बोलें: किसी का loan दूसरों को बताना RBI rules के ख़िलाफ़ है, ये call record हो रही है, दोबारा call मत कीजिए।",
-  "और दरवाज़े पर: अपना ID और bank का authorisation letter दिखाइए, मैं bank से लिखित में बात करूँगा, अब आप जा सकते हैं।",
-  "शांत रहिए, बहस मत कीजिए, और कभी भी हाथापाई में मत पड़िए।"
+  "Agent के call पर: कृपया सारी बात मेरे registered email पर लिखित में भेजिए। मैं वहीं जवाब दूँगा।",
+  "रिश्तेदारों को call करें, तो वो कहें: किसी का loan दूसरों को बताना RBI rules के ख़िलाफ़ है। ये call record हो रही है। दोबारा call मत कीजिए।",
+  "दरवाज़े पर: अपना ID और bank का authorisation letter दिखाइए। मैं bank से लिखित में बात करूँगा। अब आप जा सकते हैं।",
+  "शांत रहिए। बहस मत कीजिए। कभी भी झगड़े में मत पड़िए।"
+ ],
+ "faq": [
+  "अब, आपके सबसे ज़्यादा पूछे जाने वाले सवाल। Quick answers।",
+  {"q": "क्या jail जाना पड़ेगा?", "style": "fear"},
+  "नहीं। सिर्फ़ bill न भरने पर jail नहीं। सिर्फ़ cheque, NACH bounce, या fraud ही criminal है।",
+  {"q": "क्या मेरे bank accounts freeze कर देंगे?"},
+  "दूसरे banks में, court order के बिना नहीं। उसी bank में set-off हो सकता है।",
+  {"q": "क्या मेरे office में call करेंगे?"},
+  "आपका क़र्ज़ आपके employer या colleagues को बताना मना है। बताएँ, तो complaint कीजिए।",
+  {"q": "क्या सात साल बाद क़र्ज़ ख़त्म हो जाता है?"},
+  "नहीं। Credit report में history धुंधली होती है, लेकिन bank का claim और case का risk ऐसे ही ख़त्म नहीं होते।",
+  {"q": "क्या settlement installments में भर सकते हैं?"},
+  "अक्सर हाँ। दो से छह हिस्सों में। लेकिन पहले letter लीजिए।",
+  {"q": "मेरे home loan या दूसरी EMIs पर असर पड़ेगा?"},
+  "आप उन्हें भरते रहेंगे, तो वो normal चलेंगी। नए loans ज़रूर मुश्किल होंगे।",
+  {"q": "क्या विदेश जा सकते हैं?"},
+  "सिर्फ़ card default से travel नहीं रुकता। लेकिन court का summons कभी ignore मत कीजिए।",
+  {"q": "क्या agent मेरी bike या phone ले जा सकता है?", "style": "fear"},
+  "नहीं। Agent के पास कुछ भी ले जाने का अधिकार नहीं।",
+  {"q": "Settlement के बाद फिर से माँगेंगे?"},
+  "सही full and final letter और NOC हो, तो नहीं माँग सकते।",
+  {"q": "पूरा भरें, या settle करें?"},
+  "भर सकते हैं, तो पूरा भरिए। Settled से Closed status कहीं बेहतर है।",
+  {"q": "क्या फिर से card मिलेगा?", "style": "happy"},
+  "मिलेगा। कुछ समय clean record के बाद, छोटे से शुरू कीजिए, जैसे secured card।"
  ],
  "plan": [
-  "अब सबसे ज़रूरी हिस्सा — plan कैसे बनाएँ।",
-  "पहला, card का use और rotation तुरंत बंद कीजिए।",
-  "दूसरा, हर क़र्ज़ की list बनाइए — कितना बकाया, minimum due, due date, और interest rate।",
-  "तीसरा, पहले ज़रूरी चीज़ें बचाइए — किराया, खाना, दवाई, और वो EMIs जिनमें auto-debit या cheque लगा है।",
-  "चौथा, जल्दी से जल्दी bank को email कीजिए, और EMI conversion या restructuring का option माँगिए।",
-  "पाँचवाँ, अपनी मुश्किल सच्चाई से, लिखित में बताइए।",
-  "छठा, settlement के लिए एक lump sum जोड़ने का plan बनाइए।",
-  "और सातवाँ — card भरने के लिए loan apps से कभी नया loan मत लीजिए।"
+  "अब सबसे ज़रूरी — plan।",
+  "एक, card का use और rotation तुरंत बंद।",
+  "दो, हर क़र्ज़ की list बनाइए। कितना बकाया, minimum due, due date, interest rate।",
+  "तीन, पहले ज़रूरतें। किराया, खाना, दवाई, और auto-debit या cheque वाली EMIs।",
+  "चार, जल्दी से जल्दी bank को email करके, EMI conversion या restructuring माँगिए।",
+  "पाँच, अपनी मुश्किल ईमानदारी से, लिखित में बताइए।",
+  "छह, settlement के लिए lump sum जोड़ने का plan।",
+  "और सात — card भरने के लिए loan apps से कभी नया loan मत लीजिए।"
  ],
  "compare": [
-  "एक बात ध्यान रखिए — नब्बे दिन से पहले bank के पास EMI conversion या restructuring जैसे options होते हैं, और score भी कम ख़राब होता है।",
-  "NPA के बाद settlement में कम पैसा देना पड़ सकता है, लेकिन CIBIL पर Settled लिखा आता है, जो कई साल तक नए loan मुश्किल बना देता है।",
-  "इसलिए अपनी situation के हिसाब से, सोच-समझकर रास्ता चुनिए।"
+  "नब्बे दिन से पहले, EMI conversion, restructuring जैसे options होते हैं। Score भी कम ख़राब होता है।",
+  "NPA के बाद settlement में कम देना पड़ सकता है, लेकिन CIBIL पर Settled लिखा आता है। कई साल तक नए loans मुश्किल।",
+  "अपनी हालत के हिसाब से, सोच-समझकर चुनिए।"
  ],
  "settle": [
-  "अब settlement — ग़लत तरीक़े से किया, तो पैसा भी जाएगा और क़र्ज़ भी बना रहेगा।",
-  "Negotiation principal amount पर कीजिए, और हमेशा bank से लिखित में।",
-  "पैसे देने से पहले bank के letterhead पर settlement letter लीजिए, जिसमें amount, account number, और full and final settlement साफ़ लिखा हो।",
-  "Payment सिर्फ़ bank के official account या official link पर — agent के personal UPI या cash में कभी नहीं।",
-  "Payment के बाद No Dues Certificate लीजिए, और तीस-पैंतालीस दिन बाद अपनी CIBIL report ज़रूर check कीजिए।"
+  "Settlement ग़लत किया, तो पैसा भी जाएगा और क़र्ज़ भी रहेगा। ध्यान से सुनिए।",
+  "Negotiation principal पर, bank से लिखित में।",
+  "पैसे देने से पहले, bank के letterhead पर settlement letter। उसमें amount, account number, और full and final settlement साफ़ लिखा हो।",
+  "Payment सिर्फ़ bank के official account या official link पर। Agent के personal UPI या cash में — कभी नहीं।",
+  "फिर No Dues Certificate लीजिए। तीस-पैंतालीस दिन बाद, CIBIL report ज़रूर check कीजिए।"
  ],
  "settled": [
-  "याद रखिए, Settled और Closed एक चीज़ नहीं हैं।",
-  "Settled का मतलब है आपने पूरा नहीं चुकाया, और lenders इसे negative मानते हैं।",
-  "आगे चलकर पैसा हो, तो बाक़ी रक़म देकर status Closed करवाया जा सकता है।",
-  "और फिर समय पर payments और कम usage से, score धीरे-धीरे वापस बनता है।"
+  "Settled और Closed एक नहीं हैं।",
+  "Settled मतलब पूरा नहीं चुकाया। Lenders इसे negative मानते हैं।",
+  "बाद में पैसा हो, तो बाक़ी भरकर status Closed करवाया जा सकता है।",
+  "समय पर payments और कम usage से, score धीरे-धीरे वापस बनता है।"
  ],
  "cautions": [
-  "अब कुछ ज़रूरी सावधानियाँ।",
-  "Court या Lok Adalat का notice कभी ignore मत कीजिए — जाइए, या advocate से जवाब दिलवाइए।",
-  "किसी caller को OTP, card details या Aadhaar मत दीजिए — recovery के नाम पर fraud भी बहुत होते हैं।",
-  "जो companies settlement के नाम पर पहले ही मोटी fees माँगती हैं, उनसे सावधान रहिए।",
-  "बिना पढ़े कोई भी paper sign मत कीजिए।",
-  "और जिस bank का card बकाया है, उसी bank में salary या savings रखने से पहले set-off का risk समझ लीजिए।"
+  "आख़िर में कुछ सावधानियाँ।",
+  "Court या Lok Adalat का notice कभी ignore मत कीजिए। जाइए, या advocate से जवाब दिलवाइए।",
+  "किसी caller को OTP, card details, या Aadhaar मत दीजिए। Recovery के नाम पर fraud भी होते हैं।",
+  "Settlement के नाम पर पहले ही मोटी fees माँगने वाली companies से सावधान।",
+  "बिना पढ़े किसी paper पर sign मत कीजिए।",
+  "जिस bank का card बकाया है, उसी में salary या savings रखने से पहले set-off का risk समझ लीजिए।"
  ],
  "outro": [
-  "तो आज की बात का सार: credit card default crime नहीं है, लेकिन इसे ignore करना भी solution नहीं है।",
-  "नब्बे दिन से पहले bank से बात कीजिए, और हर चीज़ लिखित में रखिए।",
-  "Harassment हो, तो डरिए मत — RBI के rules आपके साथ हैं।",
-  "और settlement हमेशा letter लेकर, सही तरीक़े से कीजिए। ये video उन लोगों के साथ ज़रूर share कीजिए, जिन्हें इसकी ज़रूरत है।"
+  "सार ये है: credit card default crime नहीं है। लेकिन उसे ignore करना भी solution नहीं।",
+  "नब्बे दिन से पहले bank से बात कीजिए। सब कुछ लिखित में रखिए।",
+  "Harassment हो, तो डरिए मत। RBI के rules आपके साथ हैं।",
+  "Settlement हमेशा letter लेकर ही कीजिए। ये video उन तक ज़रूर पहुँचाइए, जिन्हें इसकी ज़रूरत है।"
  ],
  "disclaimer": [
-  "आख़िर में, एक ज़रूरी disclaimer।",
-  "ये video सिर्फ़ शिक्षा और जागरूकता के लिए है। हम जानबूझकर default करने की सलाह कभी नहीं देते। ये legal या financial advice नहीं है, और हमारा RBI, किसी bank या recovery agency से कोई संबंध नहीं है।",
-  "जानकारी RBI के public documents पर आधारित है, और rules बदल सकते हैं — इसलिए rbi dot org dot in पर ज़रूर verify कीजिए, और अपने case के लिए किसी qualified advocate या financial counsellor से सलाह लीजिए।",
-  "और याद रखिए — मुश्किल कितनी भी बड़ी हो, आप अकेले नहीं हैं। मदद माँगिए।"
+  "आख़िर में disclaimer।",
+  "ये video सिर्फ़ जागरूकता के लिए है। हम जानबूझकर default करने की सलाह कभी नहीं देते। ये legal या financial advice नहीं है। हमारा RBI, किसी bank या agency से कोई संबंध नहीं।",
+  "जानकारी RBI के public documents पर आधारित है। Rules बदल सकते हैं। rbi dot org dot in पर verify कीजिए। अपने case के लिए qualified advocate से सलाह लीजिए।",
+  "मुश्किल कितनी भी बड़ी हो, आप अकेले नहीं हैं। मदद माँगिए।"
  ]
 }

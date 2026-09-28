@@ -15,7 +15,7 @@ const FFMPEG = require('child_process').execSync(
   'python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"').toString().trim();
 
 const [lang, mode, arg] = process.argv.slice(2);
-const timeline = JSON.parse(fs.readFileSync(`${ROOT}/build/${lang}/timeline.json`, 'utf8'));
+const timeline = JSON.parse(fs.readFileSync(process.env.TIMELINE || `${ROOT}/build/${lang}/timeline.json`, "utf8"));
 
 function icons() {
   const set = require(`${ROOT}/node_modules/@iconify-json/fluent-emoji-flat/icons.json`);

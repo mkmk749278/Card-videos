@@ -227,7 +227,7 @@ B.growth = sc => {
       </div>`).join('')}
     </div>
     <div class="abs" style="left:190px;top:864px;width:1180px;display:flex;gap:50px">${sc.bars.map(b => `<div style="flex:1;text-align:center;font-size:26px;color:var(--mut)">${b[0]}</div>`).join('')}</div>
-    <div class="abs x2" style="left:1420px;top:400px;width:380px;text-align:center"><div class="num" style="font-size:130px;color:var(--red);line-height:1">~1.9×</div><div style="font-size:30px;color:var(--mut)">in one year</div></div>
+    <div class="abs x2" style="left:1420px;top:400px;width:380px;text-align:center"><div class="num" style="font-size:130px;color:var(--red);line-height:1">${sc.mult || "~1.9×"}</div><div style="font-size:30px;color:var(--mut)">in one year</div></div>
     <div class="abs" data-at="1" style="left:190px;top:920px;font-size:20px;color:var(--mut);opacity:.8">${sc.note}</div>
   </div>`);
   const a = s0.start + 1, b = s1.end - 0.5;
@@ -539,6 +539,129 @@ B.outro = sc => {
   return { el: r, update: lt => reveal(r, lt) };
 };
 
+// ---- v2 scene types -------------------------------------------------------
+const speakerAt = (sc, lt) => { const x = sc.sentences.find(q => lt >= q.start - 0.05 && lt < q.end + 0.3); return x ? x.who : null; };
+const bars = (col) => `<div class="eq" style="display:flex;gap:6px;height:40px;align-items:flex-end;justify-content:center;margin-top:14px">${[0,1,2,3,4].map(() => `<div style="width:10px;border-radius:5px;background:${col}"></div>`).join('')}</div>`;
+function animBars(el, on, lt, seed) {
+  el.querySelectorAll('.eq div').forEach((b, i) => { const h = on ? 10 + 30 * Math.abs(Math.sin(lt * (6 + i) + seed + i * 1.7)) : 6; b.style.height = h + 'px'; b.style.opacity = on ? 1 : .35; });
+}
+const LABELS = {te: ['మీ ప్రశ్న', 'సమాధానం'], hi: ['आपका सवाल', 'जवाब']};
+
+B.dialogue = sc => {
+  const L = LABELS[TL.lang] || ['Question', 'Answer'];
+  const av = (side, ic, col, label) => `<div class="abs av ${side}" style="${side === 'q' ? 'left:230px' : 'right:230px'};top:330px;width:420px;text-align:center">
+      <div class="ring" style="width:300px;height:300px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,${col}33,transparent 70%);border:5px solid ${col}">${icon(ic, 200)}</div>
+      <div class="pill" style="margin-top:22px;background:${col}26;color:${col};font-size:28px">${label}</div>${bars(col)}</div>`;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs card" data-at="0.15" style="left:50%;margin-left:-560px;width:1120px;top:140px;padding:28px 40px;display:flex;gap:24px;align-items:center;border-color:rgba(245,158,11,.5)">
+      ${icon(sc.icon, 72)}<div style="font-size:40px;font-weight:700;line-height:1.25">${sc.topic}</div></div>
+    ${av('q', 'worried-face', '#f59e0b', L[0])}${av('a', 'man-office-worker', '#2dd4bf', L[1])}
+    <div class="abs vs" style="left:50%;top:430px;transform:translateX(-50%);font-size:40px;color:var(--mut);font-weight:800">⟷</div>
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const who = speakerAt(sc, lt);
+    [['q', 0], ['a', 2]].forEach(([w, seed]) => {
+      const a = $('.av.' + w, r), on = who === w, k = E(lt, w === 'q' ? 0.2 : 0.5, 0.6);
+      a.style.opacity = k * (on || !who ? 1 : 0.55);
+      a.style.transform = `translateY(${(1 - k) * 60}px) scale(${on ? 1.06 : 0.96})`;
+      $('.ring', a).style.boxShadow = on ? `0 0 ${40 + 20 * Math.sin(lt * 5)}px ${w === 'q' ? '#f59e0b' : '#2dd4bf'}` : 'none';
+      animBars(a, on, lt, seed);
+    });
+  }};
+};
+
+B.secured = sc => {
+  const t = cueTimes(sc, 3), vAt = sentStart(sc, sc.verdictCue);
+  const col = (d, colr, at0, times, vAt) => `<div class="card" data-at="${at0}" style="padding:36px 40px;border-color:${colr}88">
+      <div class="h2" style="color:${colr}">${d.title}</div><div style="font-size:26px;color:var(--mut);margin-top:6px">${d.sub}</div>
+      ${d.items.map((it, i) => `<div class="row" data-at="${times[i]}" style="margin-top:22px;gap:18px;font-size:32px">${icon(it[0], 64)}<span style="flex:1">${it[1]}</span>${it[2] !== '—' ? `<span class="pill" style="background:${colr}22;color:${colr};font-size:22px">${it[2]}</span>` : ''}</div>`).join('')}
+      <div class="verdict" data-at="${vAt}" data-fx="pop" style="margin-top:30px;padding:18px 22px;border-radius:18px;background:${colr}1f;border:2px solid ${colr};font-size:28px;font-weight:700">${d.verdict}</div>
+    </div>`;
+  const r = el(`<div class="abs" style="left:150px;top:150px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:44px">
+    ${col(sc.secured, '#f59e0b', 0.3, [t[0], t[0] + .4, t[0] + .8], sentStart(sc, 2))}
+    ${col(sc.unsecured, '#2dd4bf', t[2] - 0.2, [t[2], t[2] + .4, t[2] + .8], vAt)}</div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.stack = sc => {
+  const t = cueTimes(sc, sc.parts.length), tagAt = sentStart(sc, sc.tagCue), W = 1560;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:180px;top:150px;font-size:56px">${sc.heading}</div>
+    <div class="abs" style="left:180px;top:330px;width:${W}px;height:120px;border-radius:24px;background:rgba(255,255,255,.06);overflow:hidden;display:flex">
+      ${sc.parts.map((p, i) => `<div class="seg" data-i="${i}" style="height:100%;width:0;background:${COLORS[p[2]]};border-right:3px solid #0b1020"></div>`).join('')}
+    </div>
+    <div class="abs tot num" style="left:180px;top:250px;width:${W}px;text-align:right;font-size:44px;color:var(--red)">Total shown: ${inr(sc.total)}</div>
+    <div class="abs" style="left:180px;top:500px;width:${W}px;display:grid;grid-template-columns:repeat(${sc.parts.length},1fr);gap:22px">
+      ${sc.parts.map((p, i) => `<div data-at="${t[i]}" style="border-top:6px solid ${COLORS[p[2]]};padding-top:16px"><div class="num" style="font-size:44px;color:${COLORS[p[2]]}">${inr(p[1])}</div><div style="font-size:25px;color:var(--mut);margin-top:6px">${p[0]}</div></div>`).join('')}
+    </div>
+    <div class="abs pill" data-at="${tagAt}" data-fx="pop" style="left:180px;top:760px;background:rgba(45,212,191,.18);color:var(--teal);font-size:34px;padding:16px 34px">${icon('handshake', 44)} ${sc.tag}</div>
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    r.querySelectorAll('.seg').forEach((e, i) => e.style.width = (E(lt, t[i], 0.9) * sc.parts[i][1] / sc.total * W) + 'px');
+    $('.tot', r).style.opacity = E(lt, t[t.length - 1] + 0.8, 0.5);
+  }};
+};
+
+B.table = sc => {
+  const t = cueTimes(sc, sc.rows.length), n = sc.cols.length;
+  const tpl = n === 2 ? '1fr 2fr' : '1.1fr 1fr 1.4fr 0.9fr';
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:140px;font-size:52px;width:1620px">${sc.heading}</div>
+    <div class="abs" style="left:150px;top:250px;width:1620px">
+      <div style="display:grid;grid-template-columns:${tpl};gap:0;padding:18px 28px;border-radius:18px 18px 0 0;background:rgba(139,92,246,.22);font-size:26px;font-weight:700;color:#ddd6fe">${sc.cols.map(c => `<div>${c}</div>`).join('')}</div>
+      ${sc.rows.map((row, i) => `<div class="tr" data-at="${t[i]}" data-fx="left" style="display:grid;grid-template-columns:${tpl};padding:22px 28px;border-bottom:1px solid rgba(255,255,255,.08);background:var(--card);font-size:${n === 2 ? 32 : 30}px;align-items:center">
+        ${row.map((c, j) => `<div style="${j === 0 ? 'font-weight:700' : ''};${j === n - 1 && n > 2 ? `color:${['var(--green)', 'var(--green)', 'var(--amber)', 'var(--red)'][i]}` : ''};${j === 2 && n > 2 ? 'color:var(--teal);font-weight:700' : ''}">${c}</div>`).join('')}</div>`).join('')}
+      <div data-at="1" style="margin-top:16px;font-size:21px;color:var(--mut)">${sc.note}</div>
+    </div>
+    ${sc.tag ? `<div class="abs pill" data-at="${sentStart(sc, sc.tagCue)}" data-fx="pop" style="left:150px;top:${n === 2 ? 790 : 810}px;background:rgba(45,212,191,.18);color:var(--teal);font-size:32px;padding:16px 32px">${icon('bullseye', 40)} ${sc.tag}</div>` : ''}
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    let cur = -1; t.forEach((x, i) => { if (lt >= x) cur = i; });
+    r.querySelectorAll('.tr').forEach((e, i) => { e.style.background = i === cur ? 'rgba(45,212,191,.14)' : 'var(--card)'; });
+  }};
+};
+
+B.property = sc => {
+  const t = cueTimes(sc, sc.cards.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:140px;font-size:54px">${sc.heading}</div>
+    <div class="abs" style="left:150px;top:250px;width:1620px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+      ${sc.cards.map((c, i) => `<div class="card" data-at="${t[i]}" data-fx="pop" style="padding:28px 30px;min-height:260px;border-color:${COLORS[c[3]]}77">
+        <div class="row" style="gap:16px">${icon(c[0], 64)}<div style="font-size:28px;font-weight:700;line-height:1.25">${c[1]}</div></div>
+        <div class="pill" style="margin-top:20px;background:${COLORS[c[3]]}26;color:${COLORS[c[3]]};font-size:22px">${c[2]}</div>
+        <div style="font-size:23px;color:var(--mut);margin-top:14px;line-height:1.4">${c[4]}</div></div>`).join('')}
+    </div></div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.faq = sc => {
+  const S = sc.sentences, n = sc.pairs.length;
+  const qAt = i => S[1 + 2 * i] ? S[1 + 2 * i].start : 1e9, aAt = i => S[2 + 2 * i] ? S[2 + 2 * i].start : 1e9;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs row" data-at="0.2" style="left:150px;top:140px">${icon('thinking-face', 76)}<div class="h1">Quick answers</div></div>
+    <div class="abs cnt num" style="right:150px;top:160px;font-size:44px;color:var(--mut)"></div>
+    ${sc.pairs.map((p, i) => `<div class="abs pr" data-i="${i}" style="left:150px;top:290px;width:1620px">
+      <div class="card" style="padding:34px 44px;border-color:rgba(245,158,11,.6);background:rgba(245,158,11,.08);display:flex;gap:26px;align-items:center">${icon('worried-face', 84)}<div style="font-size:54px;font-weight:700">${p[0]}</div></div>
+      <div class="card ans" style="margin-top:28px;padding:34px 44px;border-color:rgba(34,197,94,.6);background:rgba(34,197,94,.08);display:flex;gap:26px;align-items:center">${icon('man-office-worker', 84)}<div style="font-size:40px;font-weight:600;line-height:1.35">${p[1]}</div></div>
+    </div>`).join('')}
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    let cur = -1;
+    r.querySelectorAll('.pr').forEach((e, i) => {
+      const a = qAt(i), b = i + 1 < n ? qAt(i + 1) : 1e9;
+      if (lt >= a) cur = i;
+      const vin = E(lt, a, 0.45), vout = E(lt, b - 0.3, 0.3);
+      e.style.opacity = vin * (1 - vout); e.style.transform = `translateY(${(1 - vin) * 40 - vout * 40}px)`;
+      const an = $('.ans', e), k = E(lt, aAt(i), 0.45); an.style.opacity = k; an.style.transform = `translateX(${(1 - k) * 60}px)`;
+    });
+    $('.cnt', r).textContent = cur >= 0 ? `${cur + 1} / ${n}` : '';
+  }};
+};
+
 const helpStrip = (text, at) => `<div class="abs" data-at="${at}" data-fx="pop" style="left:50%;margin-left:-620px;width:1240px;top:790px;padding:20px 34px;border-radius:24px;display:flex;align-items:center;gap:22px;background:linear-gradient(90deg,rgba(45,212,191,.2),rgba(139,92,246,.2));border:2px solid rgba(45,212,191,.55)">
   ${icon('telephone', 58)}<div style="font-size:33px;font-weight:600">${text}</div></div>`;
 
@@ -587,7 +710,7 @@ function chunks(s) {
   for (const p of parts) { if ((cur + ' ' + p).trim().length > 68 && cur) { out.push(cur.trim()); cur = p; } else cur = (cur + ' ' + p).trim(); }
   if (cur) out.push(cur);
   const total = out.reduce((a, c) => a + c.length, 0); let t0 = s.start;
-  return out.map(c => { const d = (s.end - s.start) * c.length / total; const r = {text: c.replace(/\s*[—–]$/, ''), start: t0, end: t0 + d}; t0 += d; return r; });
+  return out.map(c => { const d = (s.end - s.start) * c.length / total; const r = {text: c.replace(/\s*[—–]$/, ''), who: s.who, start: t0, end: t0 + d}; t0 += d; return r; });
 }
 
 // ---- background -----------------------------------------------------------
@@ -657,7 +780,7 @@ window.render = t => {
   $('#hud').style.opacity = sc.type === 'title' ? E(lt, 3, 0.6) : 1;
   const c = sc.caps.find(c => lt >= c.start - 0.05 && lt < c.end + 0.3);
   const cap = $('#cap');
-  if (c) { if (cap.dataset.k !== c.text) { cap.innerHTML = `<span>${c.text}</span>`; cap.dataset.k = c.text; } cap.style.opacity = 1; }
+  if (c) { if (cap.dataset.k !== c.text) { cap.innerHTML = c.who === 'q' ? `<span style="border-left:6px solid var(--amber);color:#fde68a">${c.text}</span>` : `<span>${c.text}</span>`; cap.dataset.k = c.text; } cap.style.opacity = 1; }
   else { cap.style.opacity = 0; }
   $('#bar').style.width = (t / TL.total * 1920) + 'px';
 };

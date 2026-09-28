@@ -37,10 +37,23 @@ async def synth(text, voice, rate, out_mp3, sem):
         raise RuntimeError(f"TTS failed: {text[:40]}")
 
 
-def to_wav(mp3, wav):
+# Voice finishing for depth and clarity: slight pitch-down + slower pace (rubberband),
+# low-shelf warmth, presence boost for consonants, de-essing and gentle compression.
+_COMMON = "highpass=f=60,deesser=i=0.4,acompressor=threshold=-20dB:ratio=3:attack=8:release=160:makeup=2"
+VOICE_FX = {
+    "A": {"a": f"rubberband=tempo=0.93:pitch=0.95,lowshelf=g=3:f=170,equalizer=f=3200:t=h:w=1500:g=3,{_COMMON}",
+          "q": f"rubberband=tempo=0.95:pitch=0.98,lowshelf=g=1.5:f=200,equalizer=f=3200:t=h:w=1500:g=2.5,{_COMMON}"},
+    "B": {"a": f"rubberband=tempo=0.90:pitch=0.92,lowshelf=g=4.5:f=160,equalizer=f=3000:t=h:w=1500:g=4,{_COMMON}",
+          "q": f"rubberband=tempo=0.93:pitch=0.97,lowshelf=g=2:f=200,equalizer=f=3200:t=h:w=1500:g=3,{_COMMON}"},
+}
+
+
+def to_wav(mp3, wav, fx=None):
     # trim leading/trailing silence so our own gaps control pacing
     af = ("silenceremove=start_periods=1:start_threshold=-50dB,"
           "areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse")
+    if fx:
+        af = f"{fx},{af},asetpts=N/SR/TB"
     subprocess.run([FFMPEG, "-y", "-loglevel", "error", "-i", mp3, "-af", af,
                     "-ar", "48000", "-ac", "1", wav], check=True)
     with wave.open(wav) as w:
@@ -119,7 +132,8 @@ async def main(lang):
                 print(f"missing audio {raw}", file=sys.stderr)
                 continue
             wav = f"{vdir}/{s['id']}_{i:02d}.wav"
-            d = to_wav(raw, wav)
+            fx = VOICE_FX.get(narr.get("_fx", ""), {}).get(ln["who"]) if engine == "svara" else None
+            d = to_wav(raw, wav, fx)
             # a speaker change gets a slightly longer pause, like a real conversation
             if sents and sents[-1]["who"] != ln["who"]:
                 local += 0.25

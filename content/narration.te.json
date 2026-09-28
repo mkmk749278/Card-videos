@@ -1,5 +1,6 @@
 {
  "_engine": "svara",
+ "_fx": "A",
  "_lang": "Telugu",
  "_styles": {"opendisc": "clear", "secured": "clear", "rates": "clear", "stack": "clear", "norule": "clear", "stages": "clear", "amounts": "clear", "property": "clear", "rbiagents": "clear", "rbicards": "clear", "ladder": "clear", "cancant": "clear", "disclaimer": "clear"},
  "cold": [

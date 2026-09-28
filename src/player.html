@@ -1,0 +1,622 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Credit Card Awareness</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:500;src:url(../node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2)}
+@font-face{font-family:NotoDeva;font-weight:500;src:url(../node_modules/@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-500-normal.woff2)}
+@font-face{font-family:NotoDeva;font-weight:700;src:url(../node_modules/@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-700-normal.woff2)}
+@font-face{font-family:NotoTelugu;font-weight:500;src:url(../node_modules/@fontsource/noto-sans-telugu/files/noto-sans-telugu-telugu-500-normal.woff2)}
+@font-face{font-family:NotoTelugu;font-weight:700;src:url(../node_modules/@fontsource/noto-sans-telugu/files/noto-sans-telugu-telugu-700-normal.woff2)}
+:root{
+  --bg0:#070b1a; --bg1:#0d1430; --ink:#f4f6ff; --mut:#9aa6c8; --line:rgba(255,255,255,.09);
+  --teal:#2dd4bf; --cyan:#38bdf8; --violet:#8b5cf6; --amber:#f59e0b; --orange:#fb7185; --red:#f43f5e; --green:#22c55e;
+  --card:rgba(255,255,255,.055); --card2:rgba(255,255,255,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg0);color:var(--ink);font-family:Poppins,NotoDeva,NotoTelugu,sans-serif}
+#stage{position:absolute;inset:0;overflow:hidden}
+#bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 20% 10%,#16205a 0%,transparent 60%),radial-gradient(1000px 700px at 90% 90%,#2a1452 0%,transparent 60%),linear-gradient(160deg,var(--bg1),var(--bg0))}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35}
+#grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;opacity:.35;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.dot{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff}
+#hud{position:absolute;left:64px;top:44px;display:flex;align-items:center;gap:16px;font-weight:600;font-size:22px;color:var(--mut);z-index:5}
+#hud .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--violet));display:grid;place-items:center}
+#hud .logo img{width:30px}
+#hud .ch{color:var(--ink)}
+#hud .sep{opacity:.4}
+#lang{position:absolute;right:64px;top:50px;font-size:20px;font-weight:600;color:var(--mut);letter-spacing:2px;z-index:5}
+#scene{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#cap{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);max-width:1560px;text-align:center;z-index:6}
+#cap span{display:inline;background:rgba(5,8,22,.78);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:8px 22px;border-radius:14px;font-size:38px;line-height:1.75;font-weight:500}
+body.hi #cap span{font-family:Poppins,NotoDeva}
+body.te #cap span{font-family:Poppins,NotoTelugu}
+#bar{position:absolute;left:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--teal),var(--violet));z-index:7}
+.abs{position:absolute}
+.h1{font-weight:800;font-size:64px;line-height:1.1;letter-spacing:-1px}
+.h2{font-weight:700;font-size:48px;line-height:1.15}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:999px;font-weight:700;font-size:24px;letter-spacing:1px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.12);border-radius:28px;backdrop-filter:blur(8px);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.row{display:flex;align-items:center;gap:22px}
+.item{display:flex;align-items:center;gap:22px;padding:20px 28px;border-radius:22px;background:var(--card);border:1px solid rgba(255,255,255,.1);font-size:32px;font-weight:500}
+.item img{width:54px;height:54px;flex:none}
+.grad{background:linear-gradient(90deg,#fff,#c7d2fe);-webkit-background-clip:text;color:transparent}
+.gradw{background:linear-gradient(90deg,var(--amber),var(--red));-webkit-background-clip:text;color:transparent}
+.num{font-weight:800;font-variant-numeric:tabular-nums}
+.tick{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none;font-weight:800;font-size:28px}
+.phone{width:470px;height:860px;border-radius:64px;background:#0b0f1d;border:10px solid #1c2440;box-shadow:0 40px 120px rgba(0,0,0,.6),inset 0 0 0 2px #2b3560;overflow:hidden}
+.bubble{background:#1f2c34;border-radius:0 18px 18px 18px;padding:16px 20px;font-size:23px;line-height:1.35;color:#e9edef;margin:14px 18px 0 18px;max-width:390px;box-shadow:0 2px 0 rgba(0,0,0,.3)}
+.stamp{border:10px solid var(--red);color:var(--red);font-weight:800;font-size:72px;padding:6px 30px;border-radius:18px;letter-spacing:4px;background:rgba(244,63,94,.08)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg"></div>
+  <div id="grid"></div>
+  <div id="fx"></div>
+  <div id="scene"></div>
+  <div id="hud"><div class="logo"></div><span>Credit Card Awareness</span><span class="sep">|</span><span class="ch"></span></div>
+  <div id="lang"></div>
+  <div id="cap"></div>
+  <div id="bar"></div>
+</div>
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeBack = x => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const P = (t, a, d = 0.5) => clamp((t - a) / d);          // linear progress
+const E = (t, a, d = 0.5) => easeOut(P(t, a, d));         // eased progress
+const COLORS = {green:'#22c55e', amber:'#f59e0b', orange:'#fb923c', red:'#f43f5e', violet:'#8b5cf6', teal:'#2dd4bf', cyan:'#38bdf8'};
+const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+
+let TL, ICONS, CHAPTERS = [];
+const cache = {};
+
+function icon(name, size = 64, extra = '') {
+  const svg = ICONS[name] || ICONS['warning'];
+  return `<img src="data:image/svg+xml;utf8,${encodeURIComponent(svg)}" style="width:${size}px;height:${size}px;${extra}">`;
+}
+function el(html) { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstElementChild; }
+
+// ---- cue timing -----------------------------------------------------------
+// item i appears when narration reaches sentence cue[i]; items sharing a
+// sentence are spread across it. Without cues, spread evenly.
+function cueTimes(sc, n, key = 'cue') {
+  const S = sc.sentences, cue = sc[key];
+  if (cue && S.length) {
+    const groups = {};
+    cue.forEach((c, i) => (groups[c] = groups[c] || []).push(i));
+    const out = [];
+    for (const c in groups) {
+      const s = S[c], span = (s.end - s.start) * 0.8, g = groups[c];
+      g.forEach((i, k) => out[i] = s.start + (g.length > 1 ? span * k / g.length : 0.1));
+    }
+    return out;
+  }
+  const a = 0.7, b = Math.max(a + 0.5, sc.dur * 0.72);
+  return Array.from({length: n}, (_, i) => a + (b - a) * (n > 1 ? i / (n - 1) : 0));
+}
+function sentStart(sc, i) { return sc.sentences[Math.min(i, sc.sentences.length - 1)].start; }
+
+// generic reveal: elements with data-at slide up + fade in
+function reveal(root, lt) {
+  root.querySelectorAll('[data-at]').forEach(e => {
+    const at = +e.dataset.at, k = E(lt, at, 0.55);
+    const kind = e.dataset.fx || 'up';
+    let tr = '';
+    if (kind === 'up') tr = `translateY(${(1 - k) * 40}px)`;
+    else if (kind === 'left') tr = `translateX(${(1 - k) * -80}px)`;
+    else if (kind === 'right') tr = `translateX(${(1 - k) * 80}px)`;
+    else if (kind === 'pop') tr = `scale(${0.6 + 0.4 * easeBack(P(lt, at, 0.5))})`;
+    e.style.opacity = k;
+    e.style.transform = tr;
+  });
+}
+
+// ---- scene builders -------------------------------------------------------
+const B = {};
+
+B.title = sc => {
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs" style="left:150px;top:250px;width:980px">
+      <div class="pill" data-at="0.2" style="background:rgba(45,212,191,.15);color:var(--teal)">${sc.kicker.toUpperCase()}</div>
+      <div class="h1" data-at="0.45" style="font-size:104px;margin-top:34px;line-height:1.02">Credit Card Bill<br><span class="gradw">Not Paid?</span></div>
+      <div data-at="1.0" style="margin-top:36px;font-size:32px;color:var(--mut);line-height:1.5;max-width:900px">${sc.sub}</div>
+    </div>
+    <div class="abs cc" style="left:1180px;top:300px;width:600px;height:370px;border-radius:32px;background:linear-gradient(135deg,#312e81,#7c3aed 55%,#db2777);box-shadow:0 50px 120px rgba(124,58,237,.45);padding:40px;overflow:hidden">
+      <div style="position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+      <div style="width:84px;height:64px;border-radius:12px;background:linear-gradient(135deg,#fde68a,#f59e0b);margin-top:40px"></div>
+      <div style="font-size:40px;letter-spacing:6px;margin-top:40px;font-weight:600">•••• •••• •••• 4821</div>
+      <div style="display:flex;justify-content:space-between;margin-top:26px;font-size:22px;opacity:.85"><span>CARD HOLDER</span><span>VALID 08/29</span></div>
+      <div class="stampc abs stamp" style="left:150px;top:120px;font-size:60px">OVERDUE</div>
+    </div>
+    ${sc.icons.map((n, i) => `<div class="abs orb" data-i="${i}" style="left:${[1120, 1700, 1780, 1160][i]}px;top:${[190, 180, 700, 720][i]}px">${icon(n, 96)}</div>`).join('')}
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const c = $('.cc', r), k = E(lt, 0.3, 0.9);
+    c.style.transform = `perspective(1400px) rotateY(${-18 + 10 * Math.sin(lt * 0.6)}deg) rotateX(${6 + 3 * Math.sin(lt * 0.8)}deg) translateY(${(1 - k) * 120}px)`;
+    c.style.opacity = k;
+    const s = $('.stampc', r), sk = P(lt, 2.2, 0.35);
+    s.style.opacity = sk; s.style.transform = `rotate(-14deg) scale(${2.2 - 1.2 * easeOut(sk)})`;
+    r.querySelectorAll('.orb').forEach(o => {
+      const i = +o.dataset.i, k2 = E(lt, 0.8 + i * 0.25, 0.6);
+      o.style.opacity = k2;
+      o.style.transform = `translateY(${Math.sin(lt * 1.3 + i * 1.7) * 14 + (1 - k2) * 40}px) scale(${0.6 + 0.4 * k2})`;
+    });
+  }};
+};
+
+B.agenda = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const r = el(`<div class="abs" style="left:150px;top:170px;width:1620px">
+    <div class="h1" data-at="0.2">${sc.heading}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:50px">
+      ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" data-fx="left"><div class="tick" style="background:rgba(139,92,246,.2);color:#c4b5fd">${i + 1}</div>${icon(it.icon, 54)}<span>${it.text}</span></div>`).join('')}
+    </div></div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.chapter = sc => {
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs wipe" style="left:0;top:0;height:1080px;background:linear-gradient(90deg,var(--teal),var(--violet))"></div>
+    <div class="abs big" style="left:150px;top:230px;font-size:340px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.35)">${String(sc.num).padStart(2, '0')}</div>
+    <div class="abs" style="left:160px;top:600px">
+      <div class="pill" data-at="0.45" style="background:rgba(255,255,255,.08);color:var(--mut)">CHAPTER ${sc.num}</div>
+      <div class="h1" data-at="0.6" style="font-size:88px;margin-top:22px">${sc.title}</div>
+    </div>
+    <div class="abs ic" style="right:160px;top:240px;width:480px;height:480px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(199,210,254,.28),transparent 68%)">${icon(sc.icon, 340)}</div>
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const w = $('.wipe', r), a = E(lt, 0, 0.45), b = E(lt, 0.35, 0.45);
+    w.style.left = (b * 1920) + 'px'; w.style.width = ((a - b) * 1920) + 'px';
+    const g = $('.big', r); g.style.opacity = E(lt, 0.3, 0.6); g.style.transform = `translateX(${(1 - E(lt, 0.3, 0.8)) * -60}px)`;
+    const ic = $('.ic', r), k = P(lt, 0.5, 0.7);
+    ic.style.opacity = E(lt, 0.5, 0.4);
+    ic.style.transform = `scale(${0.5 + 0.5 * easeBack(k)}) rotate(${(1 - easeOut(k)) * -20 + Math.sin(lt * 2) * 3}deg)`;
+  }};
+};
+
+B.stat = sc => {
+  const t = cueTimes(sc, sc.big.length);
+  const r = el(`<div class="abs" style="left:150px;top:190px;width:1620px">
+    <div class="row" data-at="0.2">${icon(sc.icon, 80)}<div class="h1">${sc.heading}</div></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:80px">
+      ${sc.big.map((b, i) => `<div class="card" data-at="${t[i]}" data-fx="pop" style="padding:56px 40px;text-align:center;border-color:${COLORS[b.color]}55">
+        <div class="num" style="font-size:${b.value.length > 6 ? 80 : 96}px;white-space:nowrap;color:${COLORS[b.color]}">${b.value}</div>
+        <div style="font-size:30px;color:var(--mut);margin-top:12px">${b.label}</div></div>`).join('')}
+    </div></div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.mad = sc => {
+  const t = cueTimes(sc, sc.points.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:160px">${sc.heading}</div>
+    <div class="abs card" data-at="0.5" data-fx="left" style="left:150px;top:300px;width:620px;padding:44px;background:#f8fafc;color:#0f172a">
+      <div style="display:flex;justify-content:space-between;font-size:24px;color:#64748b;font-weight:600"><span>CARD STATEMENT</span><span>Due: 15th</span></div>
+      <div style="margin-top:36px;font-size:26px;color:#475569">Total Amount Due</div>
+      <div class="num" style="font-size:84px">${sc.tad}</div>
+      <div class="madbox" style="margin-top:26px;padding:22px 26px;border-radius:18px;background:#fef3c7;border:3px solid #f59e0b">
+        <div style="font-size:26px;color:#92400e">Minimum Amount Due</div>
+        <div class="num" style="font-size:60px;color:#b45309">${sc.mad}</div>
+      </div>
+    </div>
+    <div class="abs" style="left:860px;top:310px;width:920px;display:flex;flex-direction:column;gap:22px">
+      ${sc.points.map((p, i) => `<div class="item" data-at="${t[i]}" data-fx="right"><div class="tick" style="background:${i ? 'rgba(244,63,94,.18)' : 'rgba(34,197,94,.18)'};color:${i ? 'var(--red)' : 'var(--green)'}">${i ? '!' : '✓'}</div><span style="font-size:30px">${p}</span></div>`).join('')}
+    </div></div>`);
+  return { el: r, update(lt) { reveal(r, lt); const m = $('.madbox', r); m.style.transform = `scale(${1 + 0.04 * Math.max(0, Math.sin(lt * 4)) * E(lt, 1.2, 0.5)})`; } };
+};
+
+B.growth = sc => {
+  const max = Math.max(...sc.bars.map(b => b[1]));
+  const s0 = sc.sentences[0], s1 = sc.sentences[1];
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs row" data-at="0.2" style="left:150px;top:160px">${icon('chart-increasing', 76)}<div class="h1">${sc.heading}</div></div>
+    <div class="abs" style="left:190px;top:330px;width:1180px;height:520px;display:flex;align-items:flex-end;gap:50px;border-bottom:2px solid rgba(255,255,255,.2)">
+      ${sc.bars.map((b, i) => `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%">
+        <div class="lbl num" style="font-size:34px;margin-bottom:12px"></div>
+        <div class="b" data-v="${b[1]}" style="width:100%;border-radius:16px 16px 0 0;background:linear-gradient(180deg,${i === sc.bars.length - 1 ? '#f43f5e,#be123c' : '#f59e0b,#b45309'})"></div>
+      </div>`).join('')}
+    </div>
+    <div class="abs" style="left:190px;top:864px;width:1180px;display:flex;gap:50px">${sc.bars.map(b => `<div style="flex:1;text-align:center;font-size:26px;color:var(--mut)">${b[0]}</div>`).join('')}</div>
+    <div class="abs x2" style="left:1420px;top:400px;width:380px;text-align:center"><div class="num" style="font-size:130px;color:var(--red);line-height:1">~1.9×</div><div style="font-size:30px;color:var(--mut)">in one year</div></div>
+    <div class="abs" data-at="1" style="left:190px;top:920px;font-size:20px;color:var(--mut);opacity:.8">${sc.note}</div>
+  </div>`);
+  const a = s0.start + 1, b = s1.end - 0.5;
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    r.querySelectorAll('.b').forEach((e, i) => {
+      const k = E(lt, a + (b - a) * i / sc.bars.length, 1.1), v = +e.dataset.v;
+      e.style.height = (k * v / max * 440) + 'px';
+      e.parentElement.querySelector('.lbl').textContent = k > 0.02 ? inr(v * k) : '';
+    });
+    const x = $('.x2', r), k = P(lt, b + 0.4, 0.5); x.style.opacity = k; x.style.transform = `scale(${0.5 + 0.5 * easeBack(k)})`;
+  }};
+};
+
+B.bullets = sc => {
+  const t = cueTimes(sc, sc.items.length), col = COLORS[sc.tone] || COLORS.teal;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs bigic" style="left:150px;top:330px;width:420px;height:420px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,${col}33,transparent 70%)">${icon(sc.icon, 260)}</div>
+    <div class="abs" style="left:640px;top:150px;width:1140px">
+      <div class="h1" data-at="0.2">${sc.heading}</div>
+      <div style="display:flex;flex-direction:column;gap:${sc.items.length > 4 ? 14 : 20}px;margin-top:40px">
+        ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="border-left:6px solid ${col};${sc.items.length > 4 ? 'font-size:29px;padding:15px 24px' : ''}">${icon(it.icon, 54)}<span>${it.text}</span></div>`).join('')}
+      </div></div></div>`);
+  return { el: r, update(lt) { reveal(r, lt); const b = $('.bigic', r), k = E(lt, 0.1, 0.8); b.style.opacity = k; b.style.transform = `scale(${0.7 + 0.3 * k}) translateY(${Math.sin(lt * 1.5) * 10}px)`; } };
+};
+
+const STAGES = ['Day 0–3', 'Day 4–30', 'Day 31–60', 'Day 61–90', 'Day 90+', 'Day 180+', '1 year+'];
+B.timeline = sc => {
+  const col = COLORS[sc.color], t = cueTimes(sc, sc.items.length);
+  const x = i => 190 + i * (1540 / 6);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs" style="left:190px;top:196px;width:1540px;height:8px;border-radius:4px;background:rgba(255,255,255,.12)"></div>
+    <div class="abs fill" style="left:190px;top:196px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--amber),var(--red))"></div>
+    ${STAGES.map((s, i) => `<div class="abs" style="left:${x(i) - 22}px;top:178px;width:44px;height:44px;border-radius:50%;background:${i <= sc.stage ? (i === sc.stage ? col : '#475569') : '#1e2745'};border:4px solid ${i === sc.stage ? '#fff' : 'rgba(255,255,255,.2)'}" ${i === sc.stage ? 'id="cur"' : ''}></div>
+      <div class="abs" style="left:${x(i) - 110}px;top:236px;width:220px;text-align:center;font-size:22px;font-weight:${i === sc.stage ? 700 : 500};color:${i === sc.stage ? '#fff' : 'var(--mut)'}">${s}</div>`).join('')}
+    <div class="abs card" data-at="0.25" style="left:190px;top:330px;width:1540px;height:570px;padding:50px 60px;border-color:${col}66">
+      <div class="row">
+        <div style="width:150px;height:150px;border-radius:36px;display:grid;place-items:center;background:${col}22" class="ic">${icon(sc.icon, 110)}</div>
+        <div>
+          <div class="pill" style="background:${col}26;color:${col}">${sc.days.toUpperCase()}</div>
+          <div class="h2" style="margin-top:14px;font-size:54px">${sc.title}</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px 50px;margin-top:50px">
+        ${sc.items.map((it, i) => `<div class="row" data-at="${t[i]}" style="font-size:34px;gap:18px;align-items:flex-start;line-height:1.35"><div style="width:16px;height:16px;border-radius:50%;background:${col};margin-top:17px;flex:none"></div><span>${it}</span></div>`).join('')}
+      </div>
+    </div></div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const from = sc.stage ? (sc.stage - 1) * 1540 / 6 : 0, to = sc.stage * 1540 / 6;
+    $('.fill', r).style.width = (from + (to - from) * E(lt, 0.2, 0.9)) + 'px';
+    const c = $('#cur', r), p = 1 + 0.18 * Math.abs(Math.sin(lt * 3));
+    c.style.transform = `scale(${p})`; c.style.boxShadow = `0 0 ${30 * p}px ${col}`;
+    $('.ic', r).style.transform = `rotate(${Math.sin(lt * 2) * 4}deg)`;
+  }};
+};
+
+B.cancant = sc => {
+  const t1 = cueTimes(sc, sc.can.length, 'cue'), t2 = cueTimes(sc, sc.cannot.length, 'cueCannot');
+  const col = (title, items, t, good) => `<div class="card" data-at="${good ? 0.3 : sentStart(sc, 3) - 0.2}" style="padding:40px;border-color:${good ? '#22c55e66' : '#f43f5e66'}">
+    <div class="row" style="margin-bottom:26px"><div class="tick" style="width:64px;height:64px;font-size:38px;background:${good ? 'rgba(34,197,94,.2)' : 'rgba(244,63,94,.2)'};color:${good ? 'var(--green)' : 'var(--red)'}">${good ? '✓' : '✕'}</div><div class="h2">${title}</div></div>
+    ${items.map((it, i) => `<div class="row" data-at="${t[i]}" style="font-size:28px;padding:12px 0;border-top:1px solid rgba(255,255,255,.07);gap:16px"><span style="color:${good ? 'var(--green)' : 'var(--red)'};font-weight:800">${good ? '✓' : '✕'}</span>${it}</div>`).join('')}
+  </div>`;
+  const r = el(`<div class="abs" style="left:150px;top:150px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    ${col('Bank CAN', sc.can, t1, true)}${col('Bank CANNOT', sc.cannot, t2, false)}</div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.civil = sc => {
+  const t = cueTimes(sc, sc.exceptions.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs sc" style="left:170px;top:250px">${icon('balance-scale', 340)}</div>
+    <div class="abs" style="left:640px;top:190px;width:1140px">
+      <div class="h1" data-at="0.2" style="font-size:72px">Card default is a <span style="color:var(--green)">CIVIL</span> matter</div>
+      <div data-at="0.6" style="font-size:34px;color:var(--mut);margin-top:16px">${sc.sub}</div>
+      <div class="pill" data-at="${t[0] - 0.4}" style="margin-top:50px;background:rgba(245,158,11,.16);color:var(--amber)">${sc.heading2.toUpperCase()}</div>
+      <div style="display:flex;flex-direction:column;gap:18px;margin-top:24px">
+        ${sc.exceptions.map((e, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="border-left:6px solid var(--amber)">${icon(e.icon, 54)}<span>${e.text}</span></div>`).join('')}
+      </div></div></div>`);
+  return { el: r, update(lt) { reveal(r, lt); const s = $('.sc', r), k = E(lt, 0.1, 0.8); s.style.opacity = k; s.style.transform = `rotate(${Math.sin(lt * 1.4) * 5}deg) scale(${0.7 + 0.3 * k})`; } };
+};
+
+B.tactics = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs phone ph" style="left:190px;top:130px;height:800px">
+      <div style="padding:70px 30px;text-align:center">
+        <div style="font-size:24px;color:var(--mut)">Incoming call…</div>
+        <div style="font-size:40px;font-weight:700;margin-top:10px">Unknown</div>
+        <div style="font-size:26px;color:var(--mut);margin-top:6px">+91 7•••• •••••</div>
+        <div style="margin:60px auto 0;width:200px;height:200px;border-radius:50%;background:rgba(244,63,94,.15);display:grid;place-items:center" class="ring">${icon('telephone-receiver', 120)}</div>
+        <div style="margin-top:60px;font-size:28px;color:var(--mut)">Missed calls today</div>
+        <div class="num cnt" style="font-size:120px;color:var(--red);line-height:1.1">0</div>
+      </div>
+    </div>
+    <div class="abs" style="left:760px;top:150px;width:1020px">
+      <div class="h1" data-at="0.2">Common pressure tactics</div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:36px">
+        ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="border-left:6px solid var(--red);font-size:29px;padding:16px 26px">${icon(it.icon, 50)}<span>${it.text}</span></div>`).join('')}
+      </div></div></div>`);
+  const end = sc.dur * 0.7;
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const ph = $('.ph', r), k = E(lt, 0.1, 0.7);
+    ph.style.opacity = k;
+    const shake = Math.sin(lt * 40) * 4 * (Math.sin(lt * 2.2) > 0.3 ? 1 : 0);
+    ph.style.transform = `translateY(${(1 - k) * 80}px) rotate(${shake * 0.3}deg) translateX(${shake}px)`;
+    $('.ring', r).style.transform = `scale(${1 + 0.1 * Math.abs(Math.sin(lt * 5))})`;
+    $('.cnt', r).textContent = Math.round(sc.calls * E(lt, 0.5, end));
+  }};
+};
+
+B.chat = sc => {
+  const t = cueTimes(sc, sc.messages.length), st = sentStart(sc, sc.stampCue);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs phone ph" style="left:260px;top:120px;height:820px;background:#0b141a">
+      <div style="background:#1f2c34;padding:56px 24px 18px;display:flex;align-items:center;gap:14px">
+        <div style="width:54px;height:54px;border-radius:50%;background:#374151;display:grid;place-items:center">${icon('bust-in-silhouette', 36)}</div>
+        <div><div style="font-size:22px;font-weight:600">${sc.contact}</div><div style="font-size:17px;color:#8696a0">online</div></div>
+      </div>
+      <div style="padding-top:10px">
+        ${sc.messages.map((m, i) => `<div class="bubble" data-at="${t[i]}" data-fx="pop" style="transform-origin:0 0">${m}<div style="text-align:right;font-size:15px;color:#8696a0;margin-top:6px">${9 + i}:4${i} PM</div></div>`).join('')}
+      </div>
+    </div>
+    <div class="abs stamp stp" style="left:150px;top:440px">${sc.stamp}</div>
+    <div class="abs" style="left:1000px;top:260px;width:800px">
+      <div class="h1" data-at="0.3">Sounds scary?</div>
+      <div data-at="${st - 0.2}" style="margin-top:30px;font-size:40px;line-height:1.4">It's a <b style="color:var(--red)">scare script</b> — built to make you pay <b>today</b>, out of fear.</div>
+      <div class="row" data-at="${st + 1.2}" style="margin-top:50px;gap:18px;flex-wrap:wrap">
+        ${[['camera', 'Screenshot'], ['no-entry', 'Block'], ['e-mail', 'Report to bank']].map(([ic, tx]) => `<div class="pill" style="background:var(--card2);font-size:28px;padding:14px 26px">${icon(ic, 40)} ${tx}</div>`).join('')}
+      </div>
+    </div></div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const ph = $('.ph', r), k = E(lt, 0.1, 0.7); ph.style.opacity = k; ph.style.transform = `translateY(${(1 - k) * 80}px)`;
+    const s = $('.stp', r), sk = P(lt, st, 0.3);
+    s.style.opacity = sk; s.style.transform = `rotate(-12deg) scale(${2.4 - 1.4 * easeOut(sk)})`;
+  }};
+};
+
+B.myths = sc => {
+  const t = cueTimes(sc, sc.pairs.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.1" style="left:150px;top:150px">Myth <span style="color:var(--mut)">vs</span> <span style="color:var(--green)">Reality</span></div>
+    <div class="abs dots" style="left:150px;top:250px;display:flex;gap:12px">${sc.pairs.map(() => '<div style="width:46px;height:8px;border-radius:4px;background:rgba(255,255,255,.15)"></div>').join('')}</div>
+    ${sc.pairs.map((p, i) => `<div class="abs pair" data-i="${i}" style="left:150px;top:320px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:40px">
+      <div class="card m" style="padding:50px;min-height:480px;border-color:#f43f5e66;background:rgba(244,63,94,.07)">
+        <div class="pill" style="background:rgba(244,63,94,.18);color:var(--red)">✕ MYTH ${i + 1}</div>
+        <div style="font-size:56px;font-weight:700;margin-top:40px;line-height:1.25">${p[0]}</div></div>
+      <div class="card f" style="padding:50px;min-height:480px;border-color:#22c55e66;background:rgba(34,197,94,.07)">
+        <div class="pill" style="background:rgba(34,197,94,.18);color:var(--green)">✓ REALITY</div>
+        <div style="font-size:42px;font-weight:600;margin-top:40px;line-height:1.35">${p[1]}</div></div>
+    </div>`).join('')}
+  </div>`);
+  const S = sc.sentences;
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    r.querySelectorAll('.pair').forEach((p, i) => {
+      const a = t[i], b = i + 1 < t.length ? t[i + 1] : 1e9;
+      const vin = E(lt, a, 0.5), vout = E(lt, b - 0.35, 0.35), vis = vin * (1 - vout);
+      p.style.opacity = vis; p.style.transform = `translateX(${(1 - vin) * 80 - vout * 80}px)`;
+      // reality card flips in around the middle of the sentence ("सच / నిజం")
+      const s = S[sc.cue[i]], mid = s.start + (s.end - s.start) * 0.32;
+      const fk = E(lt, mid, 0.5), f = $('.f', p);
+      f.style.opacity = fk; f.style.transform = `perspective(1200px) rotateY(${(1 - fk) * 70}deg)`;
+      r.querySelectorAll('.dots div')[i].style.background = lt >= a ? (lt < b ? 'var(--teal)' : 'rgba(45,212,191,.5)') : 'rgba(255,255,255,.15)';
+    });
+  }};
+};
+
+B.rules = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs sh" style="left:170px;top:250px;width:380px;height:440px;display:grid;place-items:center">
+      ${icon('shield', 340)}
+      <div class="abs" style="left:0;right:0;top:170px;text-align:center;font-size:64px;font-weight:800;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.5)">RBI</div>
+    </div>
+    <div class="abs" style="left:640px;top:160px;width:1140px">
+      <div class="h1" data-at="0.2">${sc.heading}</div>
+      <div data-at="0.5" style="font-size:24px;color:var(--teal);margin-top:10px">${sc.source}</div>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-top:34px">
+        ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="font-size:29px;padding:16px 26px"><div class="tick" style="background:rgba(34,197,94,.2);color:var(--green)">✓</div><span>${it}</span></div>`).join('')}
+      </div></div></div>`);
+  return { el: r, update(lt) { reveal(r, lt); const s = $('.sh', r), k = E(lt, 0.1, 0.8); s.style.opacity = k; s.style.transform = `scale(${0.7 + 0.3 * k}) translateY(${Math.sin(lt * 1.4) * 10}px)`; } };
+};
+
+B.ladder = sc => {
+  const t = cueTimes(sc, sc.steps.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">${sc.heading}</div>
+    ${sc.steps.map((s, i) => `<div class="abs card" data-at="${t[i]}" style="left:${150 + i * 170}px;top:${730 - i * 150}px;width:1080px;padding:24px 32px;display:flex;gap:24px;align-items:center;border-color:${i === 3 ? '#f43f5e66' : '#2dd4bf55'}">
+      <div class="tick" style="width:64px;height:64px;font-size:32px;background:${i === 3 ? 'rgba(244,63,94,.2)' : 'rgba(45,212,191,.2)'};color:${i === 3 ? 'var(--red)' : 'var(--teal)'}">${i + 1}</div>
+      ${icon(s.icon, 64)}
+      <div><div style="font-size:31px;font-weight:700">${s.title}</div><div style="font-size:23px;color:var(--mut);margin-top:4px">${s.sub}</div></div>
+    </div>`).join('')}
+  </div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.scripts = sc => {
+  const t = cueTimes(sc, sc.cards.length), tipAt = sentStart(sc, 4);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs row" data-at="0.2" style="left:150px;top:150px">${icon('speech-balloon', 76)}<div class="h1">Say this — calmly</div></div>
+    <div class="abs" style="left:150px;top:300px;width:1620px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      ${sc.cards.map((c, i) => `<div class="card" data-at="${t[i]}" data-fx="pop" style="padding:40px;min-height:470px;border-color:#38bdf855">
+        <div class="row" style="gap:16px">${icon(c.icon, 56)}<div style="font-size:26px;font-weight:700;color:var(--cyan)">${c.who}</div></div>
+        <div style="font-size:120px;line-height:.6;color:rgba(56,189,248,.35);margin-top:34px;font-weight:800">“</div>
+        <div style="font-size:31px;line-height:1.45;font-weight:500">${c.line}</div>
+      </div>`).join('')}
+    </div>
+    <div class="abs pill" data-at="${tipAt}" style="left:50%;top:810px;transform:translateX(-50%);background:rgba(245,158,11,.16);color:var(--amber);font-size:30px">${sc.tip}</div>
+  </div>`);
+  return { el: r, update(lt) { reveal(r, lt); const p = r.querySelector('.pill[data-at]'); p.style.transform += ' translateX(-50%)'; p.style.left = '50%'; } };
+};
+
+B.plan = sc => {
+  const t = cueTimes(sc, sc.steps.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs" style="left:150px;top:150px;width:520px">
+      <div class="h1" data-at="0.2">${sc.heading}</div>
+      <div data-at="0.5" style="margin-top:50px">${icon('clipboard', 300)}</div>
+    </div>
+    <div class="abs" style="left:760px;top:130px;width:1020px;display:flex;flex-direction:column;gap:13px">
+      ${sc.steps.map((s, i) => `<div class="item st" data-at="${t[i]}" data-fx="right" style="padding:15px 24px;font-size:29px"><div class="tick n" style="background:rgba(45,212,191,.18);color:var(--teal)">${i + 1}</div><span>${s}</span></div>`).join('')}
+    </div></div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    let cur = -1; t.forEach((x, i) => { if (lt >= x) cur = i; });
+    r.querySelectorAll('.st').forEach((e, i) => {
+      const on = i === cur;
+      e.style.background = on ? 'rgba(45,212,191,.16)' : 'var(--card)';
+      e.style.borderColor = on ? 'rgba(45,212,191,.7)' : 'rgba(255,255,255,.1)';
+    });
+  }};
+};
+
+B.compare = sc => {
+  const t = cueTimes(sc, 2);
+  const side = (s, at) => `<div class="card" data-at="${at}" data-fx="pop" style="padding:50px;border-color:${COLORS[s.color]}77">
+    <div class="row">${icon(s.icon, 90)}<div class="h2" style="color:${COLORS[s.color]}">${s.title}</div></div>
+    ${s.items.map(x => `<div class="row" style="font-size:32px;margin-top:30px;gap:16px"><div style="width:14px;height:14px;border-radius:50%;background:${COLORS[s.color]}"></div>${x}</div>`).join('')}
+  </div>`;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">Timing changes your options</div>
+    <div class="abs" style="left:150px;top:320px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:50px">${side(sc.left, t[0])}${side(sc.right, t[1])}</div>
+  </div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.checklist = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs" style="left:150px;top:150px;width:470px">
+      <div class="h1" data-at="0.2">${sc.heading}</div>
+      <div data-at="0.5" style="margin-top:60px">${icon('handshake', 300)}</div>
+    </div>
+    <div class="abs" style="left:700px;top:150px;width:1080px;display:flex;flex-direction:column;gap:16px">
+      ${sc.items.map((s, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="font-size:29px;padding:18px 26px"><div class="tick box" data-t="${t[i] + 0.45}" style="border:3px solid var(--green);border-radius:12px;color:var(--green)"></div><span>${s}</span></div>`).join('')}
+    </div></div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    r.querySelectorAll('.box').forEach(b => { const k = P(lt, +b.dataset.t, 0.25); b.textContent = k > 0 ? '✓' : ''; b.style.background = `rgba(34,197,94,${0.25 * k})`; b.style.transform = `scale(${1 + 0.25 * Math.sin(k * Math.PI)})`; });
+  }};
+};
+
+B.gauge = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const ang = v => Math.PI * (1 - (v - 300) / 600);   // 300..900 -> 180°..0°
+  const arc = (a0, a1, c) => { const R = 250, cx = 300, cy = 300; const p = a => [cx + R * Math.cos(a), cy - R * Math.sin(a)];
+    const [x0, y0] = p(a0), [x1, y1] = p(a1); return `<path d="M${x0} ${y0} A${R} ${R} 0 0 1 ${x1} ${y1}" stroke="${c}" stroke-width="44" fill="none"/>`; };
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">${sc.heading}</div>
+    <div class="abs" data-at="0.4" style="left:130px;top:290px;width:600px;height:420px">
+      <svg width="600" height="340" viewBox="0 0 600 340">
+        ${arc(Math.PI, ang(550), '#f43f5e')}${arc(ang(550), ang(650), '#f59e0b')}${arc(ang(650), ang(750), '#a3e635')}${arc(ang(750), 0, '#22c55e')}
+        <line class="needle" x1="300" y1="300" x2="300" y2="90" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="300" cy="300" r="22" fill="#fff"/>
+      </svg>
+      <div style="text-align:center;margin-top:-10px"><div class="num sc" style="font-size:96px;line-height:1">780</div><div style="font-size:26px;color:var(--mut)">Credit score (illustrative)</div></div>
+      <div class="pill tag" style="position:absolute;left:190px;top:-40px;background:rgba(244,63,94,.2);color:var(--red)">SETTLED</div>
+    </div>
+    <div class="abs" style="left:820px;top:320px;width:960px;display:flex;flex-direction:column;gap:22px">
+      ${sc.items.map((s, i) => `<div class="item" data-at="${t[i]}" data-fx="right" style="font-size:30px">${icon(['cross-mark', 'counterclockwise-arrows-button', 'chart-increasing'][i], 54)}<span>${s}</span></div>`).join('')}
+    </div></div>`);
+  const a = t[0] - 0.3, b = t[1] + 0.5;
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    let v = sc.from + (sc.to - sc.from) * E(lt, a, 1.4);
+    v += (700 - sc.to) * E(lt, b, 2.5) * (lt > b ? 1 : 0);   // recovery after rebuilding
+    const deg = (1 - (v - 300) / 600) * 180 - 90;
+    $('.needle', r).setAttribute('transform', `rotate(${-deg} 300 300)`);
+    $('.sc', r).textContent = Math.round(v);
+    const tg = $('.tag', r), k = E(lt, a + 1.2, 0.4); tg.style.opacity = k * (1 - E(lt, b, 0.5)); tg.style.transform = `scale(${0.6 + 0.4 * k})`;
+  }};
+};
+
+B.outro = sc => {
+  const t = cueTimes(sc, sc.items.length);
+  const shareAt = sentStart(sc, 3) + 2.5;
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.1" style="left:150px;top:150px;font-size:80px"><span class="grad">${sc.heading}</span></div>
+    <div class="abs" style="left:150px;top:290px;width:1100px;display:flex;flex-direction:column;gap:16px">
+      ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" data-fx="left" style="font-size:31px">${icon(it.icon, 54)}<span>${it.text}</span></div>`).join('')}
+    </div>
+    <div class="abs sh" data-at="${shareAt}" data-fx="pop" style="left:1330px;top:420px;text-align:center">
+      <div style="width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(45,212,191,.3),transparent 70%);display:grid;place-items:center">${icon('loudspeaker', 200)}</div>
+      <div class="pill" style="margin-top:10px;background:linear-gradient(90deg,var(--teal),var(--violet));color:#fff;font-size:32px;padding:16px 36px">SHARE THIS VIDEO</div>
+    </div></div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+B.disclaimer = sc => {
+  const r = el(`<div class="abs" style="inset:0;display:grid;place-items:center">
+    <div class="card" data-at="0.2" style="width:1300px;padding:60px 70px;text-align:center">
+      ${icon('balance-scale', 110)}
+      <div class="h2" style="margin-top:20px">Disclaimer</div>
+      <div style="font-size:32px;color:var(--mut);line-height:1.55;margin-top:20px">${sc.text}</div>
+    </div></div>`);
+  return { el: r, update: lt => reveal(r, lt) };
+};
+
+// ---- captions -------------------------------------------------------------
+// split long sentences into readable chunks, timed by character share
+function chunks(s) {
+  const parts = s.text.split(/(?<=[,—–।?!:;])\s+|(?<=\.)\s+/).filter(Boolean);
+  const out = []; let cur = '';
+  for (const p of parts) { if ((cur + ' ' + p).trim().length > 68 && cur) { out.push(cur.trim()); cur = p; } else cur = (cur + ' ' + p).trim(); }
+  if (cur) out.push(cur);
+  const total = out.reduce((a, c) => a + c.length, 0); let t0 = s.start;
+  return out.map(c => { const d = (s.end - s.start) * c.length / total; const r = {text: c.replace(/\s*[—–]$/, ''), start: t0, end: t0 + d}; t0 += d; return r; });
+}
+
+// ---- background -----------------------------------------------------------
+const BLOBS = [['#2dd4bf', 520], ['#8b5cf6', 600], ['#38bdf8', 420]];
+function initBg() {
+  const fx = $('#fx');
+  BLOBS.forEach(([c, s]) => fx.appendChild(el(`<div class="blob" style="width:${s}px;height:${s}px;background:${c}"></div>`)));
+  for (let i = 0; i < 40; i++) fx.appendChild(el(`<div class="dot"></div>`));
+}
+function drawBg(t) {
+  const fx = $('#fx');
+  fx.querySelectorAll('.blob').forEach((b, i) => {
+    b.style.left = (960 + Math.cos(t * 0.07 + i * 2.1) * 700 - 300) + 'px';
+    b.style.top = (540 + Math.sin(t * 0.05 + i * 1.3) * 380 - 300) + 'px';
+  });
+  fx.querySelectorAll('.dot').forEach((d, i) => {
+    const sx = (i * 397) % 1920, sp = 8 + (i % 7) * 4;
+    d.style.left = sx + Math.sin(t * 0.3 + i) * 30 + 'px';
+    d.style.top = (1100 - ((t * sp + i * 137) % 1160)) + 'px';
+    d.style.opacity = 0.08 + 0.18 * ((i * 31) % 10) / 10;
+  });
+  $('#grid').style.backgroundPosition = `${t * 6}px ${t * 4}px`;
+}
+
+// ---- main -----------------------------------------------------------------
+let curId = null, curObj = null;
+window.setup = (timeline, icons) => {
+  TL = timeline; ICONS = icons;
+  document.body.className = TL.lang;
+  $('#lang').textContent = TL.lang === 'hi' ? 'HINGLISH' : 'TELUGU';
+  $('#hud .logo').innerHTML = icon('credit-card', 30);
+  TL.scenes.forEach(s => { s.caps = s.sentences.flatMap(chunks); });
+  let ch = '';
+  TL.scenes.forEach(s => { if (s.type === 'chapter') ch = s.title; s.chapterName = ch; });
+  initBg();
+  return document.fonts.ready.then(() => TL.total);
+};
+
+window.render = t => {
+  drawBg(t);
+  const sc = TL.scenes.find(s => t >= s.start && t < s.start + s.dur) || TL.scenes[TL.scenes.length - 1];
+  const lt = t - sc.start;
+  if (sc.id !== curId) {
+    const root = $('#scene'); root.innerHTML = '';
+    curObj = B[sc.type](sc); root.appendChild(curObj.el); curId = sc.id;
+  }
+  curObj.update(lt);
+  const fin = E(lt, 0, 0.45), fout = sc.type === 'chapter' ? 1 : 1 - E(lt, sc.dur - 0.35, 0.35);
+  const sEl = $('#scene');
+  sEl.style.opacity = Math.min(fin, fout);
+  sEl.style.transform = `scale(${0.97 + 0.03 * fin})`;
+  $('#hud .ch').textContent = sc.chapterName || 'Introduction';
+  $('#hud').style.opacity = sc.type === 'title' ? E(lt, 3, 0.6) : 1;
+  const c = sc.caps.find(c => lt >= c.start - 0.05 && lt < c.end + 0.3);
+  const cap = $('#cap');
+  if (c) { if (cap.dataset.k !== c.text) { cap.innerHTML = `<span>${c.text}</span>`; cap.dataset.k = c.text; } cap.style.opacity = 1; }
+  else { cap.style.opacity = 0; }
+  $('#bar').style.width = (t / TL.total * 1920) + 'px';
+};
+</script>
+</body>
+</html>

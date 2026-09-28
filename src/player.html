@@ -539,13 +539,43 @@ B.outro = sc => {
   return { el: r, update: lt => reveal(r, lt) };
 };
 
+const helpStrip = (text, at) => `<div class="abs" data-at="${at}" data-fx="pop" style="left:50%;margin-left:-620px;width:1240px;top:790px;padding:20px 34px;border-radius:24px;display:flex;align-items:center;gap:22px;background:linear-gradient(90deg,rgba(45,212,191,.2),rgba(139,92,246,.2));border:2px solid rgba(45,212,191,.55)">
+  ${icon('telephone', 58)}<div style="font-size:33px;font-weight:600">${text}</div></div>`;
+
+B.why = sc => {
+  const t = cueTimes(sc, sc.chain.length);
+  const hopeAt = sentStart(sc, sc.hopeCue), helpAt = sentStart(sc, sc.helpCue);
+  const cols = ['#f59e0b', '#fb923c', '#f43f5e', '#e11d48', '#9f1239'];
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">${sc.heading}</div>
+    <div class="abs chain" style="left:150px;top:290px;width:1620px;display:flex;align-items:center;justify-content:space-between">
+      ${sc.chain.map((c, i) => `<div data-at="${t[i]}" data-fx="pop" style="width:250px;text-align:center">
+          <div style="width:170px;height:170px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:${cols[i]}22;border:3px solid ${cols[i]}">${icon(c.icon, 100)}</div>
+          <div style="font-size:28px;font-weight:600;margin-top:16px">${c.text}</div></div>
+        ${i < sc.chain.length - 1 ? `<div data-at="${t[i] + 0.3}" style="font-size:54px;color:${cols[i]};font-weight:800;margin-top:-50px">→</div>` : ''}`).join('')}
+    </div>
+    <div class="abs hope" style="left:50%;margin-left:-620px;width:1240px;top:600px;padding:26px 36px;border-radius:24px;display:flex;align-items:center;gap:24px;background:rgba(34,197,94,.12);border:2px solid rgba(34,197,94,.6)">
+      ${icon('seedling', 70)}<div style="font-size:36px;font-weight:700">${sc.hope}</div></div>
+    ${helpStrip(sc.help, helpAt)}
+  </div>`);
+  return { el: r, update(lt) {
+    reveal(r, lt);
+    const h = $('.hope', r), k = E(lt, hopeAt, 0.6);
+    h.style.opacity = k; h.style.transform = `translateY(${(1 - k) * 40}px)`;
+    // the chain dims once the message turns to hope
+    $('.chain', r).style.opacity = 1 - 0.55 * E(lt, hopeAt, 0.8);
+  }};
+};
+
 B.disclaimer = sc => {
-  const r = el(`<div class="abs" style="inset:0;display:grid;place-items:center">
-    <div class="card" data-at="0.2" style="width:1300px;padding:60px 70px;text-align:center">
-      ${icon('balance-scale', 110)}
-      <div class="h2" style="margin-top:20px">Disclaimer</div>
-      <div style="font-size:32px;color:var(--mut);line-height:1.55;margin-top:20px">${sc.text}</div>
-    </div></div>`);
+  const t = cueTimes(sc, sc.items.length), helpAt = sentStart(sc, sc.helpCue);
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs row" data-at="0.2" style="left:150px;top:140px">${icon('balance-scale', 80)}<div class="h1">${sc.heading}</div></div>
+    <div class="abs" style="left:150px;top:260px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:16px 30px">
+      ${sc.items.map((it, i) => `<div class="item" data-at="${t[i]}" style="font-size:27px;padding:16px 24px;align-items:flex-start"><div class="tick" style="width:38px;height:38px;font-size:22px;background:rgba(245,158,11,.2);color:var(--amber)">!</div><span>${it}</span></div>`).join('')}
+    </div>
+    ${helpStrip(sc.help, helpAt)}
+  </div>`);
   return { el: r, update: lt => reveal(r, lt) };
 };
 
@@ -605,7 +635,7 @@ window.setup = (timeline, icons) => {
   $('#hud .logo').innerHTML = icon('credit-card', 30);
   TL.scenes.forEach(s => { s.caps = s.sentences.flatMap(chunks); });
   let ch = '';
-  TL.scenes.forEach(s => { if (s.type === 'chapter') ch = s.title; s.chapterName = ch; });
+  TL.scenes.forEach(s => { if (s.type === 'chapter') ch = s.title; s.chapterName = s.type === 'disclaimer' ? 'Disclaimer' : ch; });
   initBg();
   return document.fonts.ready.then(() => TL.total);
 };

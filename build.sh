@@ -9,6 +9,7 @@ FFMPEG=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe()
 
 python3 src/tts.py "$LANG_CODE"
 python3 src/audio.py "$LANG_CODE"
+python3 src/description.py "$LANG_CODE"
 node src/render.js "$LANG_CODE" video "$WORKERS"
 
 mkdir -p output

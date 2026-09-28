@@ -13,17 +13,21 @@ Credit card bill కట్టలేకపోతే actually ఏం జరుగ�
 
 CHAPTERS
 0:00 Disclaimer
-0:24 Introduction & why this video
-1:40 1. The Interest Trap
-3:08 2. Day-by-Day Timeline
-5:29 3. What Banks Can & Can't Do
-6:28 4. How Recovery Agents Pressure You
-8:09 5. What RBI Actually Says
-10:17 6. What To Say
-10:54 7. Your Action Plan
-12:02 8. Settlement — The Right Way
-13:00 9. Cautions
-13:57 Disclaimer & where to get help
+0:52 Introduction & why this video
+2:17 1. Secured vs Unsecured Loans
+3:17 2. The Interest Trap
+4:49 3. Day-by-Day Timeline
+7:16 4. Principal vs What the Bank Shows
+8:35 5. Settlement: How Much & When
+11:28 6. Your Property & Family
+13:02 7. What Banks Can & Can't Do
+14:07 8. How Recovery Agents Pressure You
+15:53 9. What RBI Actually Says
+18:41 10. Quick Answers
+20:36 11. Your Action Plan
+21:44 12. Settlement — The Right Way
+22:46 13. Cautions
+23:47 Disclaimer & where to get help
 
 🆘 అప్పు లేదా recovery ఒత్తిడితో చాలా బాధపడుతుంటే, మీరు ఒంటరి కాదు. Tele-MANAS (భారత ప్రభుత్వం) mental health helpline: 14416 లేదా 1-800-891-4416 — free, 24×7.
 

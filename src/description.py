@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 META = {
     "hi": {
-        "title": "Credit Card Bill नहीं भरा तो क्या होगा? Day-by-Day सच, RBI Rules, Recovery Agent Harassment से बचाव (Hinglish)",
+        "title": "Credit Card Bill नहीं भरा तो क्या होगा? Settlement कितना? Property ले लेंगे? RBI Rules पूरी जानकारी (Hinglish)",
         "intro": "Credit card bill न भर पाने पर actually क्या होता है — due date से लेकर NPA, write-off और court stage तक, "
                  "day by day। Bank क्या कर सकता है और क्या नहीं, recovery agents कैसे pressure डालते हैं, RBI के rules आपको "
                  "क्या protection देते हैं, complaint कहाँ करें, और settlement सही तरीक़े से कैसे करें।",
@@ -17,7 +17,7 @@ META = {
         "help": "अगर आप क़र्ज़ या recovery के दबाव से बहुत परेशान हैं, तो आप अकेले नहीं हैं। Tele-MANAS (भारत सरकार) mental health helpline: 14416 या 1-800-891-4416 — free, 24×7।",
     },
     "te": {
-        "title": "Credit Card Bill కట్టకపోతే ఏం జరుగుతుంది? Day-by-Day నిజం, RBI Rules, Recovery Agent Harassment నుంచి రక్షణ (Telugu)",
+        "title": "Credit Card Bill కట్టకపోతే ఏం జరుగుతుంది? Settlement ఎంత? Property తీసుకుంటారా? RBI Rules పూర్తి వివరాలు (Telugu)",
         "intro": "Credit card bill కట్టలేకపోతే actually ఏం జరుగుతుంది — due date నుంచి NPA, write-off, court stage వరకు, day by day. "
                  "Bank ఏం చేయగలదు, ఏం చేయలేదు, recovery agents ఎలా pressure పెడతారు, RBI rules మీకు ఇచ్చే protection, "
                  "complaint ఎక్కడ చేయాలి, settlement సరిగ్గా ఎలా చేయాలి.",
@@ -55,9 +55,11 @@ def ts(sec):
 
 def main(lang):
     tl = json.load(open(f"{ROOT}/build/{lang}/timeline.json", encoding="utf-8"))
-    chapters = [(0, "Disclaimer")]
+    chapters = [(0, "Opening")] if tl["scenes"][0]["id"] == "cold" else [(0, "Disclaimer")]
     for s in tl["scenes"]:
-        if s["id"] == "intro":
+        if s["id"] == "opendisc" and chapters[0][1] == "Opening":
+            chapters.append((s["start"], "Disclaimer"))
+        elif s["id"] == "intro":
             chapters.append((s["start"], "Introduction & why this video"))
         elif s["type"] == "chapter":
             chapters.append((s["start"], f"{s['num']}. {s['title']}"))

@@ -2,7 +2,7 @@
 
 ## Title
 
-Credit Card Bill కట్టకపోతే ఏం జరుగుతుంది? Day-by-Day నిజం, RBI Rules, Recovery Agent Harassment నుంచి రక్షణ (Telugu)
+Credit Card Bill కట్టకపోతే ఏం జరుగుతుంది? Settlement ఎంత? Property తీసుకుంటారా? RBI Rules పూర్తి వివరాలు (Telugu)
 
 ## Description (paste as-is)
 
@@ -12,7 +12,8 @@ Credit card bill కట్టలేకపోతే actually ఏం జరుగ�
 ఈ video card rotation, పెరిగే అప్పుల్లో ఇరుక్కుపోయి, నిజంగా కట్టలేని పరిస్థితిలో ఉన్నవాళ్ళ కోసం. Bill కట్టకండి అని మేము ఎవరికీ చెప్పడం లేదు — మీరు కట్టగలిగితే, పూర్తిగా, సమయానికి కట్టండి.
 
 CHAPTERS
-0:00 Disclaimer
+0:00 Opening
+0:28 Disclaimer
 0:52 Introduction & why this video
 2:17 1. Secured vs Unsecured Loans
 3:17 2. The Interest Trap

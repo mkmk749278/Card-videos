@@ -1,195 +1,303 @@
 {
- "_voice": "te-IN-MohanNeural",
- "_rate": "+6%",
+ "_engine": "svara",
+ "_lang": "Telugu",
+ "_styles": {"opendisc": "clear", "secured": "clear", "rates": "clear", "stack": "clear", "norule": "clear", "stages": "clear", "amounts": "clear", "property": "clear", "rbiagents": "clear", "rbicards": "clear", "ladder": "clear", "cancant": "clear", "disclaimer": "clear"},
+ "cold": [
+  {"q": "అన్నా... మూడు నెలల నుంచి నా credit card bill కట్టలేదు. రోజూ calls వస్తున్నాయి. రేపు police వస్తారు అంటున్నారు. నాకు చాలా భయంగా ఉంది.", "style": "fear"},
+  "ఆగండి, ముందు ఊపిరి తీసుకోండి. మీరు ఒక్కరే కాదు, చాలామంది ఇదే పరిస్థితిలో ఉన్నారు.",
+  "ఈ video లో, అసలు ఏం జరుగుతుంది, bank ఏం చేయగలదు, ఏం చేయలేదు, settlement ఎలా చేయాలి — అన్నీ మొదటి నుంచి చివరి వరకు, clear గా మాట్లాడుకుందాం."
+ ],
  "opendisc": [
-  "మొదలుపెట్టే ముందు, ఒక ముఖ్యమైన విషయం.",
-  "ఈ video కేవలం విద్య, అవగాహన కోసం — RBI rules, మీ హక్కులు బాగా అర్థం చేసుకోవడానికి.",
-  "Credit card bill కట్టకండి అని మేము ఎవరికీ చెప్పడం లేదు. మీరు కట్టగలిగితే, పూర్తిగా, సమయానికి కట్టండి — అదే ఎప్పుడూ తక్కువ ఖర్చు దారి.",
-  "ఈ video నిజంగా కట్టలేని పరిస్థితిలో ఉన్నవాళ్ళ కోసం."
+  "మొదలుపెట్టే ముందు, ఒక ముఖ్యమైన మాట.",
+  "ఈ video కేవలం అవగాహన కోసం — RBI rules, మీ హక్కులు అర్థం చేసుకోవడానికి.",
+  "Bill కట్టకండి అని మేము ఎవరికీ చెప్పడం లేదు. మీరు కట్టగలిగితే, పూర్తిగా, సమయానికి కట్టండి. అదే ఎప్పుడూ తక్కువ ఖర్చు దారి.",
+  "ఈ video, నిజంగా కట్టలేని పరిస్థితిలో ఉన్నవాళ్ళ కోసం."
  ],
  "intro": [
-  "మీ credit card bill కట్టలేకపోతే, తర్వాత actually ఏం జరుగుతుంది?",
-  "Bank ఏం చేయగలదు, recovery agents ఎలా pressure పెడతారు, RBI rules మీకు ఎలాంటి protection ఇస్తాయి?",
-  "ఈ video లో అన్నీ step by step, day by day గా చూద్దాం — భయం లేకుండా, కేవలం facts తో."
+  "Credit card bill కట్టలేకపోతే, తర్వాత actually ఏం జరుగుతుంది?",
+  "Bank ఏం చేయగలదు? Recovery agents ఎలా pressure పెడతారు? RBI rules మీకు ఏ protection ఇస్తాయి?",
+  "ఒక్కొక్కటిగా, భయం లేకుండా, facts తో చూద్దాం."
  ],
  "why": [
-  "ఈ video ఎందుకు చేస్తున్నాం?",
-  "చాలామంది ఒక card తో ఇంకో card కడుతూ rotation లో ఇరుక్కుపోతారు, అప్పు ప్రతి నెలా పెరుగుతూనే ఉంటుంది.",
-  "తర్వాత default, recovery agents pressure మొదలవుతుంది, మనిషి ఒంటరిగా, నిస్సహాయంగా ఫీల్ అవుతారు.",
-  "కొంతమంది ఈ ఒత్తిడిలో తమ ప్రాణం తీసుకునే నిర్ణయం వరకు వెళ్తున్నారు. ఇది జరగకూడదు.",
-  "గుర్తుపెట్టుకోండి — అప్పు డబ్బుకి సంబంధించిన సమస్య, దానికి పరిష్కారం ఉంటుంది. మీ ప్రాణం అమూల్యం.",
-  "మీరు చాలా ఒత్తిడిలో ఉంటే, ప్రభుత్వ Tele-MANAS helpline, ఒకటి నాలుగు నాలుగు ఒకటి ఆరు, కి free గా, ఇరవై నాలుగు గంటలూ మాట్లాడొచ్చు."
+  "అసలు ఈ video ఎందుకు చేస్తున్నాం అంటే...",
+  "చాలామంది ఒక card తో ఇంకో card కడుతూ, rotation లో ఇరుక్కుపోతారు. అప్పు ప్రతి నెలా పెరుగుతూనే ఉంటుంది.",
+  "తర్వాత default, recovery calls, బెదిరింపులు... మనిషి ఒంటరిగా, నిస్సహాయంగా ఫీల్ అవుతారు.",
+  {"t": "కొంతమంది ఈ ఒత్తిడిలో, తమ ప్రాణం తీసుకునే నిర్ణయం వరకు వెళ్తున్నారు. ఇది జరగకూడదు.", "style": "sad"},
+  "గుర్తుపెట్టుకోండి — అప్పు డబ్బుకి సంబంధించిన సమస్య. దానికి పరిష్కారం ఉంటుంది. మీ ప్రాణం అమూల్యం.",
+  "మీకు చాలా ఒత్తిడిగా ఉంటే, ప్రభుత్వ Tele-MANAS helpline, ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి, free గా, ఎప్పుడైనా call చేయొచ్చు."
  ],
  "agenda": [
-  "ఈ video లో ఏడు parts ఉన్నాయి.",
-  "ముందు interest trap, తర్వాత due date నుంచి ఒక సంవత్సరం వరకు పూర్తి timeline.",
-  "తర్వాత bank కి ఉన్న నిజమైన legal power, agents tactics, ఇంకా RBI rules.",
-  "చివరగా ఒక practical action plan, ఇంకా settlement ని సరిగ్గా ఎలా చేయాలో."
+  "ఈ రోజు మనం పది విషయాలు మాట్లాడుకుంటాం.",
+  "Secured, unsecured loans తేడా, interest trap, day by day timeline, bank చూపించే amount వెనక నిజం.",
+  "Settlement లో ఎంత తగ్గుతుంది, మీ property, family పరిస్థితి ఏంటి, bank హద్దులు, agents, RBI rules.",
+  "చివరగా మీ ప్రశ్నలకు quick answers, ఒక action plan. చివరి వరకు చూడండి."
+ ],
+ "sec_dlg": [
+  {"q": "అన్నా, credit card loan కూడా home loan లాంటిదేనా? కట్టకపోతే మా ఇల్లు తీసుకుంటారా?", "style": "fear"},
+  "మంచి ప్రశ్న. ఈ ఒక్క తేడా అర్థమైతే, సగం భయం పోతుంది. చూడండి."
+ ],
+ "secured": [
+  "Loans రెండు రకాలు. Secured, ఇంకా unsecured.",
+  "Secured loan అంటే, మీరు ఏదో ఒక asset హామీగా పెడతారు. Home loan కి ఇల్లు, gold loan కి బంగారం, car loan కి వాహనం.",
+  "అందుకే secured loan కట్టకపోతే, bank ఆ asset నే తీసుకోగలదు. పెద్ద loans లో అయితే court లేకుండానే, SARFAESI law కింద.",
+  "Credit card, personal loan, app loans — ఇవన్నీ unsecured. మీరు ఏ asset హామీగా పెట్టలేదు, కేవలం మీ మాట మీద ఇచ్చారు.",
+  "కాబట్టి unsecured అప్పుకి, bank నేరుగా మీ ఇల్లు గానీ, land గానీ, ఏదీ తీసుకోలేదు. ముందు court కి వెళ్ళాలి, case గెలవాలి. అది చాలా పెద్ద process."
  ],
  "rates": [
-  "ముందుగా ఒక విషయం అర్థం చేసుకోండి — credit card అన్నిటికంటే ఖరీదైన loan.",
-  "చాలా cards మీద interest నెలకి మూడున్నర నుంచి మూడుముప్పావు percent ఉంటుంది, అంటే సంవత్సరానికి నలభై రెండు నుంచి నలభై ఐదు percent.",
-  "ఈ interest మీద, ప్రతి fee మీద, పద్దెనిమిది percent GST extra గా పడుతుంది."
+  "ఇప్పుడు interest గురించి. Credit card అన్నిటికంటే ఖరీదైన loan.",
+  "చాలా cards మీద interest నెలకి మూడున్నర నుంచి మూడుముప్పావు percent. అంటే సంవత్సరానికి నలభై రెండు నుంచి నలభై ఐదు percent!",
+  "దానిమీద, ప్రతి fee మీద, పద్దెనిమిది percent GST extra."
  ],
  "mad": [
-  "మీ statement లో రెండు amounts ఉంటాయి — Total Amount Due, ఇంకా Minimum Amount Due.",
-  "మీరు minimum మాత్రమే కడితే late fee పడదు, account regular గా ఉంటుంది — కానీ మిగతా మొత్తం balance మీద interest నడుస్తూనే ఉంటుంది.",
-  "పూర్తి bill clear అయ్యేవరకు కొత్త purchases కి కూడా interest-free period ఉండదు — ప్రతి transaction date నుంచే interest మొదలవుతుంది."
+  "మీ statement లో రెండు amounts ఉంటాయి. Total Amount Due, Minimum Amount Due.",
+  "Minimum మాత్రమే కడితే, late fee పడదు, account regular గా ఉంటుంది. కానీ... మిగతా మొత్తం balance మీద interest నడుస్తూనే ఉంటుంది.",
+  "ఇంకో trap ఏంటంటే, పూర్తి bill కట్టేవరకు, కొత్తగా కొన్నవాటికి కూడా interest-free period ఉండదు. కొన్న రోజు నుంచే interest."
  ],
  "growth": [
-  "ఒక example చూడండి. ఒక లక్ష రూపాయల బాకీ ఉంది, ఒక సంవత్సరం పాటు ఏమీ కట్టలేదు అనుకుందాం.",
-  "Interest, late fee, GST కలిపి ఈ మొత్తం దాదాపు ఒక లక్ష ఎనభై ఎనిమిది వేల వరకు వెళ్ళొచ్చు.",
-  "అంటే కేవలం ఒక సంవత్సరంలో, కొత్తగా ఏమీ కొనకుండానే, అప్పు దాదాపు రెట్టింపు."
+  "ఒక example చూడండి. ఒక లక్ష రూపాయలు బాకీ. ఒక సంవత్సరం పాటు ఏమీ కట్టలేదు అనుకుందాం.",
+  "Interest, late fees, GST కలిపి... ఇది దాదాపు ఒక లక్షా ఎనభై వేలు అవుతుంది.",
+  "అంటే కొత్తగా ఒక్క రూపాయి ఖర్చు పెట్టకుండానే, అప్పు దాదాపు రెట్టింపు."
  ],
  "rotation": [
-  "చాలామంది ఒక card bill ని ఇంకో card తో కడతారు — దీన్నే card rotation అంటారు.",
-  "ప్రతి rotation కి ఒకటి నుంచి మూడు percent fee పోతుంది, అప్పు తగ్గదు, ఒక card నుంచి ఇంకో card కి shift అవుతుంది అంతే.",
-  "Card కట్టడానికి loan apps నుంచి డబ్బు తీసుకోవడం ఇంకా ప్రమాదం — అక్కడ interest ఎక్కువ, harassment కూడా ఎక్కువ."
+  "ఇక card rotation. ఒక card bill ని ఇంకో card తో కట్టడం.",
+  "ప్రతిసారీ ఒకటి నుంచి మూడు percent fee పోతుంది. అప్పు తగ్గదు, ఒక card నుంచి ఇంకో card కి మారుతుంది అంతే.",
+  "Card కట్టడానికి loan apps నుంచి డబ్బు తీసుకోవడం ఇంకా ప్రమాదం. అక్కడ interest ఎక్కువ, harassment ఇంకా ఎక్కువ."
  ],
  "t0": [
-  "Due date దాటిపోయింది — ఇప్పుడు ఏంటి?",
-  "RBI rule ప్రకారం, due date తర్వాత మూడు రోజుల్లో కట్టేస్తే, bank late fee వేయకూడదు, CIBIL కి past due అని report చేయకూడదు.",
-  "కానీ interest మాత్రం పడొచ్చు, reminder messages రావడం మొదలవుతాయి."
+  "సరే, ఇప్పుడు timeline. Due date దాటిపోయింది. తర్వాత ఏంటి?",
+  "RBI rule ప్రకారం, due date తర్వాత మూడు రోజుల్లో కట్టేస్తే, late fee వేయకూడదు, CIBIL కి past due అని report చేయకూడదు.",
+  "Interest మాత్రం పడొచ్చు. Reminder messages మొదలవుతాయి."
  ],
  "t1": [
-  "నాలుగో రోజు నుంచి late fee పడుతుంది — bill amount ని బట్టి వంద రూపాయల నుంచి పదమూడు వందలు లేదా అంతకంటే ఎక్కువ, plus GST.",
-  "ఇప్పుడు మొత్తం balance మీద interest, bank నుంచి reminder calls మొదలవుతాయి.",
-  "Bank ప్రతి నెలా credit bureaus కి data పంపిస్తుంది, కాబట్టి మీ report లో DPD, అంటే days past due, కనిపిస్తుంది, score పడిపోవడం మొదలవుతుంది."
+  "నాలుగో రోజు నుంచి late fee. Bill ని బట్టి వంద నుంచి పదమూడు వందల వరకు, plus GST.",
+  "మొత్తం balance మీద interest, bank నుంచి reminder calls.",
+  "Bank ప్రతి నెలా data పంపిస్తుంది కాబట్టి, మీ credit report లో DPD, అంటే days past due, కనిపిస్తుంది. Score పడిపోవడం మొదలవుతుంది."
  ],
  "t2": [
-  "ఒక నెల తర్వాత రెండో due date కూడా miss అవుతుంది.",
-  "ఇప్పుడు bank in-house collection team రోజుకి చాలాసార్లు call చేస్తుంది, చాలా cases లో card మీద కొత్త ఖర్చులు block చేస్తారు.",
-  "Report లో thirty plus DPD కనిపిస్తుంది, score వేగంగా పడిపోతుంది."
+  "నెల తర్వాత, రెండో due date కూడా miss.",
+  "ఇప్పుడు bank collection team రోజుకి చాలాసార్లు call చేస్తుంది. చాలా cases లో card block చేస్తారు.",
+  "Report లో thirty plus DPD. Score వేగంగా పడిపోతుంది."
  ],
  "t3": [
-  "అరవై రోజుల తర్వాత account SMA-2 category లోకి వెళ్తుంది — అంటే NPA అవ్వడానికి ముందు stage.",
-  "ఈ stage లో case ని తరచుగా బయట recovery agency కి ఇచ్చేస్తారు.",
-  "ఇప్పుడు final reminder letters, WhatsApp messages, కొన్నిసార్లు ఇంటికి visits కూడా మొదలవ్వొచ్చు."
+  "అరవై రోజుల తర్వాత account SMA-2 లోకి వెళ్తుంది. అంటే NPA కి ముందు stage.",
+  "ఇక్కడ case ని తరచుగా బయట recovery agency కి ఇస్తారు.",
+  "Final reminder letters, WhatsApp messages, కొన్నిసార్లు ఇంటికి visits కూడా మొదలవ్వొచ్చు."
  ],
  "t4": [
-  "తొంభై రోజులు పూర్తవగానే account NPA అవుతుంది — Non-Performing Asset.",
-  "Card శాశ్వతంగా block అవుతుంది, ఈ default మీ credit report లో ఏడు సంవత్సరాల వరకు కనిపించొచ్చు.",
-  "ఆసక్తికరమైన విషయం ఏంటంటే, ఈ stage నుంచే banks settlement offers ఇవ్వడం మొదలుపెడతాయి."
+  "తొంభై రోజులు దాటగానే, account NPA. Non-Performing Asset.",
+  "Card శాశ్వతంగా block. ఈ default మీ credit report లో ఏడు సంవత్సరాల వరకు కనిపించొచ్చు.",
+  "ఆసక్తికరమైన విషయం — సరిగ్గా ఇక్కడ నుంచే, settlement offers రావడం మొదలవుతాయి."
  ],
  "t5": [
-  "ఆరు నెలల దగ్గర చాలా banks account ని తమ books లో write-off చేస్తాయి.",
-  "కానీ గుర్తుపెట్టుకోండి — write-off అంటే మాఫీ కాదు. Bank recovery హక్కు వదులుకోదు.",
-  "ఈ stage లో legal notice, Lok Adalat లేదా arbitration notice రావొచ్చు, settlement లో discount కూడా ఎక్కువ దొరకొచ్చు."
+  "ఆరు నెలల దగ్గర, చాలా banks account ని తమ books లో write-off చేస్తాయి.",
+  "కానీ write-off అంటే మాఫీ కాదు! Bank recovery హక్కు వదులుకోదు.",
+  "ఈ stage లో legal notice, Lok Adalat, లేదా arbitration notice రావొచ్చు. Settlement లో discount కూడా ఎక్కువ దొరకొచ్చు."
  ],
  "t6": [
-  "Bank civil court లో recovery suit కూడా file చేయొచ్చు, కానీ చిన్న amounts కి ఇది తక్కువగా జరుగుతుంది.",
-  "Law ప్రకారం recovery కి మూడు సంవత్సరాల limitation ఉంటుంది, కానీ ఏ చిన్న part-payment అయినా, లేదా అప్పుని written గా ఒప్పుకున్నా, ఆ clock మళ్ళీ మొదలవుతుంది.",
-  "అన్నిటికంటే ముఖ్యం — court summons వస్తే ఎప్పుడూ ignore చేయకండి, లేకపోతే మీరు లేకుండానే తీర్పు రావొచ్చు."
+  "Bank civil court లో recovery suit కూడా వేయొచ్చు. చిన్న amounts కి ఇది అరుదు.",
+  "Recovery కి law లో మూడు సంవత్సరాల limitation ఉంది. కానీ చిన్న part-payment చేసినా, లేదా అప్పుని written గా ఒప్పుకున్నా, ఆ clock మళ్ళీ మొదలవుతుంది.",
+  "అన్నిటికంటే ముఖ్యం — court summons వస్తే ఎప్పుడూ ignore చేయకండి. లేకపోతే మీరు లేకుండానే తీర్పు వచ్చేస్తుంది."
+ ],
+ "shows_dlg": [
+  {"q": "అన్నా, నేను ఖర్చు పెట్టింది లక్ష రూపాయలే. కానీ statement లో లక్షా ఎనభై వేలు చూపిస్తున్నారు. ఇదెలా?", "style": "surprise"},
+  "ఇదే చాలామందికి అర్థం కాని విషయం. ఆ amount లోపల ఏముందో విడదీసి చూద్దాం."
+ ],
+ "stack": [
+  "Bank చూపించే total amount ని నాలుగు ముక్కలుగా చూడండి.",
+  "మొదటిది principal. అంటే మీరు నిజంగా ఖర్చు పెట్టింది, మీరు కట్టిన దాన్ని తీసేస్తే మిగిలింది. ఇక్కడ ఒక లక్ష.",
+  "మిగతాదంతా పైన పెరిగింది. Interest మీద interest, ప్రతి నెలా late fee, వాటన్నిటి మీద GST. ఇవే ఎనభై వేలు.",
+  "అందుకే settlement మాట్లాడేటప్పుడు, వాళ్ళ total నుంచి కాదు, మీ principal నుంచి మొదలుపెట్టాలి. మీ principal ఎంతో, మీ పాత statements తో లెక్కపెట్టుకోండి."
+ ],
+ "afternpa": [
+  "NPA తర్వాత కూడా, వాళ్ళ system లో interest, charges కలుపుతూనే ఉంటారు. Statement పెరుగుతూనే ఉంటుంది.",
+  "Write-off అయినా, అది bank books లో మాత్రమే. మీ మీద claim అలాగే ఉంటుంది.",
+  "Agents ఎప్పుడూ పెంచిన total నే చెప్తారు. Court కి వెళ్తే కూడా, bank సాధారణంగా interest కలిపే claim చేస్తుంది.",
+  "కానీ settlement అనేది negotiation. అక్కడ మీ బలం — మీ principal తెలుసుకోవడం."
+ ],
+ "set_dlg": [
+  {"q": "సరే అన్నా, settlement లో ఎంత తగ్గిస్తారు? ఎప్పుడు ఎక్కువ discount వస్తుంది?"},
+  "ఇది అందరూ అడిగే ప్రశ్న. నిజాయితీగా చెప్తాను."
+ ],
+ "norule": [
+  "ముందుగా ఒక నిజం — settlement కి RBI ఏ fixed percentage పెట్టలేదు.",
+  "ప్రతి bank కి, దాని board approve చేసిన సొంత policy ఉంటుంది. RBI రెండు వేల ఇరవై మూడు framework ఇదే చెప్తుంది.",
+  "Discount దేని మీద ఆధారపడుతుంది అంటే — default ఎంత పాతది, amount ఎంత, మీ ఇబ్బంది ఎంత నిజమైనది.",
+  "Agent ఎంత promise చేసినా, approve చేసే అధికారం వాళ్ళకి లేదు. Final గా ఏదైనా, bank letterhead మీదే రావాలి."
+ ],
+ "stages": [
+  "Market లో సాధారణంగా కనిపించే ranges చూద్దాం. ఇవి rules కాదు, అనుభవాలు మాత్రమే.",
+  "తొంభై రోజుల ముందు, ఎక్కువగా late fees, కొంత interest మాత్రమే తగ్గిస్తారు. లేదా EMI plan ఇస్తారు.",
+  "తొంభై రోజుల నుంచి ఒక సంవత్సరం లోపు, total మీద ఇరవై నుంచి ముప్పై ఐదు percent తగ్గొచ్చు.",
+  "ఒకటి నుంచి మూడు సంవత్సరాల మధ్య, నలభై నుంచి అరవై ఐదు percent వరకు తగ్గొచ్చు.",
+  "మూడు సంవత్సరాలు దాటితే, కొన్నిసార్లు డెబ్బై నుంచి తొంభై percent కూడా. కానీ అప్పటివరకు case risk, CIBIL దెబ్బ అలాగే ఉంటాయి."
+ ],
+ "amounts": [
+  "ఇప్పుడు amounts తో example. సుమారు ఒక సంవత్సరం తర్వాత పరిస్థితి.",
+  "మీరు పది వేలు ఖర్చు పెట్టారు అనుకోండి. Fees వల్ల bank దాదాపు ముప్పై వేలు చూపించొచ్చు. Settlement సాధారణంగా పదకొండు నుంచి పద్దెనిమిది వేల మధ్య. ఇంత చిన్న amount కి court case దాదాపు రాదు.",
+  "ఇరవై వేలు అయితే, దాదాపు నలభై ఏడు వేలు చూపిస్తారు. Settlement పదిహేడు నుంచి ఇరవై ఎనిమిది వేలు.",
+  "ఒక లక్ష అయితే, దాదాపు లక్షా ఎనభై వేలు. Settlement అరవై మూడు వేల నుంచి లక్షా ఎనిమిది వేల వరకు. ఇక్కడ legal notice, Lok Adalat రావొచ్చు.",
+  "రెండు లక్షలు అయితే, దాదాపు మూడు లక్షల నలభై వేలు. Settlement లక్షా ఇరవై వేల నుంచి రెండు లక్షల ఆరు వేలు. ఈ size లో arbitration లేదా case వచ్చే అవకాశం ఎక్కువ.",
+  "Simple గా గుర్తుపెట్టుకోండి — ఒక సంవత్సరం తర్వాత, మీ principal దగ్గర గానీ, దానికంటే తక్కువకి గానీ settle చేయడం target."
+ ],
+ "settletips": [
+  "Negotiation కి కొన్ని tips.",
+  "మొదటి offer ఎప్పుడూ ఒప్పుకోకండి. అది ఎప్పుడూ ఎక్కువే ఉంటుంది.",
+  "ఒకేసారి lump sum కడితే ఎక్కువ discount. రెండు నుంచి ఆరు installments లో కూడా ఒప్పుకుంటారు, కానీ discount తక్కువ.",
+  "Lok Adalat notice వస్తే, భయపడకండి. అది free, మీ ఇష్టంతోనే settlement, అక్కడ వచ్చే award final.",
+  "ఏ offer అయినా, bank official email నుంచి, written గా అడగండి."
+ ],
+ "prop_dlg": [
+  {"q": "అన్నా, నా పేరు మీద కొంచెం land ఉంది. మా అమ్మానాన్నల ఇల్లు కూడా ఉంది. వాటిని తీసుకుంటారా?", "style": "fear"},
+  "ఇది చాలామందిని నిద్రపోనివ్వని ప్రశ్న. ఒక్కొక్కటిగా చెప్తాను."
+ ],
+ "property": [
+  "Card అప్పు unsecured కాబట్టి, ఏది ఏమవుతుందో చూడండి.",
+  "మీ భార్య, అమ్మానాన్నలు, అన్నదమ్ముల property — దాన్ని ఎవరూ ముట్టుకోలేరు. వాళ్ళు co-borrower గా గానీ, guarantor గా గానీ sign చేసి ఉంటే తప్ప.",
+  "Joint property అయితే, మీ వాటా మాత్రమే. అది కూడా court decree వచ్చిన తర్వాతే.",
+  "మీ పేరు మీద ఉన్న land, property — bank court కి వెళ్ళి, case గెలిచి, decree తెచ్చుకుని, execution వేస్తేనే. మీరు ఉంటున్న ఒక్క ఇల్లు కి, law లో సాధారణంగా రక్షణ ఉంటుంది.",
+  "Salary అయితే, court order తర్వాత, కొంత భాగం మాత్రమే. మిగతాదానికి law రక్షణ ఇస్తుంది.",
+  "Bank accounts — వేరే banks లో అయితే court order కావాలి. అదే bank లో అయితే మాత్రం, set-off చేసే అవకాశం ఉంది."
+ ],
+ "heirs": [
+  "ఇంకా family గురించి కొన్ని doubts.",
+  "Cardholder చనిపోతే, వారసులు కేవలం వారసత్వంగా వచ్చిన ఆస్తి వరకు మాత్రమే బాధ్యులు. సొంత డబ్బు నుంచి కట్టాల్సిన అవసరం లేదు.",
+  "Add-on card అయితే, బాధ్యత primary cardholder ది.",
+  "ఒక్క పెద్ద హెచ్చరిక — card కట్టడానికి land గానీ, బంగారం గానీ ఎప్పుడూ తాకట్టు పెట్టకండి. అలా చేస్తే unsecured అప్పు, secured అయిపోతుంది."
  ],
  "cancant": [
-  "ఇప్పుడు clear గా చూద్దాం — bank ఏం చేయగలదు, ఏం చేయలేదు.",
-  "Bank interest, fees వేయొచ్చు, CIBIL కి report చేయొచ్చు, ఉదయం ఎనిమిది నుంచి సాయంత్రం ఏడు లోపు call చేయొచ్చు, authorised agent ని పంపొచ్చు, court కి కూడా వెళ్ళొచ్చు.",
-  "అదే bank లో మీకు savings account ఉంటే, agreement ప్రకారం అందులోంచి డబ్బు adjust చేయొచ్చు — దీన్ని set-off అంటారు.",
-  "కానీ bank మిమ్మల్ని arrest చేయించలేదు, court order లేకుండా property తీసుకోలేదు, బెదిరించలేదు, మీ బంధువులకి లేదా office వాళ్ళకి మీ అప్పు గురించి చెప్పలేదు."
+  "ఇప్పుడు clear గా — bank ఏం చేయగలదు, ఏం చేయలేదు.",
+  "Bank interest, fees వేయొచ్చు, CIBIL కి report చేయొచ్చు, ఉదయం ఎనిమిది నుంచి సాయంత్రం ఏడు లోపు call చేయొచ్చు, authorised agent ని పంపొచ్చు, court కి వెళ్ళొచ్చు.",
+  "అదే bank లో మీ savings account ఉంటే, అందులోంచి adjust చేయొచ్చు. దీన్ని set-off అంటారు.",
+  "కానీ bank మిమ్మల్ని arrest చేయించలేదు. Court order లేకుండా property తీసుకోలేదు. బెదిరించలేదు. మీ బంధువులకి, office వాళ్ళకి మీ అప్పు గురించి చెప్పలేదు."
  ],
  "civil": [
-  "అతి పెద్ద నిజం: credit card bill కట్టలేకపోవడం crime కాదు — ఇది civil విషయం.",
-  "Criminal case అయ్యేది కేవలం మీరు ఇచ్చిన cheque bounce అయితే, bank account నుంచి auto-debit అంటే NACH bounce అయితే, లేదా మొదటి నుంచే fraud చేసి ఉంటే.",
-  "కాబట్టి card కోసం మీరు ఏదైనా cheque లేదా auto-debit ఇచ్చి ఉంటే, దానిమీద ప్రత్యేకంగా జాగ్రత్తగా ఉండండి."
+  "అతి పెద్ద నిజం — credit card bill కట్టలేకపోవడం crime కాదు. ఇది civil విషయం.",
+  "Criminal case అయ్యేది మూడు సందర్భాల్లోనే. మీరు ఇచ్చిన cheque bounce అయితే, bank account నుంచి NACH auto-debit bounce అయితే, లేదా మొదటి నుంచే fraud చేసి ఉంటే.",
+  "కాబట్టి card కోసం cheque గానీ, auto-debit గానీ ఇచ్చి ఉంటే, దానిమీద జాగ్రత్త."
  ],
  "tactics": [
-  "ఇప్పుడు recovery agents గురించి — ఎందుకంటే అసలు భయం ఇక్కడే మొదలవుతుంది.",
-  "వేరు వేరు numbers నుంచి ఆగకుండా calls, మీ family, friends, office కి calls, WhatsApp లో fake legal notices, 'రేపు police వస్తారు' లాంటి బెదిరింపులు.",
-  "కొంతమంది తమని తాము advocate, police లేదా court officer అని చెప్పుకుంటారు, కొన్నిసార్లు group గా ఇంటికి లేదా office కి వచ్చి అవమానించడానికి ప్రయత్నిస్తారు.",
-  "గుర్తుపెట్టుకోండి — వీటిలో చాలావరకు RBI rules కి వ్యతిరేకం."
+  "ఇక recovery agents. అసలు భయం ఇక్కడే మొదలవుతుంది, కదా?",
+  "వేరు వేరు numbers నుంచి ఆగకుండా calls. Family కి, friends కి, office కి calls. WhatsApp లో fake legal notices. రేపు police వస్తారు అని బెదిరింపులు.",
+  "కొంతమంది advocate అని, police అని, court officer అని చెప్పుకుంటారు. Group గా ఇంటికి వచ్చి అవమానించడానికి ప్రయత్నిస్తారు.",
+  "గుర్తుపెట్టుకోండి — వీటిలో చాలావరకు RBI rules కి పూర్తిగా వ్యతిరేకం."
  ],
  "chat": [
-  "ఇలాంటి messages మీరు కూడా చూసే ఉంటారు.",
-  "ఇరవై నాలుగు గంటల్లో legal action, arrest warrant, రేపు ఇంటికి, office కి team వస్తుంది, contacts అందరికీ photo పంపిస్తాం.",
-  "ఇవన్నీ pressure tactics — మీరు భయపడి ఈరోజే ఎంతో కొంత కట్టాలి, అదే వాళ్ళ ఉద్దేశం."
+  "ఇలాంటి messages మీకూ వచ్చి ఉంటాయి.",
+  "ఇరవై నాలుగు గంటల్లో legal action. Arrest warrant వచ్చింది. రేపు ఇంటికి, office కి team వస్తుంది. Contacts అందరికీ photo పంపిస్తాం.",
+  "ఇవన్నీ pressure tactics. మీరు భయపడి ఈరోజే ఎంతో కొంత కట్టాలి, అదే వాళ్ళ ఉద్దేశం."
  ],
  "myths": [
-  "Myth ఒకటి: police మిమ్మల్ని arrest చేస్తారు. నిజం: కేవలం bill కట్టకపోవడం వల్ల police case అవ్వదు.",
-  "Myth రెండు: మీ పేరు మీద arrest warrant వచ్చింది. నిజం: warrant ఇచ్చేది court మాత్రమే, దానికి ముందు proper summons వస్తుంది — WhatsApp లో కాదు.",
-  "Myth మూడు: ఈరోజే మీ ఇల్లు seize చేస్తాం. నిజం: agent కి అలాంటి power ఏమీ లేదు, అది court decree తో మాత్రమే సాధ్యం.",
-  "Myth నాలుగు: మీ salary ఆపేస్తాం. నిజం: అది court order తో మాత్రమే, agent మీ employer ముందు మిమ్మల్ని అవమానించకూడదు.",
-  "Myth ఐదు: ఇప్పుడు కొంచెం కట్టండి, case close అవుతుంది. నిజం: చిన్న payment ఏమీ close చేయదు — డబ్బు bank official account కి మాత్రమే, written plan తో మాత్రమే కట్టండి."
+  "Myth ఒకటి: police arrest చేస్తారు. నిజం: కేవలం bill కట్టకపోతే police case అవ్వదు.",
+  "Myth రెండు: arrest warrant వచ్చింది. నిజం: warrant ఇచ్చేది court మాత్రమే. దానికి ముందు proper summons వస్తుంది, WhatsApp లో కాదు.",
+  "Myth మూడు: ఈరోజే ఇల్లు seize చేస్తాం. నిజం: agent కి ఆ power ఏమీ లేదు. Court decree తో మాత్రమే.",
+  "Myth నాలుగు: salary ఆపేస్తాం. నిజం: court order తో మాత్రమే, అది కూడా కొంత భాగం. Agent మీ office కి వెళ్ళి అవమానించకూడదు.",
+  "Myth ఐదు: ఇప్పుడు కొంచెం కట్టండి, case close. నిజం: చిన్న payment ఏమీ close చేయదు. డబ్బు bank official account కే, written plan తోనే."
  ],
  "rbiagents": [
   "ఇప్పుడు RBI actually ఏం చెప్తుందో చూద్దాం.",
-  "పన్నెండు August రెండు వేల ఇరవై రెండు RBI circular ప్రకారం, recovery కోసం ఉదయం ఎనిమిది గంటల ముందు, సాయంత్రం ఏడు గంటల తర్వాత call చేయకూడదు.",
-  "ఏ రకమైన బెదిరింపు, తిట్లు, అందరి ముందు అవమానం, మీ family, friends, referees privacy లోకి చొరబడటం — అన్నీ నిషేధం.",
-  "Anonymous లేదా బెదిరించే calls, social media లో తప్పుడు messages, అబద్ధాలు చెప్పడం కూడా నిషేధం.",
+  "పన్నెండు August రెండు వేల ఇరవై రెండు RBI circular ప్రకారం, recovery కోసం ఉదయం ఎనిమిది ముందు, సాయంత్రం ఏడు తర్వాత call చేయకూడదు.",
+  "బెదిరింపులు, తిట్లు, అందరి ముందు అవమానం, మీ family, friends privacy లోకి చొరబడటం — అన్నీ నిషేధం.",
+  "Anonymous calls, social media లో తప్పుడు messages, అబద్ధాలు చెప్పడం కూడా నిషేధం.",
   "ఇంకా ముఖ్యం — agent చేసే ప్రతి తప్పుకి బాధ్యత bank దే."
  ],
  "rbicards": [
-  "Credit cards కోసం RBI కి ప్రత్యేక Master Direction ఉంది — రెండు వేల ఇరవై రెండు ది.",
-  "దీని ప్రకారం due date తర్వాత మూడు రోజుల వరకు late fee వేయకూడదు, past due అని report చేయకూడదు.",
-  "కట్టని fees, charges మీద interest వేయకూడదు, మీ explicit consent లేకుండా over-limit charges వేయకూడదు.",
-  "Minimum amount due అప్పు ఆగకుండా పెరిగిపోయేలా ఉండకూడదు.",
-  "Settlement తర్వాత, bank ముప్పై రోజుల్లో CIBIL లో status update చేయాలి."
+  "Credit cards కోసం RBI కి ప్రత్యేక Master Direction ఉంది. రెండు వేల ఇరవై రెండు ది.",
+  "Due date తర్వాత మూడు రోజుల వరకు, late fee వేయకూడదు, past due report చేయకూడదు.",
+  "కట్టని fees, charges మీద interest వేయకూడదు. మీ consent లేకుండా over-limit charges వేయకూడదు.",
+  "Minimum amount due, అప్పు ఆగకుండా పెరిగేలా ఉండకూడదు.",
+  "Settlement తర్వాత, bank ముప్పై రోజుల్లో CIBIL update చేయాలి."
  ],
  "ladder": [
-  "Harassment జరిగితే, complaint చేయాల్సిన సరైన దారి ఇది.",
-  "మొదటిది — bank customer care కి written complaint ఇవ్వండి, complaint number తీసుకోండి.",
-  "రెండోది — సమాధానం రాకపోతే, bank Grievance లేదా Principal Nodal Officer కి email చేయండి.",
-  "మూడోది — ముప్పై రోజుల్లో reply రాకపోతే, లేదా reply సరిగ్గా లేకపోతే, RBI Ombudsman లో cms dot rbi dot org dot in లో free గా complaint చేయండి. Helpline — ఒకటి నాలుగు నాలుగు నాలుగు ఎనిమిది.",
-  "బెదిరింపులు, తిట్లు, morph చేసిన photos పంపిస్తే, నేరుగా police కి లేదా cybercrime dot gov dot in లో complaint చేయండి."
+  "Harassment జరిగితే, complaint చేయాల్సిన దారి ఇది.",
+  "ఒకటి — bank customer care కి written complaint, complaint number తీసుకోండి.",
+  "రెండు — reply రాకపోతే, bank Grievance లేదా Principal Nodal Officer కి email.",
+  "మూడు — ముప్పై రోజుల్లో reply రాకపోయినా, సరిగ్గా లేకపోయినా, RBI Ombudsman లో cms dot rbi dot org dot in లో free complaint. Helpline ఒకటి నాలుగు నాలుగు నాలుగు ఎనిమిది.",
+  "బెదిరింపులు, తిట్లు, morph చేసిన photos వస్తే, నేరుగా police కి, లేదా cybercrime dot gov dot in లో complaint."
  ],
  "evidence": [
-  "ఏ complaint కైనా అసలైన బలం — సాక్ష్యం.",
-  "ప్రతి message screenshot తీసుకోండి, ప్రతి call date, time, number note చేయండి, వీలైతే calls record చేయండి.",
-  "ఇంటికి వచ్చిన agent ని ID card, bank authorisation letter చూపించమని అడగండి.",
-  "Bank తో ప్రతి విషయం email లోనే మాట్లాడండి, అన్నీ written గా ఉండేలా."
+  "ఏ complaint కైనా అసలు బలం — సాక్ష్యం.",
+  "ప్రతి message screenshot, ప్రతి call date, time, number note చేయండి. వీలైతే calls record చేయండి.",
+  "ఇంటికి వచ్చిన agent ని ID card, bank authorisation letter అడగండి.",
+  "Bank తో మాటలన్నీ email లోనే. అన్నీ written గా ఉండాలి."
  ],
  "scripts": [
   "ఇప్పుడు మీరు వాడుకోగల కొన్ని ready-made lines.",
-  "Agent call చేస్తే: దయచేసి అన్ని విషయాలు నా registered email కి written గా పంపించండి, నేను అక్కడే reply ఇస్తాను.",
-  "బంధువులకి call చేస్తే, వాళ్ళు ఇలా చెప్పాలి: ఒకరి loan గురించి వేరేవాళ్ళకి చెప్పడం RBI rules కి వ్యతిరేకం, ఈ call record అవుతోంది, మళ్ళీ call చేయకండి.",
-  "ఇంటి గుమ్మం దగ్గర: మీ ID, bank authorisation letter చూపించండి, నేను bank తో written గా మాట్లాడతాను, ఇప్పుడు మీరు వెళ్ళొచ్చు.",
-  "ప్రశాంతంగా ఉండండి, వాదించకండి, ఎప్పుడూ గొడవకి దిగకండి."
+  "Agent call చేస్తే: దయచేసి అన్ని విషయాలు నా registered email కి written గా పంపండి. నేను అక్కడే reply ఇస్తాను.",
+  "బంధువులకి call చేస్తే, వాళ్ళు ఇలా చెప్పాలి: ఒకరి loan గురించి వేరేవాళ్ళకి చెప్పడం RBI rules కి వ్యతిరేకం. ఈ call record అవుతోంది. మళ్ళీ call చేయకండి.",
+  "ఇంటి దగ్గర: మీ ID, bank authorisation letter చూపించండి. నేను bank తో written గా మాట్లాడతాను. ఇప్పుడు మీరు వెళ్ళొచ్చు.",
+  "ప్రశాంతంగా ఉండండి. వాదించకండి. ఎప్పుడూ గొడవకి దిగకండి."
+ ],
+ "faq": [
+  "ఇప్పుడు, మీరు ఎక్కువగా అడిగే ప్రశ్నలు. Quick answers.",
+  {"q": "Jail కి వెళ్ళాల్సి వస్తుందా?", "style": "fear"},
+  "లేదు. కేవలం bill కట్టకపోతే jail లేదు. Cheque, NACH bounce, లేదా fraud మాత్రమే criminal.",
+  {"q": "నా bank accounts freeze చేస్తారా?"},
+  "వేరే banks లో అయితే, court order లేకుండా కుదరదు. అదే bank లో మాత్రం set-off అవకాశం ఉంది.",
+  {"q": "నా office కి call చేస్తారా?"},
+  "మీ అప్పు గురించి మీ employer కి గానీ, colleagues కి గానీ చెప్పకూడదు. చెప్తే, అది complaint చేయాల్సిన విషయం.",
+  {"q": "ఏడు సంవత్సరాల తర్వాత అప్పు పోతుందా?"},
+  "లేదు. Credit report లో history మసకబారుతుంది, కానీ bank claim, case risk అలా ఊరికే పోవు.",
+  {"q": "Settlement installments లో కట్టొచ్చా?"},
+  "చాలాసార్లు అవును. రెండు నుంచి ఆరు parts. కానీ ముందు letter తీసుకోండి.",
+  {"q": "నా home loan, ఇతర EMIs మీద effect ఉంటుందా?"},
+  "మీరు వాటిని కడుతూ ఉంటే, అవి normal గానే నడుస్తాయి. కొత్త loans మాత్రం కష్టం అవుతాయి.",
+  {"q": "విదేశాలకి వెళ్ళొచ్చా?"},
+  "కేవలం card default వల్ల ప్రయాణం ఆగదు. కానీ court summons ని మాత్రం ఎప్పుడూ ignore చేయకండి.",
+  {"q": "Agent నా bike, phone తీసుకెళ్ళొచ్చా?", "style": "fear"},
+  "లేదు. Agent కి ఏదీ తీసుకునే అధికారం లేదు.",
+  {"q": "Settlement తర్వాత మళ్ళీ అడుగుతారా?"},
+  "సరైన full and final letter, NOC ఉంటే, అడగలేరు.",
+  {"q": "పూర్తిగా కట్టాలా, settle చేయాలా?"},
+  "కట్టగలిగితే పూర్తిగా కట్టండి. Settled కంటే Closed status చాలా మంచిది.",
+  {"q": "మళ్ళీ card వస్తుందా?", "style": "happy"},
+  "వస్తుంది. కొంత కాలం clean record తర్వాత, చిన్నగా, ఉదాహరణకి secured card తో మొదలుపెట్టండి."
  ],
  "plan": [
-  "ఇప్పుడు అతి ముఖ్యమైన part — plan ఎలా వేసుకోవాలి.",
-  "ఒకటి, card వాడటం, rotation చేయడం వెంటనే ఆపండి.",
-  "రెండు, ప్రతి అప్పుకి list రాయండి — ఎంత బాకీ, minimum due, due date, interest rate.",
-  "మూడు, ముందు అవసరాలు కాపాడుకోండి — అద్దె, భోజనం, మందులు, auto-debit లేదా cheque ఉన్న EMIs.",
-  "నాలుగు, వీలైనంత త్వరగా bank కి email చేసి, EMI conversion లేదా restructuring option అడగండి.",
+  "ఇప్పుడు అతి ముఖ్యమైనది — plan.",
+  "ఒకటి, card వాడటం, rotation వెంటనే ఆపండి.",
+  "రెండు, ప్రతి అప్పుకి list రాయండి. ఎంత బాకీ, minimum due, due date, interest rate.",
+  "మూడు, ముందు అవసరాలు. అద్దె, భోజనం, మందులు, auto-debit లేదా cheque ఉన్న EMIs.",
+  "నాలుగు, వీలైనంత త్వరగా bank కి email చేసి, EMI conversion లేదా restructuring అడగండి.",
   "ఐదు, మీ ఇబ్బందిని నిజాయితీగా, written గా చెప్పండి.",
-  "ఆరు, settlement కోసం ఒక lump sum కూడబెట్టే plan వేసుకోండి.",
+  "ఆరు, settlement కోసం ఒక lump sum కూడబెట్టే plan.",
   "ఏడు — card కట్టడానికి loan apps నుంచి ఎప్పుడూ కొత్త loan తీసుకోకండి."
  ],
  "compare": [
-  "ఒక విషయం గుర్తుంచుకోండి — తొంభై రోజుల ముందు bank దగ్గర EMI conversion, restructuring లాంటి options ఉంటాయి, score కూడా తక్కువ దెబ్బతింటుంది.",
-  "NPA తర్వాత settlement లో తక్కువ డబ్బు కట్టొచ్చు, కానీ CIBIL లో Settled అని వస్తుంది, దానివల్ల చాలా సంవత్సరాలు కొత్త loans కష్టం అవుతాయి.",
-  "కాబట్టి మీ పరిస్థితిని బట్టి, ఆలోచించి దారి ఎంచుకోండి."
+  "తొంభై రోజుల ముందు, EMI conversion, restructuring లాంటి options ఉంటాయి. Score కూడా తక్కువ దెబ్బతింటుంది.",
+  "NPA తర్వాత settlement లో తక్కువ కట్టొచ్చు, కానీ CIBIL లో Settled అని వస్తుంది. చాలా సంవత్సరాలు కొత్త loans కష్టం.",
+  "మీ పరిస్థితిని బట్టి, ఆలోచించి ఎంచుకోండి."
  ],
  "settle": [
-  "ఇప్పుడు settlement — తప్పుగా చేస్తే డబ్బూ పోతుంది, అప్పూ మిగిలిపోతుంది.",
-  "Negotiation principal amount మీద చేయండి, ఎప్పుడూ bank తో written గా.",
-  "డబ్బు కట్టే ముందే bank letterhead మీద settlement letter తీసుకోండి, అందులో amount, account number, full and final settlement అని clear గా ఉండాలి.",
-  "Payment bank official account లేదా official link కి మాత్రమే — agent personal UPI కి గానీ, cash గా గానీ ఎప్పుడూ కాదు.",
-  "Payment తర్వాత No Dues Certificate తీసుకోండి, ముప్పై నలభై ఐదు రోజుల తర్వాత మీ CIBIL report తప్పకుండా check చేయండి."
+  "Settlement తప్పుగా చేస్తే, డబ్బూ పోతుంది, అప్పూ మిగిలిపోతుంది. జాగ్రత్తగా వినండి.",
+  "Negotiation principal మీద, bank తో written గా.",
+  "డబ్బు కట్టే ముందే, bank letterhead మీద settlement letter. అందులో amount, account number, full and final settlement అని clear గా ఉండాలి.",
+  "Payment bank official account కి, official link కి మాత్రమే. Agent personal UPI కి, cash గా — ఎప్పుడూ కాదు.",
+  "తర్వాత No Dues Certificate తీసుకోండి. ముప్పై నలభై ఐదు రోజుల తర్వాత, CIBIL report తప్పకుండా check చేయండి."
  ],
  "settled": [
-  "గుర్తుపెట్టుకోండి, Settled, Closed రెండూ ఒకటి కాదు.",
-  "Settled అంటే మీరు పూర్తిగా కట్టలేదు అని, lenders దీన్ని negative గా చూస్తారు.",
-  "తర్వాత డబ్బు ఉంటే, మిగతా మొత్తం కట్టి status ని Closed గా మార్పించుకోవచ్చు.",
-  "తర్వాత సమయానికి payments, తక్కువ usage తో score మెల్లగా మళ్ళీ పెరుగుతుంది."
+  "Settled, Closed రెండూ ఒకటి కాదు.",
+  "Settled అంటే పూర్తిగా కట్టలేదు అని. Lenders దీన్ని negative గా చూస్తారు.",
+  "తర్వాత డబ్బు ఉంటే, మిగతాది కట్టి, status ని Closed గా మార్పించుకోవచ్చు.",
+  "సమయానికి payments, తక్కువ usage తో, score మెల్లగా మళ్ళీ పెరుగుతుంది."
  ],
  "cautions": [
-  "ఇప్పుడు కొన్ని ముఖ్యమైన జాగ్రత్తలు.",
-  "Court లేదా Lok Adalat notice ఎప్పుడూ ignore చేయకండి — వెళ్ళండి, లేదా advocate ద్వారా reply ఇవ్వండి.",
-  "ఏ caller కీ OTP, card details, Aadhaar ఇవ్వకండి — recovery పేరుతో fraud లు కూడా చాలా జరుగుతాయి.",
+  "చివరగా కొన్ని జాగ్రత్తలు.",
+  "Court, Lok Adalat notice ఎప్పుడూ ignore చేయకండి. వెళ్ళండి, లేదా advocate ద్వారా reply ఇవ్వండి.",
+  "ఏ caller కీ OTP, card details, Aadhaar ఇవ్వకండి. Recovery పేరుతో fraud లు కూడా జరుగుతాయి.",
   "Settlement పేరుతో ముందే భారీ fees అడిగే companies తో జాగ్రత్త.",
   "చదవకుండా ఏ paper మీదా sign చేయకండి.",
-  "Card బాకీ ఉన్న bank లోనే salary లేదా savings ఉంచే ముందు, set-off risk అర్థం చేసుకోండి."
+  "Card బాకీ ఉన్న bank లోనే salary, savings ఉంచే ముందు, set-off risk అర్థం చేసుకోండి."
  ],
  "outro": [
-  "సారాంశం ఏంటంటే: credit card default crime కాదు, కానీ దాన్ని ignore చేయడం solution కూడా కాదు.",
-  "తొంభై రోజుల ముందే bank తో మాట్లాడండి, అన్నీ written గా ఉంచుకోండి.",
-  "Harassment జరిగితే భయపడకండి — RBI rules మీ వైపు ఉన్నాయి.",
-  "Settlement ఎప్పుడూ letter తీసుకునే, సరైన పద్ధతిలో చేయండి. ఈ video అవసరమైన వాళ్ళతో తప్పకుండా share చేయండి."
+  "సారాంశం: credit card default crime కాదు. కానీ దాన్ని ignore చేయడం solution కూడా కాదు.",
+  "తొంభై రోజుల ముందే bank తో మాట్లాడండి. అన్నీ written గా ఉంచుకోండి.",
+  "Harassment జరిగితే భయపడకండి. RBI rules మీ వైపు ఉన్నాయి.",
+  "Settlement ఎప్పుడూ letter తీసుకునే చేయండి. ఈ video అవసరమైన వాళ్ళకి తప్పకుండా share చేయండి."
  ],
  "disclaimer": [
-  "చివరగా, ఒక ముఖ్యమైన disclaimer.",
-  "ఈ video కేవలం విద్య, అవగాహన కోసం. కావాలని default చేయమని మేము ఎప్పుడూ చెప్పం. ఇది legal లేదా financial advice కాదు, మాకు RBI తో గానీ, ఏ bank లేదా recovery agency తో గానీ సంబంధం లేదు.",
-  "ఈ సమాచారం RBI public documents ఆధారంగా ఉంది, rules మారొచ్చు — కాబట్టి rbi dot org dot in లో verify చేయండి, మీ case కోసం qualified advocate లేదా financial counsellor సలహా తీసుకోండి.",
-  "ఇంకా గుర్తుపెట్టుకోండి — సమస్య ఎంత పెద్దదైనా, మీరు ఒంటరి కాదు. సహాయం అడగండి."
+  "చివరగా disclaimer.",
+  "ఈ video కేవలం అవగాహన కోసం. కావాలని default చేయమని మేము ఎప్పుడూ చెప్పం. ఇది legal, financial advice కాదు. మాకు RBI తో గానీ, ఏ bank, agency తో గానీ సంబంధం లేదు.",
+  "ఈ సమాచారం RBI public documents ఆధారంగా. Rules మారొచ్చు. rbi dot org dot in లో verify చేయండి. మీ case కోసం qualified advocate సలహా తీసుకోండి.",
+  "సమస్య ఎంత పెద్దదైనా, మీరు ఒంటరి కాదు. సహాయం అడగండి."
  ]
 }

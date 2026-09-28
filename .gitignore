@@ -3,3 +3,4 @@ build/
 *.log
 output/*.mp4
 output/samples/
+__pycache__/

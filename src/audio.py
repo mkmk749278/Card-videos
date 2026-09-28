@@ -101,7 +101,11 @@ def main(lang):
 
     for sc in tl["scenes"]:
         for s in sc["sentences"]:
-            add(voice, read_wav(f"{ROOT}/{s['wav']}"), sc["start"] + s["start"])
+            clip = read_wav(f"{ROOT}/{s['wav']}")
+            # level every clip to the same loudness so both voices sit evenly
+            rms = float(np.sqrt(np.mean(clip ** 2))) + 1e-9
+            clip = clip * min(0.1 / rms, 0.95 / (np.abs(clip).max() + 1e-9))
+            add(voice, clip, sc["start"] + s["start"])
         if sc["type"] == "chapter":
             add(sfx, whoosh(0.9, 1.3), sc["start"] - 0.2, 0.9)
             add(sfx, boom(), sc["start"] + 0.45, 0.55)

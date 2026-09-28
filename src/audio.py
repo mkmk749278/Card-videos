@@ -84,6 +84,8 @@ def thud():
 
 def add(buf, clip, at, gain=1.0):
     i = int(at * SR)
+    if i < 0:  # clip starts before t=0 (e.g. whoosh ahead of the first scene)
+        clip, i = clip[-i:], 0
     if i >= len(buf):
         return
     e = min(len(buf), i + len(clip))

@@ -16,7 +16,7 @@ import imageio_ffmpeg  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT = os.environ.get("PROJECT", "")
-CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+CONTENT = os.environ.get("CONTENT_DIR") or (f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content")
 BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 

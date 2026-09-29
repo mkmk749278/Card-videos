@@ -545,7 +545,7 @@ const bars = (col) => `<div class="eq" style="display:flex;gap:6px;height:40px;a
 function animBars(el, on, lt, seed) {
   el.querySelectorAll('.eq div').forEach((b, i) => { const h = on ? 10 + 30 * Math.abs(Math.sin(lt * (6 + i) + seed + i * 1.7)) : 6; b.style.height = h + 'px'; b.style.opacity = on ? 1 : .35; });
 }
-const LABELS = {te: ['మీ ప్రశ్న', 'సమాధానం'], hi: ['आपका सवाल', 'जवाब']};
+const LABELS = {te: ['మీ ప్రశ్న', 'సమాధానం'], hi: ['आपका सवाल', 'जवाब'], en: ['Your question', 'Answer']};
 
 B.dialogue = sc => {
   const L = LABELS[TL.lang] || ['Question', 'Answer'];
@@ -665,10 +665,10 @@ B.faq = sc => {
 B.addon = sc => {
   const r = el(`<div class="abs" style="inset:0">
     <div class="abs" style="left:150px;top:260px;width:1050px">
-      <div class="pill" data-at="0.2" style="background:rgba(139,92,246,.2);color:#c4b5fd">ADD-ON · PART ${sc.part}</div>
+      <div class="pill" data-at="0.2" style="background:rgba(139,92,246,.2);color:#c4b5fd">${sc.kicker || `ADD-ON · PART ${sc.part}`}</div>
       <div class="h1" data-at="0.45" style="font-size:84px;margin-top:30px;line-height:1.08">${sc.title}</div>
       <div data-at="0.9" style="margin-top:30px;font-size:32px;color:var(--mut);line-height:1.5">${sc.sub}</div>
-      <div data-at="1.3" style="margin-top:40px;font-size:24px;color:var(--teal)">From the series: Credit Card Bill Not Paid? — the complete guide</div>
+      ${sc.kicker ? "" : `<div data-at="1.3" style="margin-top:40px;font-size:24px;color:var(--teal)">From the series: Credit Card Bill Not Paid? — the complete guide</div>`}
     </div>
     <div class="abs ic" style="left:1250px;top:230px;width:520px;height:520px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(139,92,246,.3),transparent 70%)">${icon(sc.icon, 330)}</div>
   </div>`);
@@ -780,7 +780,7 @@ let curId = null, curObj = null;
 window.setup = (timeline, icons) => {
   TL = timeline; ICONS = icons;
   document.body.className = TL.lang;
-  $('#lang').textContent = TL.lang === 'hi' ? 'HINGLISH' : 'TELUGU';
+  $('#lang').textContent = ({hi: 'HINGLISH', te: 'TELUGU', en: 'ENGLISH'})[TL.lang] || '';
   $('#hud .logo').innerHTML = icon('credit-card', 30);
   TL.scenes.forEach(s => { s.caps = s.sentences.flatMap(chunks); });
   let ch = '';

@@ -1,0 +1,1950 @@
+[
+ {
+  "id": "cold",
+  "type": "dialogue",
+  "topic": "\"I haven't paid my card bill for 3 months…\"",
+  "icon": "worried-face"
+ },
+ {
+  "id": "opendisc",
+  "type": "bullets",
+  "heading": "Disclaimer — please read",
+  "icon": "balance-scale",
+  "tone": "amber",
+  "items": [
+   {
+    "icon": "books",
+    "text": "For education only — to understand RBI rules & your rights"
+   },
+   {
+    "icon": "no-entry",
+    "text": "We do NOT encourage anyone to skip credit card payments"
+   },
+   {
+    "icon": "check-mark-button",
+    "text": "Can pay? Pay in full, on time — always the cheapest option"
+   },
+   {
+    "icon": "folded-hands",
+    "text": "Made for people genuinely unable to pay"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "intro",
+  "type": "title",
+  "title": "Credit Card Bill Not Paid?",
+  "kicker": "The complete guide",
+  "sub": "What really happens — day by day · What RBI says · How to plan & protect yourself",
+  "icons": [
+   "credit-card",
+   "alarm-clock",
+   "classical-building",
+   "balance-scale"
+  ]
+ },
+ {
+  "id": "why",
+  "type": "why",
+  "heading": "Why this video?",
+  "chain": [
+   {
+    "icon": "counterclockwise-arrows-button",
+    "text": "Card rotation"
+   },
+   {
+    "icon": "chart-increasing",
+    "text": "Debt keeps growing"
+   },
+   {
+    "icon": "locked",
+    "text": "Default"
+   },
+   {
+    "icon": "telephone-receiver",
+    "text": "Agent pressure"
+   },
+   {
+    "icon": "pensive-face",
+    "text": "Stress & despair"
+   }
+  ],
+  "cue": [
+   1,
+   1,
+   2,
+   2,
+   3
+  ],
+  "hope": "Debt is a money problem — it has solutions. Your life is priceless.",
+  "hopeCue": 4,
+  "help": "Tele-MANAS mental health helpline: 14416 — free, 24×7",
+  "helpCue": 5
+ },
+ {
+  "id": "agenda",
+  "type": "agenda",
+  "heading": "In this video",
+  "items": [
+   {
+    "icon": "locked",
+    "text": "Secured vs unsecured loans"
+   },
+   {
+    "icon": "money-with-wings",
+    "text": "The interest trap"
+   },
+   {
+    "icon": "spiral-calendar",
+    "text": "Day-by-day timeline"
+   },
+   {
+    "icon": "receipt",
+    "text": "Principal vs what the bank shows"
+   },
+   {
+    "icon": "handshake",
+    "text": "Settlement: how much & when"
+   },
+   {
+    "icon": "house",
+    "text": "Your property & family"
+   },
+   {
+    "icon": "classical-building",
+    "text": "What banks can & can't do"
+   },
+   {
+    "icon": "shield",
+    "text": "Agents, RBI rules & complaints"
+   },
+   {
+    "icon": "thinking-face",
+    "text": "Quick answers to your questions"
+   },
+   {
+    "icon": "clipboard",
+    "text": "Action plan & safe settlement"
+   }
+  ]
+ },
+ {
+  "id": "ch1",
+  "type": "chapter",
+  "num": 1,
+  "title": "Secured vs Unsecured Loans",
+  "icon": "locked"
+ },
+ {
+  "id": "sec_dlg",
+  "type": "dialogue",
+  "topic": "\"Is a card loan like a home loan?\"",
+  "icon": "house"
+ },
+ {
+  "id": "secured",
+  "type": "secured",
+  "secured": {
+   "title": "SECURED loan",
+   "sub": "You pledge an asset",
+   "items": [
+    [
+     "house",
+     "Home loan",
+     "House"
+    ],
+    [
+     "ring",
+     "Gold loan",
+     "Gold"
+    ],
+    [
+     "automobile",
+     "Car / bike loan",
+     "Vehicle"
+    ]
+   ],
+   "verdict": "Stop paying → bank can take THAT asset"
+  },
+  "unsecured": {
+   "title": "UNSECURED loan",
+   "sub": "Nothing pledged — only your promise",
+   "items": [
+    [
+     "credit-card",
+     "Credit card",
+     "—"
+    ],
+    [
+     "money-bag",
+     "Personal loan",
+     "—"
+    ],
+    [
+     "mobile-phone",
+     "App loans",
+     "—"
+    ]
+   ],
+   "verdict": "Bank must go to COURT first — no direct seizure"
+  },
+  "cue": [
+   1,
+   2,
+   3
+  ],
+  "verdictCue": 4
+ },
+ {
+  "id": "ch2",
+  "type": "chapter",
+  "num": 2,
+  "title": "The Interest Trap",
+  "icon": "money-with-wings"
+ },
+ {
+  "id": "rates",
+  "type": "stat",
+  "heading": "The most expensive loan you can take",
+  "icon": "chart-increasing",
+  "big": [
+   {
+    "value": "3.5–3.75%",
+    "label": "interest per month",
+    "color": "amber"
+   },
+   {
+    "value": "42–45%",
+    "label": "interest per year",
+    "color": "red"
+   },
+   {
+    "value": "+18%",
+    "label": "GST on interest & every fee",
+    "color": "violet"
+   }
+  ],
+  "cue": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "mad",
+  "type": "mad",
+  "heading": "The Minimum Amount Due trap",
+  "tad": "₹50,000",
+  "mad": "₹2,500",
+  "points": [
+   "Pay only the minimum → no late fee, account stays regular",
+   "But interest keeps running on the full balance",
+   "No interest-free period on new purchases until fully paid",
+   "Interest is charged from the date of each transaction"
+  ],
+  "cue": [
+   0,
+   1,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "growth",
+  "type": "growth",
+  "heading": "₹1,00,000 unpaid for 12 months",
+  "note": "Illustrative: 3.6% p.m. interest + ₹1,300 late fee each month + 18% GST on interest & fees. Actual charges vary by bank.",
+  "bars": [
+   [
+    "Start",
+    100000
+   ],
+   [
+    "Month 3",
+    117400
+   ],
+   [
+    "Month 6",
+    137100
+   ],
+   [
+    "Month 9",
+    157800
+   ],
+   [
+    "Month 12",
+    180800
+   ]
+  ],
+  "mult": "~1.8×"
+ },
+ {
+  "id": "rotation",
+  "type": "bullets",
+  "heading": "Card rotation = a debt spiral",
+  "icon": "counterclockwise-arrows-button",
+  "tone": "red",
+  "items": [
+   {
+    "icon": "credit-card",
+    "text": "Paying one card's bill with another card"
+   },
+   {
+    "icon": "money-with-wings",
+    "text": "1–3% fee on every rotation (wallet / rent-pay / cash)"
+   },
+   {
+    "icon": "chart-increasing",
+    "text": "Debt only moves — it never shrinks"
+   },
+   {
+    "icon": "no-entry",
+    "text": "Loan apps to pay cards: higher interest + worse harassment"
+   }
+  ],
+  "cue": [
+   0,
+   1,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "ch3",
+  "type": "chapter",
+  "num": 3,
+  "title": "Day-by-Day Timeline",
+  "icon": "spiral-calendar"
+ },
+ {
+  "id": "t0",
+  "type": "timeline",
+  "stage": 0,
+  "days": "Day 0–3",
+  "title": "Due date missed — the 3-day window",
+  "icon": "alarm-clock",
+  "color": "green",
+  "items": [
+   "RBI: no late fee if paid within 3 days of the due date",
+   "RBI: cannot be reported as 'past due' to CIBIL in these 3 days",
+   "Interest may still apply",
+   "Reminder SMS & e-mails begin"
+  ]
+ },
+ {
+  "id": "t1",
+  "type": "timeline",
+  "stage": 1,
+  "days": "Day 4–30",
+  "title": "Late fee & interest kick in",
+  "icon": "receipt",
+  "color": "amber",
+  "items": [
+   "Late fee ₹100 to ₹1,300+ (slab-based) + GST",
+   "Interest on the entire balance",
+   "Reminder calls and SMS from the bank",
+   "DPD (Days Past Due) reported — score starts falling"
+  ]
+ },
+ {
+  "id": "t2",
+  "type": "timeline",
+  "stage": 2,
+  "days": "Day 31–60",
+  "title": "Second due date missed",
+  "icon": "telephone-receiver",
+  "color": "amber",
+  "items": [
+   "In-house collection team calls several times a day",
+   "Card usually blocked for new spends",
+   "30+ DPD on credit report — score drops sharply",
+   "Another late fee, more interest"
+  ]
+ },
+ {
+  "id": "t3",
+  "type": "timeline",
+  "stage": 3,
+  "days": "Day 61–90",
+  "title": "SMA-2 — one step before NPA",
+  "icon": "warning",
+  "color": "orange",
+  "items": [
+   "Account tagged SMA-2 (61–90 days overdue)",
+   "Case often handed to an external recovery agency",
+   "'Final reminder' letters and notices",
+   "WhatsApp messages; home visits may start"
+  ]
+ },
+ {
+  "id": "t4",
+  "type": "timeline",
+  "stage": 4,
+  "days": "Day 90+",
+  "title": "Account becomes NPA",
+  "icon": "locked",
+  "color": "red",
+  "items": [
+   "NPA = Non-Performing Asset",
+   "Card permanently blocked / closed",
+   "Default can stay on credit report up to 7 years",
+   "Settlement offers start appearing"
+  ]
+ },
+ {
+  "id": "t5",
+  "type": "timeline",
+  "stage": 5,
+  "days": "Day 180+",
+  "title": "Write-off ≠ forgiveness",
+  "icon": "page-facing-up",
+  "color": "red",
+  "items": [
+   "Bank may 'write off' in its books (accounting only)",
+   "The debt is NOT forgiven — recovery continues",
+   "Legal notice / Lok Adalat / arbitration notice possible",
+   "Deeper settlement discounts often possible"
+  ]
+ },
+ {
+  "id": "t6",
+  "type": "timeline",
+  "stage": 6,
+  "days": "1 year+",
+  "title": "Court stage (possible, not certain)",
+  "icon": "balance-scale",
+  "color": "violet",
+  "items": [
+   "Civil recovery suit can be filed",
+   "Limitation: 3 years — restarts on part-payment or written acknowledgement",
+   "NEVER ignore a court summons",
+   "No response → decision can be passed in your absence"
+  ]
+ },
+ {
+  "id": "ch4",
+  "type": "chapter",
+  "num": 4,
+  "title": "Principal vs What the Bank Shows",
+  "icon": "receipt"
+ },
+ {
+  "id": "shows_dlg",
+  "type": "dialogue",
+  "topic": "\"I spent ₹1 lakh — why do they show ₹1.8 lakh?\"",
+  "icon": "receipt"
+ },
+ {
+  "id": "stack",
+  "type": "stack",
+  "heading": "What's inside the amount the bank shows",
+  "principal": 100000,
+  "parts": [
+   [
+    "Principal (what you actually spent)",
+    100000,
+    "teal"
+   ],
+   [
+    "Interest (on interest too)",
+    52800,
+    "amber"
+   ],
+   [
+    "Late fees",
+    15600,
+    "orange"
+   ],
+   [
+    "GST on interest & fees",
+    12400,
+    "red"
+   ]
+  ],
+  "total": 180800,
+  "tag": "Negotiate from YOUR principal — not their total",
+  "cue": [
+   1,
+   2,
+   2,
+   2
+  ],
+  "tagCue": 3
+ },
+ {
+  "id": "afternpa",
+  "type": "bullets",
+  "heading": "After NPA & write-off — what they show",
+  "icon": "page-facing-up",
+  "tone": "amber",
+  "items": [
+   {
+    "icon": "chart-increasing",
+    "text": "Interest & charges often keep getting added in their system"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Write-off is only in the bank's books — the claim stays"
+   },
+   {
+    "icon": "telephone-receiver",
+    "text": "Agents always quote the full, inflated total"
+   },
+   {
+    "icon": "balance-scale",
+    "text": "A court claim usually includes contract interest too"
+   },
+   {
+    "icon": "handshake",
+    "text": "Settlement is a negotiation — anchor on your principal"
+   }
+  ],
+  "cue": [
+   0,
+   1,
+   2,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "a5_title",
+  "type": "addon",
+  "part": 5,
+  "title": "Calculate Your Real Principal — in 4 Steps",
+  "sub": "Your strongest number in any settlement talk.",
+  "icon": "abacus",
+  "kicker": "DEEP DIVE · 5 of 6"
+ },
+ {
+  "id": "a5_steps",
+  "type": "plan",
+  "heading": "4 steps",
+  "steps": [
+   "Download all statements since the card was opened (or last 2–3 years)",
+   "Add up every purchase and cash withdrawal",
+   "Subtract every payment and refund you made",
+   "What's left = your principal (no interest, fees or GST)"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a5_stack",
+  "type": "table",
+  "heading": "Example",
+  "note": "Illustrative numbers.",
+  "cols": [
+   "From your statements",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "Purchases + cash withdrawals",
+    "₹2,60,000"
+   ],
+   [
+    "Payments + refunds",
+    "− ₹1,75,000"
+   ],
+   [
+    "Your principal",
+    "₹85,000"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ],
+  "tag": "Negotiate from ₹85,000 — not from their total",
+  "tagCue": 3
+ },
+ {
+  "id": "a5_tips",
+  "type": "bullets",
+  "heading": "Tips",
+  "icon": "light-bulb",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "e-mail",
+    "text": "Missing statements? Ask the bank by e-mail — they must give them"
+   },
+   {
+    "icon": "memo",
+    "text": "Keep the calculation on one page — show it in every negotiation"
+   },
+   {
+    "icon": "handshake",
+    "text": "Open with a number near your principal, not their total"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "ch5",
+  "type": "chapter",
+  "num": 5,
+  "title": "Settlement: How Much & When",
+  "icon": "handshake"
+ },
+ {
+  "id": "set_dlg",
+  "type": "dialogue",
+  "topic": "\"How much discount will they give?\"",
+  "icon": "handshake"
+ },
+ {
+  "id": "norule",
+  "type": "rules",
+  "heading": "No fixed discount rule",
+  "source": "RBI Framework for Compromise Settlements & Technical Write-offs, June 2023",
+  "items": [
+   "RBI does NOT fix any settlement percentage",
+   "Each bank follows its own board-approved policy",
+   "Discount depends on: how old the default is, amount, your hardship",
+   "Agents cannot promise or approve — only the bank's authority can",
+   "Everything final must come on the bank's letterhead"
+  ],
+  "cue": [
+   0,
+   1,
+   2,
+   3,
+   3
+  ]
+ },
+ {
+  "id": "stages",
+  "type": "table",
+  "heading": "Commonly reported settlement ranges",
+  "note": "Market experience, not a rule — actual offers vary by bank and case.",
+  "cols": [
+   "Stage of default",
+   "What's usually possible"
+  ],
+  "rows": [
+   [
+    "Before 90 days",
+    "Mostly late fees / some interest waived — or EMI plan"
+   ],
+   [
+    "90 days – 1 year",
+    "Around 20–35% off the total shown"
+   ],
+   [
+    "1 – 3 years",
+    "Around 40–65% off the total shown"
+   ],
+   [
+    "3+ years",
+    "Sometimes 70–90% off — but case & CIBIL risk remain"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "hl": 2
+ },
+ {
+  "id": "amounts",
+  "type": "table",
+  "heading": "Examples: principal vs likely settlement (after ~1 year)",
+  "note": "Illustrative only (3.6% p.m., slab late fees, 18% GST; 40–65% off). Real numbers vary.",
+  "cols": [
+   "You spent (principal)",
+   "Bank may show",
+   "Common settlement range",
+   "Court case?"
+  ],
+  "rows": [
+   [
+    "₹10,000",
+    "~₹30,000",
+    "₹11,000 – 18,000",
+    "Very unlikely"
+   ],
+   [
+    "₹20,000",
+    "~₹47,000",
+    "₹17,000 – 28,000",
+    "Unlikely"
+   ],
+   [
+    "₹1,00,000",
+    "~₹1,81,000",
+    "₹63,000 – 1,08,000",
+    "Possible"
+   ],
+   [
+    "₹2,00,000",
+    "~₹3,43,000",
+    "₹1,20,000 – 2,06,000",
+    "More likely"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "tag": "Rough target: settle near or below your principal",
+  "tagCue": 5
+ },
+ {
+  "id": "settletips",
+  "type": "bullets",
+  "heading": "Negotiation tips",
+  "icon": "light-bulb",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "handshake",
+    "text": "Don't accept the first offer — it's always the highest"
+   },
+   {
+    "icon": "money-bag",
+    "text": "One-time lump sum gets the best discount"
+   },
+   {
+    "icon": "spiral-calendar",
+    "text": "Instalment settlement (2–6 parts) possible, smaller discount"
+   },
+   {
+    "icon": "balance-scale",
+    "text": "Lok Adalat: free, voluntary, award is final"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Ask for the offer in writing, from the bank's e-mail"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a1_title",
+  "type": "addon",
+  "part": 1,
+  "title": "Many Cards, Many Banks — How to Handle Them",
+  "sub": "One total debt, or separate? Which to settle first? A worked example.",
+  "icon": "credit-card",
+  "kicker": "DEEP DIVE · 1 of 6"
+ },
+ {
+  "id": "a1_dlg",
+  "type": "dialogue",
+  "topic": "\"I have 5 cards in 4 banks — is it one big debt?\"",
+  "icon": "credit-card"
+ },
+ {
+  "id": "a1_rules",
+  "type": "rules",
+  "heading": "How banks actually see it",
+  "icon": "classical-building",
+  "badge": "",
+  "source": "Each card is its own account and its own contract",
+  "items": [
+   "Each card = a separate account, separate dues, separate settlement",
+   "Different banks never combine — each bank settles only its own dues",
+   "Same bank, many cards or loans: ask for ONE letter covering all of them",
+   "One default is reported to CIBIL — every lender sees it",
+   "Other banks may cut your limits or close your cards"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "a1_example",
+  "type": "table",
+  "heading": "Example: 5 cards, 4 banks, ₹5.2 lakh total",
+  "note": "Illustrative. Numbers are principal (what was actually spent).",
+  "cols": [
+   "Bank",
+   "Cards",
+   "Principal",
+   "How it closes"
+  ],
+  "rows": [
+   [
+    "Bank A",
+    "2 cards",
+    "₹1,80,000",
+    "ONE settlement letter for both"
+   ],
+   [
+    "Bank B",
+    "1 card",
+    "₹1,40,000",
+    "Its own settlement"
+   ],
+   [
+    "Bank C",
+    "1 card",
+    "₹1,00,000",
+    "Its own settlement"
+   ],
+   [
+    "Bank D",
+    "1 card",
+    "₹1,00,000",
+    "Its own settlement"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   2
+  ],
+  "tag": "Not one ₹5.2L debt — four separate negotiations",
+  "tagCue": 3
+ },
+ {
+  "id": "a1_priority",
+  "type": "table",
+  "heading": "What to protect & settle first",
+  "note": "General order — your own situation decides.",
+  "cols": [
+   "Order",
+   "What"
+  ],
+  "rows": [
+   [
+    "1st — protect",
+    "Loans / EMIs with auto-debit or cheque (bounce = criminal risk)"
+   ],
+   [
+    "2nd — protect",
+    "The bank that holds your salary / savings account (set-off risk)"
+   ],
+   [
+    "Then settle",
+    "The bank giving the best written offer — close it fully"
+   ],
+   [
+    "Then",
+    "Next bank — one at a time, each with its own letter"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a1_tips",
+  "type": "bullets",
+  "heading": "Mistakes to avoid",
+  "icon": "warning",
+  "tone": "amber",
+  "items": [
+   {
+    "icon": "coin",
+    "text": "Paying ₹1,000 here and there to every bank — closes nothing"
+   },
+   {
+    "icon": "memo",
+    "text": "Keep one sheet: bank, card's last 4 digits, principal, offer, status"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Every settled card: its own letter + NOC + CIBIL check"
+   },
+   {
+    "icon": "counterclockwise-arrows-button",
+    "text": "Never use one card to settle another"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a3_title",
+  "type": "addon",
+  "part": 3,
+  "title": "Lok Adalat Notice — The Real Picture",
+  "sub": "Is attending compulsory? What happens if you don't go? How to use it well.",
+  "icon": "balance-scale",
+  "kicker": "DEEP DIVE · 3 of 6"
+ },
+ {
+  "id": "a3_dlg",
+  "type": "dialogue",
+  "topic": "\"I got a Lok Adalat notice — will they arrest me if I don't go?\"",
+  "icon": "page-facing-up"
+ },
+ {
+  "id": "a3_rules",
+  "type": "rules",
+  "heading": "What Lok Adalat really is",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Legal Services Authorities Act, 1987",
+  "items": [
+   "A settlement meeting — not a regular court case",
+   "Attending is voluntary — no arrest, no fine for not going",
+   "No award without YOUR consent — both sides must agree",
+   "If you skip, the bank may later file a regular case",
+   "If you agree, the award is final — there is no appeal"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "a3_go",
+  "type": "compare",
+  "heading": "Go, or skip?",
+  "left": {
+   "title": "Worth going if…",
+   "icon": "handshake",
+   "color": "green",
+   "items": [
+    "You can arrange some money now",
+    "You want to close the account",
+    "Offers here are often lower"
+   ]
+  },
+  "right": {
+   "title": "It's okay to skip if…",
+   "icon": "hourglass-not-done",
+   "color": "amber",
+   "items": [
+    "You have no money right now",
+    "You don't want to sign under pressure",
+    "Send a written reply to the bank instead"
+   ]
+  },
+  "cue": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "a3_carry",
+  "type": "checklist",
+  "heading": "If you go — checklist",
+  "items": [
+   "Carry ID proof, the notice and your statements",
+   "Know your principal — negotiate from it",
+   "Ask for instalments if you can't pay at once",
+   "Read the award: amount, dates, 'full and final'",
+   "Get a certified copy of the award",
+   "Pay only to the bank's official account"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   5
+  ]
+ },
+ {
+  "id": "ch6",
+  "type": "chapter",
+  "num": 6,
+  "title": "Your Property & Family",
+  "icon": "house"
+ },
+ {
+  "id": "prop_dlg",
+  "type": "dialogue",
+  "topic": "\"Will they take my land or my parents' house?\"",
+  "icon": "house-with-garden"
+ },
+ {
+  "id": "property",
+  "type": "property",
+  "heading": "What can they touch for card debt?",
+  "cards": [
+   [
+    "people-hugging",
+    "Spouse / parents / siblings' property",
+    "NO",
+    "green",
+    "Unless they signed as co-borrower or guarantor"
+   ],
+   [
+    "house-with-garden",
+    "Joint property",
+    "ONLY YOUR SHARE",
+    "amber",
+    "And only after a court decree"
+   ],
+   [
+    "page-facing-up",
+    "Land / property in your name",
+    "ONLY AFTER DECREE",
+    "amber",
+    "Court case → decree → execution"
+   ],
+   [
+    "house",
+    "The one house you live in",
+    "GENERALLY PROTECTED",
+    "green",
+    "Main residential house exemption (Sec 60 CPC)"
+   ],
+   [
+    "money-bag",
+    "Your salary",
+    "PART, AFTER COURT ORDER",
+    "amber",
+    "Law protects a portion of salary"
+   ],
+   [
+    "classical-building",
+    "Bank accounts",
+    "COURT ORDER / SAME-BANK SET-OFF",
+    "red",
+    "Other banks need a court order"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "heirs",
+  "type": "bullets",
+  "heading": "Family: what people worry about",
+  "icon": "people-hugging",
+  "tone": "violet",
+  "items": [
+   {
+    "icon": "folded-hands",
+    "text": "If the cardholder dies: heirs pay only up to what they inherit"
+   },
+   {
+    "icon": "credit-card",
+    "text": "Add-on card: the primary cardholder is liable"
+   },
+   {
+    "icon": "no-entry",
+    "text": "NEVER pledge land or gold to repay a card — unsecured becomes secured"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "a2_title",
+  "type": "addon",
+  "part": 2,
+  "title": "₹20 Lakh & ₹25 Lakh — DRT, Auction, Wilful Defaulter",
+  "sub": "When can property really be auctioned? What the numbers mean.",
+  "icon": "classical-building",
+  "kicker": "DEEP DIVE · 2 of 6"
+ },
+ {
+  "id": "a2_dlg",
+  "type": "dialogue",
+  "topic": "\"They say they'll auction my property…\"",
+  "icon": "house"
+ },
+ {
+  "id": "a2_drt",
+  "type": "rules",
+  "heading": "The ₹20 lakh line — DRT",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Recovery of Debts and Bankruptcy Act, 1993 — Sec 1(4)",
+  "items": [
+   "Debts Recovery Tribunal (DRT) handles only dues of ₹20 lakh or more",
+   "Counted per bank — NOT your total across all banks",
+   "Below ₹20 lakh: civil court, arbitration or Lok Adalat",
+   "Property can be attached / auctioned only after a decree or recovery certificate",
+   "An agent can never auction or seize anything"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "a2_sarf",
+  "type": "compare",
+  "heading": "Auction: secured vs unsecured",
+  "left": {
+   "title": "SARFAESI auction",
+   "icon": "house",
+   "color": "amber",
+   "items": [
+    "Only for SECURED loans (home, property)",
+    "Bank gives 60-day notice, then can take possession",
+    "Needs a registered charge on the asset"
+   ]
+  },
+  "right": {
+   "title": "Credit card",
+   "icon": "credit-card",
+   "color": "green",
+   "items": [
+    "UNSECURED — SARFAESI does not apply",
+    "Bank must first win a case (court / DRT)",
+    "Only then can any property be attached"
+   ]
+  },
+  "cue": [
+   0,
+   1
+  ]
+ },
+ {
+  "id": "a2_examples",
+  "type": "table",
+  "heading": "Examples",
+  "note": "DRT is only a forum — even there, you get notice and a chance to defend.",
+  "cols": [
+   "Situation",
+   "DRT possible?"
+  ],
+  "rows": [
+   [
+    "5 cards in 5 banks, ₹12 lakh total",
+    "No — every bank is below ₹20 lakh"
+   ],
+   [
+    "One bank: ₹8L card + ₹14L personal loan",
+    "Possible — ₹22 lakh with one bank"
+   ],
+   [
+    "One card, ₹3 lakh",
+    "No — civil court / arbitration route"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "a2_wilful",
+  "type": "rules",
+  "heading": "The ₹25 lakh line — 'wilful defaulter'",
+  "source": "RBI Master Direction on Wilful Defaulters, 2024",
+  "items": [
+   "Applies only when ₹25 lakh or more is outstanding",
+   "AND the default is wilful — could pay but didn't, or misused the money",
+   "Genuine hardship (job loss, illness) is not wilful default",
+   "Keep proof of hardship; deal honestly and in writing"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "ch7",
+  "type": "chapter",
+  "num": 7,
+  "title": "What Banks Can & Can't Do",
+  "icon": "classical-building"
+ },
+ {
+  "id": "cancant",
+  "type": "cancant",
+  "can": [
+   "Charge interest & late fees (as per terms)",
+   "Report to CIBIL / credit bureaus",
+   "Call & remind you (8 AM – 7 PM only)",
+   "Send an authorised recovery agent",
+   "Set-off dues from your account in the SAME bank",
+   "Go to court / arbitration / Lok Adalat"
+  ],
+  "cannot": [
+   "Get you arrested for non-payment",
+   "Seize property without a court order",
+   "Call before 8 AM or after 7 PM",
+   "Threaten, abuse or shame you publicly",
+   "Tell your relatives, friends or office about your debt",
+   "Charge over-limit fees without your consent"
+  ],
+  "cue": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  "cueCannot": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ]
+ },
+ {
+  "id": "civil",
+  "type": "civil",
+  "headline": "Card default is a CIVIL matter",
+  "sub": "Not a crime. No FIR, no arrest — just for not paying.",
+  "heading2": "Criminal exposure ONLY if:",
+  "exceptions": [
+   {
+    "icon": "page-facing-up",
+    "text": "A cheque you gave bounces (Sec 138, NI Act)"
+   },
+   {
+    "icon": "classical-building",
+    "text": "Bank-account auto-debit / NACH bounces (Sec 25, PSS Act)"
+   },
+   {
+    "icon": "detective",
+    "text": "Fraud from day one — fake documents / identity"
+   }
+  ],
+  "cue": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "ch8",
+  "type": "chapter",
+  "num": 8,
+  "title": "How Recovery Agents Pressure You",
+  "icon": "mobile-phone"
+ },
+ {
+  "id": "tactics",
+  "type": "tactics",
+  "calls": 37,
+  "items": [
+   {
+    "icon": "telephone-receiver",
+    "text": "Non-stop calls from many numbers"
+   },
+   {
+    "icon": "bust-in-silhouette",
+    "text": "Calls to family, friends, office, references"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Fake 'legal notice' PDFs on WhatsApp"
+   },
+   {
+    "icon": "police-car-light",
+    "text": "\"Police will come\" · \"Arrest warrant\" · \"FIR tomorrow\""
+   },
+   {
+    "icon": "detective",
+    "text": "Posing as advocate, police or court officer"
+   },
+   {
+    "icon": "house",
+    "text": "Group visits to home / office to shame you"
+   }
+  ],
+  "cue": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2
+  ]
+ },
+ {
+  "id": "chat",
+  "type": "chat",
+  "contact": "+91 9•••• ••••• (Unknown)",
+  "messages": [
+   "⚠️ FINAL WARNING: Legal action will be initiated against you within 24 HOURS.",
+   "Arrest warrant has been issued in your name. Pay TODAY to avoid police action.",
+   "Our field team will visit your HOME and OFFICE tomorrow.",
+   "Your photo will be shared with all your contacts."
+  ],
+  "stamp": "PRESSURE TACTIC",
+  "cue": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "stampCue": 2
+ },
+ {
+  "id": "myths",
+  "type": "myths",
+  "pairs": [
+   [
+    "\"Police will arrest you\"",
+    "Non-payment alone is civil. No arrest, no FIR."
+   ],
+   [
+    "\"Arrest warrant issued\"",
+    "Only a COURT issues warrants — after a proper summons, not WhatsApp."
+   ],
+   [
+    "\"We'll seize your house today\"",
+    "Agents have zero such power. Only a court decree & process."
+   ],
+   [
+    "\"We'll stop your salary\"",
+    "Only a court order can. Agents can't shame you to your employer."
+   ],
+   [
+    "\"Pay something now, case closes\"",
+    "Small payments close nothing. Pay only to the bank's official account, with a written plan."
+   ]
+  ],
+  "cue": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "ch9",
+  "type": "chapter",
+  "num": 9,
+  "title": "What RBI Actually Says",
+  "icon": "shield"
+ },
+ {
+  "id": "rbiagents",
+  "type": "rules",
+  "heading": "Recovery agent rules",
+  "source": "RBI circular, 12 Aug 2022 · Outsourcing & Fair Practices directions",
+  "items": [
+   "No calls before 8 AM or after 7 PM",
+   "No intimidation, abuse, threats or public humiliation",
+   "No intrusion into privacy of family, friends, referees",
+   "No anonymous / threatening calls or abusive social-media messages",
+   "No false or misleading statements",
+   "The BANK is responsible for its agents' conduct"
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   3,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "rbicards",
+  "type": "rules",
+  "heading": "Credit card rules",
+  "source": "RBI Master Direction — Credit & Debit Cards (Issuance and Conduct), 2022",
+  "items": [
+   "No late fee or 'past due' reporting until 3 days after due date",
+   "No interest on unpaid fees & charges (no capitalisation)",
+   "No over-limit charges without your explicit consent",
+   "Minimum due must not make the debt keep growing",
+   "After settlement: bank must update CIBIL within 30 days"
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "ladder",
+  "type": "ladder",
+  "heading": "Where to complain",
+  "steps": [
+   {
+    "icon": "telephone-receiver",
+    "title": "Bank customer care",
+    "sub": "Written complaint → get a ticket number"
+   },
+   {
+    "icon": "e-mail",
+    "title": "Grievance / Principal Nodal Officer",
+    "sub": "E-mail with ticket no. & evidence"
+   },
+   {
+    "icon": "classical-building",
+    "title": "RBI Ombudsman — cms.rbi.org.in",
+    "sub": "Free · after 30 days or unsatisfactory reply · Helpline 14448"
+   },
+   {
+    "icon": "police-car-light",
+    "title": "Police / cybercrime.gov.in",
+    "sub": "Threats, abuse, morphed photos, fake documents"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "evidence",
+  "type": "bullets",
+  "heading": "Evidence is your power",
+  "icon": "camera",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "camera",
+    "text": "Screenshot every message — number, date, time"
+   },
+   {
+    "icon": "memo",
+    "text": "Log every call: date, time, number, name"
+   },
+   {
+    "icon": "studio-microphone",
+    "text": "Record calls where possible"
+   },
+   {
+    "icon": "identification-card",
+    "text": "Ask visitors for ID + bank authorisation letter"
+   },
+   {
+    "icon": "e-mail",
+    "text": "Talk to the bank only by e-mail"
+   }
+  ],
+  "cue": [
+   1,
+   1,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "scripts",
+  "type": "scripts",
+  "cards": [
+   {
+    "icon": "telephone-receiver",
+    "who": "On a recovery call",
+    "line": "Please send everything in writing to my registered e-mail. I will respond there."
+   },
+   {
+    "icon": "bust-in-silhouette",
+    "who": "If they call your relative",
+    "line": "Disclosing someone's loan to others is against RBI rules. This call is recorded. Don't call this number again."
+   },
+   {
+    "icon": "house",
+    "who": "At your door",
+    "line": "Show your ID and the bank's authorisation letter. I'll deal with the bank in writing. Please leave now."
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ],
+  "tip": "Stay calm · Don't argue · Never get physical"
+ },
+ {
+  "id": "a4_title",
+  "type": "addon",
+  "part": 4,
+  "title": "Notices Decoded — Which One Is Serious?",
+  "sub": "WhatsApp 'notice', lawyer's notice, arbitration, court summons, cheque bounce.",
+  "icon": "page-facing-up",
+  "kicker": "DEEP DIVE · 4 of 6"
+ },
+ {
+  "id": "a4_table",
+  "type": "table",
+  "heading": "Five kinds of 'notice'",
+  "note": "When in doubt, show it to an advocate or your nearest free Legal Services Authority.",
+  "cols": [
+   "Notice",
+   "Who sends it",
+   "Seriousness",
+   "What to do"
+  ],
+  "rows": [
+   [
+    "WhatsApp 'legal notice' PDF",
+    "Agent",
+    "Pressure",
+    "Screenshot, don't panic, complain"
+   ],
+   [
+    "Advocate's legal notice",
+    "Bank's lawyer",
+    "Not a case yet",
+    "Reply in writing"
+   ],
+   [
+    "Arbitration notice",
+    "Arbitrator / bank",
+    "Serious",
+    "Respond, raise objections"
+   ],
+   [
+    "Court summons",
+    "Court",
+    "Must respond",
+    "Appear or send an advocate"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a4_cheque",
+  "type": "rules",
+  "heading": "Cheque bounce / NACH notice",
+  "icon": "page-facing-up",
+  "badge": "",
+  "source": "NI Act Sec 138 · PSS Act Sec 25",
+  "items": [
+   "Comes only if a cheque or bank auto-debit you gave has bounced",
+   "This one is criminal — you get 15 days after the notice",
+   "Pay or reply within the time; meet an advocate immediately"
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "a4_arb",
+  "type": "rules",
+  "heading": "Arbitration — know this",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Arbitration & Conciliation Act · Supreme Court, Perkins Eastman (2019)",
+  "items": [
+   "An arbitration award can be enforced like a court decree",
+   "An arbitrator appointed by one side alone is not valid",
+   "Reply in writing and raise your objection early",
+   "Ignoring it can lead to an award in your absence"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "a4_verify",
+  "type": "bullets",
+  "heading": "Is it genuine? Check",
+  "icon": "magnifying-glass-tilted-left",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "classical-building",
+    "text": "Court summons: court name, case number, seal & signature"
+   },
+   {
+    "icon": "globe-with-meridians",
+    "text": "Check the case number on eCourts: services.ecourts.gov.in"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Lawyer's notice: letterhead with enrolment number & address"
+   },
+   {
+    "icon": "balance-scale",
+    "text": "Free legal help: your District Legal Services Authority"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "ch10",
+  "type": "chapter",
+  "num": 10,
+  "title": "Quick Answers",
+  "icon": "thinking-face"
+ },
+ {
+  "id": "faq",
+  "type": "faq",
+  "pairs": [
+   [
+    "Will I go to jail?",
+    "No — not for non-payment. Only a bounced cheque / NACH or fraud is criminal."
+   ],
+   [
+    "Can they freeze my bank accounts?",
+    "Other banks: only with a court order. Same bank: set-off possible."
+   ],
+   [
+    "Can they call my office?",
+    "They must not disclose your debt to your employer or colleagues."
+   ],
+   [
+    "Does the debt vanish after 7 years?",
+    "No. Credit report history fades; the bank's claim & case risk don't simply vanish."
+   ],
+   [
+    "Can I settle in instalments?",
+    "Often yes — 2 to 6 parts. Get the letter first."
+   ],
+   [
+    "Will my home loan / other EMIs be affected?",
+    "They continue normally if you keep paying them. New loans get hard."
+   ],
+   [
+    "Can I travel abroad?",
+    "Card default alone doesn't stop travel. But never ignore court summons."
+   ],
+   [
+    "Can an agent take my bike or phone?",
+    "No. Agents have no power to take anything."
+   ],
+   [
+    "After settlement, can they ask again?",
+    "Not if you have a proper 'full and final' letter + NOC."
+   ],
+   [
+    "Pay full or settle?",
+    "If you can, pay in full — 'Closed' is far better than 'Settled'."
+   ],
+   [
+    "Will I get a card again?",
+    "Yes, after a clean record — start small, e.g. a secured card."
+   ]
+  ]
+ },
+ {
+  "id": "a6_title",
+  "type": "addon",
+  "part": 6,
+  "title": "12 More Questions People Ask",
+  "sub": "ARC, other accounts, references, recording calls, jobs, passport, CIBIL errors…",
+  "icon": "thinking-face",
+  "kicker": "DEEP DIVE · 6 of 6"
+ },
+ {
+  "id": "a6_faq",
+  "type": "faq",
+  "pairs": [
+   [
+    "My debt was sold to an ARC — now what?",
+    "Same debt, new owner — RBI rules still apply. Ask for the assignment letter; settle only with them, in writing."
+   ],
+   [
+    "Can they debit my account in another bank?",
+    "Only if you gave a mandate (NACH / standing instruction). Cancel old mandates."
+   ],
+   [
+    "They're calling my friends and references!",
+    "They may try to trace you, but must not reveal your debt or harass them. Complain."
+   ],
+   [
+    "Can I record recovery calls?",
+    "Recording your own calls as evidence is generally fine. Keep them safe."
+   ],
+   [
+    "Will calls stop after I settle?",
+    "They should. If calls continue after the NOC, complain to the bank and RBI."
+   ],
+   [
+    "Can default affect my job?",
+    "Some employers (banks, finance) check credit reports. Otherwise, usually not."
+   ],
+   [
+    "Passport or visa problems?",
+    "Card default alone doesn't affect your passport. Look-out circulars are for serious fraud or huge cases."
+   ],
+   [
+    "My card had 'credit shield' insurance?",
+    "Check it — it may cover death, disability or job loss."
+   ],
+   [
+    "Should I take a personal loan to pay cards?",
+    "Only if the rate is much lower, EMI is affordable, and you stop using cards. Never app loans."
+   ],
+   [
+    "Can I convert my card dues into EMI?",
+    "Yes — ask BEFORE default. It's much cheaper than revolving."
+   ],
+   [
+    "CIBIL still wrong after settlement?",
+    "Dispute with CIBIL & the bank. Not fixed in 30 days → ₹100/day compensation (RBI)."
+   ],
+   [
+    "Can I settle while my card is still regular?",
+    "Usually no — ask for an EMI plan or restructuring instead."
+   ]
+  ]
+ },
+ {
+  "id": "ch11",
+  "type": "chapter",
+  "num": 11,
+  "title": "Your Action Plan",
+  "icon": "clipboard"
+ },
+ {
+  "id": "plan",
+  "type": "plan",
+  "heading": "7-step action plan",
+  "steps": [
+   "Stop using the card — stop rotation",
+   "List every debt: balance, min. due, due date, rate",
+   "Protect essentials: rent, food, medicine, auto-debit EMIs",
+   "E-mail the bank early: EMI conversion / restructuring",
+   "Explain your hardship honestly — in writing",
+   "Plan a lump sum for settlement",
+   "Never take app loans to pay card dues"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "compare",
+  "type": "compare",
+  "left": {
+   "title": "Before 90 days",
+   "icon": "hourglass-not-done",
+   "color": "green",
+   "items": [
+    "EMI conversion / restructuring possible",
+    "Lower interest plans",
+    "Less damage to credit score"
+   ]
+  },
+  "right": {
+   "title": "After NPA (90+ days)",
+   "icon": "locked",
+   "color": "red",
+   "items": [
+    "Settlement: pay less than owed",
+    "'Settled' tag on CIBIL",
+    "New loans hard for years"
+   ]
+  },
+  "cue": [
+   0,
+   1
+  ]
+ },
+ {
+  "id": "ch12",
+  "type": "chapter",
+  "num": 12,
+  "title": "Settlement — The Right Way",
+  "icon": "handshake"
+ },
+ {
+  "id": "settle",
+  "type": "checklist",
+  "heading": "Settlement checklist",
+  "items": [
+   "Negotiate on the principal — in writing, with the bank",
+   "Get the settlement letter on bank letterhead BEFORE paying",
+   "Letter must show amount, account no. & 'full and final settlement'",
+   "Pay ONLY to the bank's official account / link — never agent UPI or cash",
+   "Collect the No-Dues Certificate (NOC)",
+   "Check your CIBIL report after 30–45 days"
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   3,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "settled",
+  "type": "gauge",
+  "heading": "'Settled' is not 'Closed'",
+  "from": 780,
+  "to": 560,
+  "items": [
+   "'Settled' = you paid less than owed → lenders see it as negative",
+   "Later, pay the waived amount → status can become 'Closed'",
+   "Rebuild: on-time payments, low usage, time"
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "ch13",
+  "type": "chapter",
+  "num": 13,
+  "title": "Cautions",
+  "icon": "warning"
+ },
+ {
+  "id": "cautions",
+  "type": "bullets",
+  "heading": "Be careful",
+  "icon": "warning",
+  "tone": "amber",
+  "items": [
+   {
+    "icon": "balance-scale",
+    "text": "Never ignore a court summons — Lok Adalat is voluntary but often the cheapest settlement"
+   },
+   {
+    "icon": "locked",
+    "text": "Never share OTP, card details or Aadhaar with callers"
+   },
+   {
+    "icon": "money-bag",
+    "text": "Beware 'settlement companies' taking big upfront fees"
+   },
+   {
+    "icon": "fountain-pen",
+    "text": "Never sign blank or unread papers"
+   },
+   {
+    "icon": "classical-building",
+    "text": "Salary in the same bank as card dues? Understand set-off risk"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "outro",
+  "type": "outro",
+  "heading": "Remember",
+  "items": [
+   {
+    "icon": "balance-scale",
+    "text": "Default is civil — not a crime. But don't ignore it."
+   },
+   {
+    "icon": "hourglass-not-done",
+    "text": "Talk to the bank before 90 days"
+   },
+   {
+    "icon": "memo",
+    "text": "Everything in writing"
+   },
+   {
+    "icon": "shield",
+    "text": "Harassment? RBI rules are on your side"
+   },
+   {
+    "icon": "handshake",
+    "text": "Settle only with a letter first"
+   }
+  ],
+  "cue": [
+   0,
+   1,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "disclaimer",
+  "type": "disclaimer",
+  "heading": "Disclaimer",
+  "items": [
+   "Educational & awareness purpose only",
+   "We never encourage wilful default — pay your dues if you can",
+   "Not legal, financial or professional advice",
+   "Not affiliated with RBI, any bank or any recovery agency",
+   "Based on public RBI documents as understood in 2026 — rules may change; verify at rbi.org.in",
+   "For your own case, consult a qualified advocate or financial counsellor"
+  ],
+  "cue": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2
+  ],
+  "help": "Feeling overwhelmed? You are not alone. Talk to Tele-MANAS: 14416 (free, 24×7)",
+  "helpCue": 3
+ }
+]

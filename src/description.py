@@ -6,7 +6,7 @@ import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT = os.environ.get("PROJECT", "")
-CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+CONTENT = os.environ.get("CONTENT_DIR") or (f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content")
 BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 
 META = {
@@ -28,6 +28,15 @@ META = {
                    "Bill కట్టకండి అని మేము ఎవరికీ చెప్పడం లేదు — మీరు కట్టగలిగితే, పూర్తిగా, సమయానికి కట్టండి.",
         "help": "అప్పు లేదా recovery ఒత్తిడితో చాలా బాధపడుతుంటే, మీరు ఒంటరి కాదు. Tele-MANAS (భారత ప్రభుత్వం) mental health helpline: 14416 లేదా 1-800-891-4416 — free, 24×7.",
     },
+}
+
+META["en"] = {
+    "title": "Credit Card Bill Not Paid? What REALLY Happens — Settlement, Property, Lok Adalat, RBI Rules (Full Guide, English)",
+    "intro": "What actually happens when you can't pay your credit card bill in India — day by day, from the due date to NPA, write-off and court. "
+             "What banks can and can't do, how recovery agents pressure you, what RBI rules protect you, how much settlement discount is realistic, "
+             "what happens with multiple cards, the Rs 20 lakh DRT and Rs 25 lakh wilful-defaulter lines, Lok Adalat, notices, and your property and family.",
+    "purpose": "This video is for people stuck in card rotation and rising debt who genuinely cannot pay right now. We never advise anyone to skip payments — if you can pay, pay in full and on time.",
+    "help": "If debt or recovery pressure is overwhelming you, you are not alone. Tele-MANAS (Govt. of India) mental health helpline: 14416 or 1-800-891-4416 — free, 24x7.",
 }
 
 DISCLAIMER = """DISCLAIMER
@@ -66,6 +75,8 @@ def main(lang):
             chapters.append((s["start"], "Introduction & why this video"))
         elif s["type"] == "chapter":
             chapters.append((s["start"], f"{s['num']}. {s['title']}"))
+        elif s["type"] == "addon" and s.get("kicker"):
+            chapters.append((s["start"], f"Deep dive: {s['title']}"))
         elif s["id"] == "disclaimer":
             chapters.append((s["start"], "Disclaimer & where to get help"))
     m = META[lang]
@@ -75,9 +86,9 @@ def main(lang):
         "🆘 " + m["help"], DISCLAIMER, SOURCES,
     ])
     os.makedirs(f"{ROOT}/output", exist_ok=True)
-    out = f"{ROOT}/output/youtube-{lang}.md"
+    out = f"{ROOT}/output/youtube-{lang}{'-' + PROJECT if PROJECT else ''}.md"
     with open(out, "w", encoding="utf-8") as f:
-        f.write(f"# YouTube upload — {'Hinglish' if lang == 'hi' else 'Telugu'}\n\n")
+        f.write(f"# YouTube upload — {{'hi': 'Hinglish', 'te': 'Telugu', 'en': 'English'}[lang]}\n\n")
         f.write(f"## Title\n\n{m['title']}\n\n## Description (paste as-is)\n\n```\n{body}\n```\n\n")
         f.write(f"## Tags\n\n{TAGS}\n\n")
         f.write("## Upload settings\n\n- Audience: **No, it's not made for kids**\n"

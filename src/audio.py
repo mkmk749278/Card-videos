@@ -10,7 +10,7 @@ import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT = os.environ.get("PROJECT", "")
-CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+CONTENT = os.environ.get("CONTENT_DIR") or (f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content")
 BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 SR = 48000
 rng = np.random.default_rng(7)

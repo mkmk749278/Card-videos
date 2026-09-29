@@ -25,9 +25,13 @@ versions share the same visuals.
 8. Settlement the right way: checklist, "Settled" vs "Closed"
 9. Cautions, summary and disclaimer
 
+## How it is made
+
+The full production process — tools, voice choices, gotchas and a checklist for the next video — is in **[docs/PROCESS.md](docs/PROCESS.md)**.
+
 ## Build
 
-Requirements: Python 3.10+, Node 18+, Chromium (Playwright).
+Requirements: Python 3.10+, Node 18+, Chromium (Playwright). Run `./setup.sh` once.
 
 ```bash
 npm install

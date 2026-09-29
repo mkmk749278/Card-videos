@@ -136,6 +136,8 @@ WORD_RE = re.compile(r"[A-Za-z][A-Za-z]*(?:-[A-Za-z0-9]+)*")
 
 
 def speakable(lang, text, warn=True):
+    if lang not in IDX:  # English narration is spoken as written
+        return text
     i = IDX[lang]
 
     def rep(m):

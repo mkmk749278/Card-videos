@@ -6,7 +6,7 @@ import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT = os.environ.get("PROJECT", "")
-CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+CONTENT = os.environ.get("CONTENT_DIR") or (f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content")
 BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 
 
@@ -16,7 +16,7 @@ def ts(s):
 
 def main(lang):
     tl = json.load(open(f"{BUILD}/{lang}/timeline.json", encoding="utf-8"))
-    name = "Hinglish" if lang == "hi" else "Telugu"
+    name = {"hi": "Hinglish", "te": "Telugu", "en": "English"}[lang]
     out = [f"# Narration script — {name}\n",
            "Record **one audio file per scene**, named with the scene number (e.g. `03.m4a`).",
            "Leave ~1 second of silence at the start and end. Chapter cards (🎬) have no voice.\n"]
@@ -32,7 +32,7 @@ def main(lang):
         out.append(f"### Scene {n:02d} · {head}  ·  {ts(s['start'])} ({round(s['dur'])}s)\n")
         out += [f"{i + 1}. {x['text']}" for i, x in enumerate(s["sentences"])]
         out.append("")
-    p = f"{ROOT}/output/narration-script-{lang}.md"
+    p = f"{ROOT}/output/narration-script-{lang}{'-' + PROJECT if PROJECT else ''}.md"
     open(p, "w", encoding="utf-8").write("\n".join(out))
     print(p, n, "scenes")
 

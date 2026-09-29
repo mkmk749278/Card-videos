@@ -1,0 +1,43 @@
+{
+ "_engine": "svara",
+ "_fx": "A",
+ "_lang": "Telugu",
+ "_styles": {
+  "table": "clear",
+  "cheque": "clear",
+  "arb": "clear"
+ },
+ "title": [
+  "Notice వచ్చిన ప్రతిసారీ భయపడాల్సిన అవసరం లేదు. ఏది serious, ఏది కాదో చూద్దాం."
+ ],
+ "table": [
+  "ఐదు రకాల notices ఉంటాయి.",
+  "WhatsApp లో వచ్చే legal notice PDF — ఇది agent పంపే pressure. Screenshot తీసుకోండి, భయపడకండి, complaint చేయండి.",
+  "Advocate పంపే legal notice — ఇది ఇంకా case కాదు. Written గా reply ఇవ్వండి.",
+  "Arbitration notice — ఇది serious. Respond అవ్వండి, మీ objections చెప్పండి.",
+  "Court summons — దీనికి తప్పకుండా respond అవ్వాలి. మీరు వెళ్ళండి, లేదా advocate ని పంపండి."
+ ],
+ "cheque": [
+  "ఇంకొకటి — cheque bounce, లేదా NACH notice.",
+  "మీరు ఇచ్చిన cheque గానీ, bank auto-debit గానీ bounce అయితేనే ఇది వస్తుంది.",
+  "ఇది criminal. Notice వచ్చిన తర్వాత పదిహేను రోజుల సమయం ఉంటుంది.",
+  "ఆ సమయంలోనే కట్టండి, లేదా reply ఇవ్వండి. వెంటనే advocate ని కలవండి."
+ ],
+ "arb": [
+  "Arbitration గురించి ఇవి తెలుసుకోండి.",
+  "Arbitration award ని court decree లాగానే enforce చేయొచ్చు.",
+  "కానీ ఒక వైపు మాత్రమే arbitrator ని నియమిస్తే, అది చెల్లదు అని Supreme Court చెప్పింది.",
+  "Written గా reply ఇవ్వండి, మీ objection మొదట్లోనే చెప్పండి.",
+  "Ignore చేస్తే, మీరు లేకుండానే award రావొచ్చు."
+ ],
+ "verify": [
+  "Notice నిజమైనదో కాదో ఎలా check చేయాలి?",
+  "Court summons లో court పేరు, case number, seal, sign ఉంటాయి.",
+  "ఆ case number ని eCourts website లో check చేయొచ్చు.",
+  "Advocate notice అయితే, letterhead మీద enrolment number, address ఉంటాయి.",
+  "Free legal help కోసం, మీ District Legal Services Authority ని కలవండి."
+ ],
+ "end": [
+  "పూర్తి వివరాల కోసం, main video చూడండి. ఒత్తిడిగా ఉంటే, Tele-MANAS ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి call చేయండి."
+ ]
+}

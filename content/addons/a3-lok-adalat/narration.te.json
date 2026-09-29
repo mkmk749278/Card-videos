@@ -1,0 +1,44 @@
+{
+ "_engine": "svara",
+ "_fx": "A",
+ "_lang": "Telugu",
+ "_styles": {
+  "rules": "clear",
+  "go": "clear",
+  "carry": "clear"
+ },
+ "title": [
+  "Lok Adalat notice వస్తే ఏం చేయాలి? నిజమైన picture చూద్దాం."
+ ],
+ "dlg": [
+  {
+   "q": "అన్నా, Lok Adalat notice వచ్చింది. వెళ్ళకపోతే arrest చేస్తారా?",
+   "style": "fear"
+  },
+  "అస్సలు కాదు. Lok Adalat గురించి చాలా అపోహలు ఉన్నాయి. నిజం ఇది."
+ ],
+ "rules": [
+  "Lok Adalat అంటే ఏంటో చూడండి.",
+  "ఇది ఒక settlement meeting. Regular court case కాదు.",
+  "వెళ్ళడం మీ ఇష్టం. వెళ్ళకపోతే arrest లేదు, fine లేదు.",
+  "మీ అంగీకారం లేకుండా award రాదు. రెండు వైపులా ఒప్పుకుంటేనే.",
+  "మీరు వెళ్ళకపోతే, bank తర్వాత regular case వేసే అవకాశం ఉంది.",
+  "మీరు ఒప్పుకుంటే మాత్రం, ఆ award final. Appeal ఉండదు."
+ ],
+ "go": [
+  "ఎప్పుడు వెళ్ళడం మంచిది?",
+  "ఇప్పుడు కొంత డబ్బు ఏర్పాటు చేయగలిగితే, account close చేయాలనుకుంటే, వెళ్ళండి. అక్కడ offers తరచుగా తక్కువగా ఉంటాయి.",
+  "డబ్బు అస్సలు లేకపోతే, ఒత్తిడిలో sign చేయడం ఇష్టం లేకపోతే, వెళ్ళకపోయినా పర్లేదు. Bank కి written reply పంపండి."
+ ],
+ "carry": [
+  "వెళ్తే, ఈ checklist.",
+  "ID proof, notice, మీ statements తీసుకెళ్ళండి.",
+  "మీ principal ఎంతో తెలుసుకోండి. దాని నుంచే negotiate చేయండి.",
+  "ఒకేసారి కట్టలేకపోతే installments అడగండి.",
+  "Award లో amount, dates, full and final అని ఉందో చదవండి.",
+  "Award certified copy తీసుకోండి. Payment bank official account కి మాత్రమే."
+ ],
+ "end": [
+  "పూర్తి వివరాల కోసం, main video చూడండి. ఒత్తిడిగా ఉంటే, Tele-MANAS ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి call చేయండి."
+ ]
+}

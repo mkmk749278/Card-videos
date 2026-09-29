@@ -1,0 +1,64 @@
+{
+ "_engine": "svara",
+ "_fx": "A",
+ "_lang": "Telugu",
+ "_styles": {},
+ "title": [
+  "ఇంకా మీరు అడిగే పన్నెండు ప్రశ్నలు. Quick గా చూద్దాం."
+ ],
+ "faq": [
+  "మొదలుపెడదాం.",
+  {
+   "q": "నా అప్పుని ARC కి అమ్మేశారు. ఇప్పుడు ఏంటి?"
+  },
+  "అదే అప్పు, కొత్త owner అంతే. RBI rules అలాగే వర్తిస్తాయి. Assignment letter అడగండి. వాళ్ళతోనే, written గా settle చేయండి.",
+  {
+   "q": "వేరే bank లో ఉన్న నా account నుంచి డబ్బు కట్ చేయగలరా?"
+  },
+  "మీరు mandate ఇచ్చి ఉంటేనే. NACH, standing instruction లాంటివి. పాత mandates cancel చేయండి.",
+  {
+   "q": "నా friends కి, references కి calls చేస్తున్నారు!",
+   "style": "anger"
+  },
+  "మిమ్మల్ని వెతకడానికి ప్రయత్నించొచ్చు. కానీ మీ అప్పు గురించి చెప్పకూడదు, వాళ్ళని వేధించకూడదు. Complaint చేయండి.",
+  {
+   "q": "Recovery calls record చేయొచ్చా?"
+  },
+  "మీ సొంత calls ని సాక్ష్యం కోసం record చేయడం సాధారణంగా పర్లేదు. జాగ్రత్తగా దాచుకోండి.",
+  {
+   "q": "Settle చేశాక calls ఆగిపోతాయా?"
+  },
+  "ఆగాలి. NOC వచ్చాక కూడా calls వస్తే, bank కి, RBI కి complaint చేయండి.",
+  {
+   "q": "Default వల్ల నా job మీద effect ఉంటుందా?"
+  },
+  "Banks, finance లాంటి కొన్ని companies credit report చూస్తాయి. మిగతా చోట్ల సాధారణంగా ఉండదు.",
+  {
+   "q": "Passport, visa సమస్యలు వస్తాయా?"
+  },
+  "కేవలం card default వల్ల passport మీద effect ఉండదు. Look-out circulars పెద్ద fraud cases కి మాత్రమే.",
+  {
+   "q": "నా card కి credit shield insurance ఉంది."
+  },
+  "Check చేయండి. మరణం, అంగవైకల్యం, job పోవడం లాంటివి cover అవ్వొచ్చు.",
+  {
+   "q": "Cards కట్టడానికి personal loan తీసుకోవచ్చా?"
+  },
+  "Interest చాలా తక్కువగా ఉంటే, EMI కట్టగలిగితే, cards వాడటం ఆపేస్తేనే. App loans మాత్రం ఎప్పుడూ వద్దు.",
+  {
+   "q": "Card బాకీని EMI గా మార్చుకోవచ్చా?"
+  },
+  "అవును. కానీ default అవ్వకముందే అడగండి. Revolving కంటే చాలా తక్కువ ఖర్చు.",
+  {
+   "q": "Settle చేశాక కూడా CIBIL లో తప్పుగా ఉంది."
+  },
+  "CIBIL కి, bank కి dispute పెట్టండి. ముప్పై రోజుల్లో సరిచేయకపోతే, RBI rule ప్రకారం రోజుకి వంద రూపాయల compensation.",
+  {
+   "q": "Card ఇంకా regular గా ఉన్నప్పుడే settle చేయొచ్చా?"
+  },
+  "సాధారణంగా కాదు. దానికి బదులు EMI plan గానీ, restructuring గానీ అడగండి."
+ ],
+ "end": [
+  "పూర్తి వివరాల కోసం, main video చూడండి. ఒత్తిడిగా ఉంటే, Tele-MANAS ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి call చేయండి."
+ ]
+}

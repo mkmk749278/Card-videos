@@ -5,6 +5,9 @@ Usage: python3 src/description.py hi|te  -> output/youtube-<lang>.md
 import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT = os.environ.get("PROJECT", "")
+CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 
 META = {
     "hi": {
@@ -54,7 +57,7 @@ def ts(sec):
 
 
 def main(lang):
-    tl = json.load(open(f"{ROOT}/build/{lang}/timeline.json", encoding="utf-8"))
+    tl = json.load(open(f"{BUILD}/{lang}/timeline.json", encoding="utf-8"))
     chapters = [(0, "Opening")] if tl["scenes"][0]["id"] == "cold" else [(0, "Disclaimer")]
     for s in tl["scenes"]:
         if s["id"] == "opendisc" and chapters[0][1] == "Opening":

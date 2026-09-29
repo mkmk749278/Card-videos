@@ -1,0 +1,92 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 3,
+  "title": "Lok Adalat Notice — The Real Picture",
+  "sub": "Is attending compulsory? What happens if you don't go? How to use it well.",
+  "icon": "balance-scale"
+ },
+ {
+  "id": "dlg",
+  "type": "dialogue",
+  "topic": "\"I got a Lok Adalat notice — will they arrest me if I don't go?\"",
+  "icon": "page-facing-up"
+ },
+ {
+  "id": "rules",
+  "type": "rules",
+  "heading": "What Lok Adalat really is",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Legal Services Authorities Act, 1987",
+  "items": [
+   "A settlement meeting — not a regular court case",
+   "Attending is voluntary — no arrest, no fine for not going",
+   "No award without YOUR consent — both sides must agree",
+   "If you skip, the bank may later file a regular case",
+   "If you agree, the award is final — there is no appeal"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "go",
+  "type": "compare",
+  "heading": "Go, or skip?",
+  "left": {
+   "title": "Worth going if…",
+   "icon": "handshake",
+   "color": "green",
+   "items": [
+    "You can arrange some money now",
+    "You want to close the account",
+    "Offers here are often lower"
+   ]
+  },
+  "right": {
+   "title": "It's okay to skip if…",
+   "icon": "hourglass-not-done",
+   "color": "amber",
+   "items": [
+    "You have no money right now",
+    "You don't want to sign under pressure",
+    "Send a written reply to the bank instead"
+   ]
+  },
+  "cue": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "carry",
+  "type": "checklist",
+  "heading": "If you go — checklist",
+  "items": [
+   "Carry ID proof, the notice and your statements",
+   "Know your principal — negotiate from it",
+   "Ask for instalments if you can't pay at once",
+   "Read the award: amount, dates, 'full and final'",
+   "Get a certified copy of the award",
+   "Pay only to the bank's official account"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   5
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

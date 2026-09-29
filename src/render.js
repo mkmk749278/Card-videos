@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
+const BUILD = process.env.PROJECT ? `${ROOT}/build/${process.env.PROJECT}` : `${ROOT}/build`;
 const FPS = 30;
 // headless_shell renders noticeably faster; fall back to Playwright's default
 const CHROME = ['/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell',
@@ -15,7 +16,7 @@ const FFMPEG = require('child_process').execSync(
   'python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"').toString().trim();
 
 const [lang, mode, arg] = process.argv.slice(2);
-const timeline = JSON.parse(fs.readFileSync(process.env.TIMELINE || `${ROOT}/build/${lang}/timeline.json`, "utf8"));
+const timeline = JSON.parse(fs.readFileSync(process.env.TIMELINE || `${BUILD}/${lang}/timeline.json`, "utf8"));
 
 function icons() {
   const set = require(`${ROOT}/node_modules/@iconify-json/fluent-emoji-flat/icons.json`);
@@ -56,7 +57,7 @@ async function renderRange(browser, f0, f1, out) {
 
 (async () => {
   const browser = await chromium.launch({ executablePath: CHROME });
-  const dir = `${ROOT}/build/${lang}`;
+  const dir = `${BUILD}/${lang}`;
   if (mode === 'preview') {
     fs.mkdirSync(`${dir}/preview`, { recursive: true });
     const page = await openPage(browser);

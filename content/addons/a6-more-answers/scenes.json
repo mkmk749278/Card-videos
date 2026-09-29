@@ -1,0 +1,68 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 6,
+  "title": "12 More Questions People Ask",
+  "sub": "ARC, other accounts, references, recording calls, jobs, passport, CIBIL errors…",
+  "icon": "thinking-face"
+ },
+ {
+  "id": "faq",
+  "type": "faq",
+  "pairs": [
+   [
+    "My debt was sold to an ARC — now what?",
+    "Same debt, new owner — RBI rules still apply. Ask for the assignment letter; settle only with them, in writing."
+   ],
+   [
+    "Can they debit my account in another bank?",
+    "Only if you gave a mandate (NACH / standing instruction). Cancel old mandates."
+   ],
+   [
+    "They're calling my friends and references!",
+    "They may try to trace you, but must not reveal your debt or harass them. Complain."
+   ],
+   [
+    "Can I record recovery calls?",
+    "Recording your own calls as evidence is generally fine. Keep them safe."
+   ],
+   [
+    "Will calls stop after I settle?",
+    "They should. If calls continue after the NOC, complain to the bank and RBI."
+   ],
+   [
+    "Can default affect my job?",
+    "Some employers (banks, finance) check credit reports. Otherwise, usually not."
+   ],
+   [
+    "Passport or visa problems?",
+    "Card default alone doesn't affect your passport. Look-out circulars are for serious fraud or huge cases."
+   ],
+   [
+    "My card had 'credit shield' insurance?",
+    "Check it — it may cover death, disability or job loss."
+   ],
+   [
+    "Should I take a personal loan to pay cards?",
+    "Only if the rate is much lower, EMI is affordable, and you stop using cards. Never app loans."
+   ],
+   [
+    "Can I convert my card dues into EMI?",
+    "Yes — ask BEFORE default. It's much cheaper than revolving."
+   ],
+   [
+    "CIBIL still wrong after settlement?",
+    "Dispute with CIBIL & the bank. Not fixed in 30 days → ₹100/day compensation (RBI)."
+   ],
+   [
+    "Can I settle while my card is still regular?",
+    "Usually no — ask for an EMI plan or restructuring instead."
+   ]
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

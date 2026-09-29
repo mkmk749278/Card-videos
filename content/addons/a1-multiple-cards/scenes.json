@@ -1,0 +1,153 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 1,
+  "title": "Many Cards, Many Banks — How to Handle Them",
+  "sub": "One total debt, or separate? Which to settle first? A worked example.",
+  "icon": "credit-card"
+ },
+ {
+  "id": "dlg",
+  "type": "dialogue",
+  "topic": "\"I have 5 cards in 4 banks — is it one big debt?\"",
+  "icon": "credit-card"
+ },
+ {
+  "id": "rules",
+  "type": "rules",
+  "heading": "How banks actually see it",
+  "icon": "classical-building",
+  "badge": "",
+  "source": "Each card is its own account and its own contract",
+  "items": [
+   "Each card = a separate account, separate dues, separate settlement",
+   "Different banks never combine — each bank settles only its own dues",
+   "Same bank, many cards or loans: ask for ONE letter covering all of them",
+   "One default is reported to CIBIL — every lender sees it",
+   "Other banks may cut your limits or close your cards"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "example",
+  "type": "table",
+  "heading": "Example: 5 cards, 4 banks, ₹5.2 lakh total",
+  "note": "Illustrative. Numbers are principal (what was actually spent).",
+  "cols": [
+   "Bank",
+   "Cards",
+   "Principal",
+   "How it closes"
+  ],
+  "rows": [
+   [
+    "Bank A",
+    "2 cards",
+    "₹1,80,000",
+    "ONE settlement letter for both"
+   ],
+   [
+    "Bank B",
+    "1 card",
+    "₹1,40,000",
+    "Its own settlement"
+   ],
+   [
+    "Bank C",
+    "1 card",
+    "₹1,00,000",
+    "Its own settlement"
+   ],
+   [
+    "Bank D",
+    "1 card",
+    "₹1,00,000",
+    "Its own settlement"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   2,
+   2
+  ],
+  "tag": "Not one ₹5.2L debt — four separate negotiations",
+  "tagCue": 3
+ },
+ {
+  "id": "priority",
+  "type": "table",
+  "heading": "What to protect & settle first",
+  "note": "General order — your own situation decides.",
+  "cols": [
+   "Order",
+   "What"
+  ],
+  "rows": [
+   [
+    "1st — protect",
+    "Loans / EMIs with auto-debit or cheque (bounce = criminal risk)"
+   ],
+   [
+    "2nd — protect",
+    "The bank that holds your salary / savings account (set-off risk)"
+   ],
+   [
+    "Then settle",
+    "The bank giving the best written offer — close it fully"
+   ],
+   [
+    "Then",
+    "Next bank — one at a time, each with its own letter"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "tips",
+  "type": "bullets",
+  "heading": "Mistakes to avoid",
+  "icon": "warning",
+  "tone": "amber",
+  "items": [
+   {
+    "icon": "coin",
+    "text": "Paying ₹1,000 here and there to every bank — closes nothing"
+   },
+   {
+    "icon": "memo",
+    "text": "Keep one sheet: bank, card's last 4 digits, principal, offer, status"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Every settled card: its own letter + NOC + CIBIL check"
+   },
+   {
+    "icon": "counterclockwise-arrows-button",
+    "text": "Never use one card to settle another"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

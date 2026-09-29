@@ -5,6 +5,9 @@ Usage: python3 src/script_doc.py hi|te -> output/narration-script-<lang>.md
 import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT = os.environ.get("PROJECT", "")
+CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 
 
 def ts(s):
@@ -12,7 +15,7 @@ def ts(s):
 
 
 def main(lang):
-    tl = json.load(open(f"{ROOT}/build/{lang}/timeline.json", encoding="utf-8"))
+    tl = json.load(open(f"{BUILD}/{lang}/timeline.json", encoding="utf-8"))
     name = "Hinglish" if lang == "hi" else "Telugu"
     out = [f"# Narration script — {name}\n",
            "Record **one audio file per scene**, named with the scene number (e.g. `03.m4a`).",

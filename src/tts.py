@@ -15,6 +15,9 @@ import edge_tts  # noqa: E402  (must import after the certifi patch)
 import imageio_ffmpeg  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT = os.environ.get("PROJECT", "")
+CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 
 LEAD_IN = 0.55      # silence before first sentence of a scene
@@ -87,14 +90,14 @@ def synth_svara(narr, scenes, lang, vdir):
 
 
 async def main(lang):
-    scenes = json.load(open(f"{ROOT}/content/scenes.json", encoding="utf-8"))
-    narr = json.load(open(f"{ROOT}/content/narration.{lang}.json", encoding="utf-8"))
+    scenes = json.load(open(f"{CONTENT}/scenes.json", encoding="utf-8"))
+    narr = json.load(open(f"{CONTENT}/narration.{lang}.json", encoding="utf-8"))
     engine = narr.get("_engine", "edge")
     styles = narr.get("_styles", {})
     for k, v in list(narr.items()):
         if not k.startswith("_"):
             narr[k] = [norm(x, styles.get(k, "chat")) for x in v]
-    vdir = f"{ROOT}/build/{lang}/voice_{engine}"
+    vdir = f"{BUILD}/{lang}/voice_{engine}"
     os.makedirs(vdir, exist_ok=True)
 
     if engine == "svara":
@@ -145,7 +148,7 @@ async def main(lang):
         t += dur
 
     json.dump({"lang": lang, "total": round(t, 3), "scenes": out},
-              open(f"{ROOT}/build/{lang}/timeline.json", "w", encoding="utf-8"),
+              open(f"{BUILD}/{lang}/timeline.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
     print(f"{lang}: {len(out)} scenes, {t/60:.2f} min")
 

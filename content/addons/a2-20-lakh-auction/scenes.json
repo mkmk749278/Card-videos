@@ -1,0 +1,118 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 2,
+  "title": "₹20 Lakh & ₹25 Lakh — DRT, Auction, Wilful Defaulter",
+  "sub": "When can property really be auctioned? What the numbers mean.",
+  "icon": "classical-building"
+ },
+ {
+  "id": "dlg",
+  "type": "dialogue",
+  "topic": "\"They say they'll auction my property…\"",
+  "icon": "house"
+ },
+ {
+  "id": "drt",
+  "type": "rules",
+  "heading": "The ₹20 lakh line — DRT",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Recovery of Debts and Bankruptcy Act, 1993 — Sec 1(4)",
+  "items": [
+   "Debts Recovery Tribunal (DRT) handles only dues of ₹20 lakh or more",
+   "Counted per bank — NOT your total across all banks",
+   "Below ₹20 lakh: civil court, arbitration or Lok Adalat",
+   "Property can be attached / auctioned only after a decree or recovery certificate",
+   "An agent can never auction or seize anything"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4,
+   4
+  ]
+ },
+ {
+  "id": "sarf",
+  "type": "compare",
+  "heading": "Auction: secured vs unsecured",
+  "left": {
+   "title": "SARFAESI auction",
+   "icon": "house",
+   "color": "amber",
+   "items": [
+    "Only for SECURED loans (home, property)",
+    "Bank gives 60-day notice, then can take possession",
+    "Needs a registered charge on the asset"
+   ]
+  },
+  "right": {
+   "title": "Credit card",
+   "icon": "credit-card",
+   "color": "green",
+   "items": [
+    "UNSECURED — SARFAESI does not apply",
+    "Bank must first win a case (court / DRT)",
+    "Only then can any property be attached"
+   ]
+  },
+  "cue": [
+   0,
+   1
+  ]
+ },
+ {
+  "id": "examples",
+  "type": "table",
+  "heading": "Examples",
+  "note": "DRT is only a forum — even there, you get notice and a chance to defend.",
+  "cols": [
+   "Situation",
+   "DRT possible?"
+  ],
+  "rows": [
+   [
+    "5 cards in 5 banks, ₹12 lakh total",
+    "No — every bank is below ₹20 lakh"
+   ],
+   [
+    "One bank: ₹8L card + ₹14L personal loan",
+    "Possible — ₹22 lakh with one bank"
+   ],
+   [
+    "One card, ₹3 lakh",
+    "No — civil court / arbitration route"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "wilful",
+  "type": "rules",
+  "heading": "The ₹25 lakh line — 'wilful defaulter'",
+  "source": "RBI Master Direction on Wilful Defaulters, 2024",
+  "items": [
+   "Applies only when ₹25 lakh or more is outstanding",
+   "AND the default is wilful — could pay but didn't, or misused the money",
+   "Genuine hardship (job loss, illness) is not wilful default",
+   "Keep proof of hardship; deal honestly and in writing"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

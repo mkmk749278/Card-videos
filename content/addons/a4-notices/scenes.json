@@ -1,0 +1,127 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 4,
+  "title": "Notices Decoded — Which One Is Serious?",
+  "sub": "WhatsApp 'notice', lawyer's notice, arbitration, court summons, cheque bounce.",
+  "icon": "page-facing-up"
+ },
+ {
+  "id": "table",
+  "type": "table",
+  "heading": "Five kinds of 'notice'",
+  "note": "When in doubt, show it to an advocate or your nearest free Legal Services Authority.",
+  "cols": [
+   "Notice",
+   "Who sends it",
+   "Seriousness",
+   "What to do"
+  ],
+  "rows": [
+   [
+    "WhatsApp 'legal notice' PDF",
+    "Agent",
+    "Pressure",
+    "Screenshot, don't panic, complain"
+   ],
+   [
+    "Advocate's legal notice",
+    "Bank's lawyer",
+    "Not a case yet",
+    "Reply in writing"
+   ],
+   [
+    "Arbitration notice",
+    "Arbitrator / bank",
+    "Serious",
+    "Respond, raise objections"
+   ],
+   [
+    "Court summons",
+    "Court",
+    "Must respond",
+    "Appear or send an advocate"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "cheque",
+  "type": "rules",
+  "heading": "Cheque bounce / NACH notice",
+  "icon": "page-facing-up",
+  "badge": "",
+  "source": "NI Act Sec 138 · PSS Act Sec 25",
+  "items": [
+   "Comes only if a cheque or bank auto-debit you gave has bounced",
+   "This one is criminal — you get 15 days after the notice",
+   "Pay or reply within the time; meet an advocate immediately"
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "arb",
+  "type": "rules",
+  "heading": "Arbitration — know this",
+  "icon": "balance-scale",
+  "badge": "",
+  "source": "Arbitration & Conciliation Act · Supreme Court, Perkins Eastman (2019)",
+  "items": [
+   "An arbitration award can be enforced like a court decree",
+   "An arbitrator appointed by one side alone is not valid",
+   "Reply in writing and raise your objection early",
+   "Ignoring it can lead to an award in your absence"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "verify",
+  "type": "bullets",
+  "heading": "Is it genuine? Check",
+  "icon": "magnifying-glass-tilted-left",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "classical-building",
+    "text": "Court summons: court name, case number, seal & signature"
+   },
+   {
+    "icon": "globe-with-meridians",
+    "text": "Check the case number on eCourts: services.ecourts.gov.in"
+   },
+   {
+    "icon": "page-facing-up",
+    "text": "Lawyer's notice: letterhead with enrolment number & address"
+   },
+   {
+    "icon": "balance-scale",
+    "text": "Free legal help: your District Legal Services Authority"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

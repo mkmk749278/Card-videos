@@ -9,6 +9,9 @@ import json, os, sys, wave
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT = os.environ.get("PROJECT", "")
+CONTENT = f"{ROOT}/content/addons/{PROJECT}" if PROJECT else f"{ROOT}/content"
+BUILD = f"{ROOT}/build/{PROJECT}" if PROJECT else f"{ROOT}/build"
 SR = 48000
 rng = np.random.default_rng(7)
 
@@ -93,7 +96,7 @@ def add(buf, clip, at, gain=1.0):
 
 
 def main(lang):
-    tl = json.load(open(f"{ROOT}/build/{lang}/timeline.json", encoding="utf-8"))
+    tl = json.load(open(f"{BUILD}/{lang}/timeline.json", encoding="utf-8"))
     total = tl["total"] + 1.0
     n = int(total * SR)
     voice = np.zeros(n, np.float32)
@@ -134,7 +137,7 @@ def main(lang):
     mix = voice + m * 0.11 * duck * fade + sfx * 0.5
     mix /= max(1.0, np.abs(mix).max() / 0.97)
 
-    out = f"{ROOT}/build/{lang}/mix.wav"
+    out = f"{BUILD}/{lang}/mix.wav"
     with wave.open(out, "w") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes((mix * 32767).astype(np.int16).tobytes())

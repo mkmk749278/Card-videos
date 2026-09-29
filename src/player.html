@@ -402,8 +402,8 @@ B.rules = sc => {
   const t = cueTimes(sc, sc.items.length);
   const r = el(`<div class="abs" style="inset:0">
     <div class="abs sh" style="left:170px;top:250px;width:380px;height:440px;display:grid;place-items:center">
-      ${icon('shield', 340)}
-      <div class="abs" style="left:0;right:0;top:170px;text-align:center;font-size:64px;font-weight:800;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.5)">RBI</div>
+      ${icon(sc.icon || 'shield', 340)}
+      ${(sc.badge ?? 'RBI') ? `<div class="abs" style="left:0;right:0;top:170px;text-align:center;font-size:64px;font-weight:800;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.5)">${sc.badge ?? 'RBI'}</div>` : ''}
     </div>
     <div class="abs" style="left:640px;top:160px;width:1140px">
       <div class="h1" data-at="0.2">${sc.heading}</div>
@@ -471,7 +471,7 @@ B.compare = sc => {
     ${s.items.map(x => `<div class="row" style="font-size:32px;margin-top:30px;gap:16px"><div style="width:14px;height:14px;border-radius:50%;background:${COLORS[s.color]}"></div>${x}</div>`).join('')}
   </div>`;
   const r = el(`<div class="abs" style="inset:0">
-    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">Timing changes your options</div>
+    <div class="abs h1" data-at="0.2" style="left:150px;top:150px">${sc.heading || "Timing changes your options"}</div>
     <div class="abs" style="left:150px;top:320px;width:1620px;display:grid;grid-template-columns:1fr 1fr;gap:50px">${side(sc.left, t[0])}${side(sc.right, t[1])}</div>
   </div>`);
   return { el: r, update: lt => reveal(r, lt) };
@@ -612,7 +612,7 @@ B.table = sc => {
     <div class="abs" style="left:150px;top:250px;width:1620px">
       <div style="display:grid;grid-template-columns:${tpl};gap:0;padding:18px 28px;border-radius:18px 18px 0 0;background:rgba(139,92,246,.22);font-size:26px;font-weight:700;color:#ddd6fe">${sc.cols.map(c => `<div>${c}</div>`).join('')}</div>
       ${sc.rows.map((row, i) => `<div class="tr" data-at="${t[i]}" data-fx="left" style="display:grid;grid-template-columns:${tpl};padding:22px 28px;border-bottom:1px solid rgba(255,255,255,.08);background:var(--card);font-size:${n === 2 ? 32 : 30}px;align-items:center">
-        ${row.map((c, j) => `<div style="${j === 0 ? 'font-weight:700' : ''};${j === n - 1 && n > 2 ? `color:${['var(--green)', 'var(--green)', 'var(--amber)', 'var(--red)'][i]}` : ''};${j === 2 && n > 2 ? 'color:var(--teal);font-weight:700' : ''}">${c}</div>`).join('')}</div>`).join('')}
+        ${row.map((c, j) => `<div style="${j === 0 ? 'font-weight:700' : ''};${j === n - 1 && sc.colorLast ? `color:${['var(--green)', 'var(--green)', 'var(--amber)', 'var(--red)'][i]}` : ''};${j === 2 && n > 2 ? 'color:var(--teal);font-weight:700' : ''}">${c}</div>`).join('')}</div>`).join('')}
       <div data-at="1" style="margin-top:16px;font-size:21px;color:var(--mut)">${sc.note}</div>
     </div>
     ${sc.tag ? `<div class="abs pill" data-at="${sentStart(sc, sc.tagCue)}" data-fx="pop" style="left:150px;top:${n === 2 ? 790 : 810}px;background:rgba(45,212,191,.18);color:var(--teal);font-size:32px;padding:16px 32px">${icon('bullseye', 40)} ${sc.tag}</div>` : ''}
@@ -660,6 +660,32 @@ B.faq = sc => {
     });
     $('.cnt', r).textContent = cur >= 0 ? `${cur + 1} / ${n}` : '';
   }};
+};
+
+B.addon = sc => {
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs" style="left:150px;top:260px;width:1050px">
+      <div class="pill" data-at="0.2" style="background:rgba(139,92,246,.2);color:#c4b5fd">ADD-ON · PART ${sc.part}</div>
+      <div class="h1" data-at="0.45" style="font-size:84px;margin-top:30px;line-height:1.08">${sc.title}</div>
+      <div data-at="0.9" style="margin-top:30px;font-size:32px;color:var(--mut);line-height:1.5">${sc.sub}</div>
+      <div data-at="1.3" style="margin-top:40px;font-size:24px;color:var(--teal)">From the series: Credit Card Bill Not Paid? — the complete guide</div>
+    </div>
+    <div class="abs ic" style="left:1250px;top:230px;width:520px;height:520px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(139,92,246,.3),transparent 70%)">${icon(sc.icon, 330)}</div>
+  </div>`);
+  return { el: r, update(lt) { reveal(r, lt); const ic = $('.ic', r), k = E(lt, 0.3, 0.8); ic.style.opacity = k; ic.style.transform = `scale(${0.7 + 0.3 * k}) translateY(${Math.sin(lt * 1.4) * 12}px)`; } };
+};
+
+B.addonend = sc => {
+  const r = el(`<div class="abs" style="inset:0">
+    <div class="abs card" data-at="0.2" style="left:50%;margin-left:-620px;width:1240px;top:190px;padding:50px 60px;text-align:center">
+      ${icon('credit-card', 110)}
+      <div class="h2" style="margin-top:20px">Watch the full guide</div>
+      <div style="font-size:34px;color:var(--mut);margin-top:14px">Credit Card Bill Not Paid? — day-by-day, RBI rules, settlement, property & family</div>
+      <div style="font-size:24px;color:var(--mut);margin-top:26px;opacity:.85">Educational only · not legal or financial advice · verify at rbi.org.in</div>
+    </div>
+    ${helpStrip('Feeling overwhelmed? Talk to Tele-MANAS: 14416 (free, 24×7)', 1.2)}
+  </div>`);
+  return { el: r, update: lt => reveal(r, lt) };
 };
 
 const helpStrip = (text, at) => `<div class="abs" data-at="${at}" data-fx="pop" style="left:50%;margin-left:-620px;width:1240px;top:790px;padding:20px 34px;border-radius:24px;display:flex;align-items:center;gap:22px;background:linear-gradient(90deg,rgba(45,212,191,.2),rgba(139,92,246,.2));border:2px solid rgba(45,212,191,.55)">
@@ -758,7 +784,7 @@ window.setup = (timeline, icons) => {
   $('#hud .logo').innerHTML = icon('credit-card', 30);
   TL.scenes.forEach(s => { s.caps = s.sentences.flatMap(chunks); });
   let ch = '';
-  TL.scenes.forEach(s => { if (s.type === 'chapter') ch = s.title; s.chapterName = s.type === 'disclaimer' ? 'Disclaimer' : ch; });
+  TL.scenes.forEach(s => { if (s.type === 'chapter') ch = s.title; s.chapterName = s.type === 'disclaimer' ? 'Disclaimer' : (s.type === 'addon' ? (ch = s.title) : ch); });
   initBg();
   return document.fonts.ready.then(() => TL.total);
 };

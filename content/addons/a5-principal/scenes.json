@@ -1,0 +1,88 @@
+[
+ {
+  "id": "title",
+  "type": "addon",
+  "part": 5,
+  "title": "Calculate Your Real Principal — in 4 Steps",
+  "sub": "Your strongest number in any settlement talk.",
+  "icon": "abacus"
+ },
+ {
+  "id": "steps",
+  "type": "plan",
+  "heading": "4 steps",
+  "steps": [
+   "Download all statements since the card was opened (or last 2–3 years)",
+   "Add up every purchase and cash withdrawal",
+   "Subtract every payment and refund you made",
+   "What's left = your principal (no interest, fees or GST)"
+  ],
+  "cue": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "stack",
+  "type": "table",
+  "heading": "Example",
+  "note": "Illustrative numbers.",
+  "cols": [
+   "From your statements",
+   "Amount"
+  ],
+  "rows": [
+   [
+    "Purchases + cash withdrawals",
+    "₹2,60,000"
+   ],
+   [
+    "Payments + refunds",
+    "− ₹1,75,000"
+   ],
+   [
+    "Your principal",
+    "₹85,000"
+   ]
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ],
+  "tag": "Negotiate from ₹85,000 — not from their total",
+  "tagCue": 3
+ },
+ {
+  "id": "tips",
+  "type": "bullets",
+  "heading": "Tips",
+  "icon": "light-bulb",
+  "tone": "teal",
+  "items": [
+   {
+    "icon": "e-mail",
+    "text": "Missing statements? Ask the bank by e-mail — they must give them"
+   },
+   {
+    "icon": "memo",
+    "text": "Keep the calculation on one page — show it in every negotiation"
+   },
+   {
+    "icon": "handshake",
+    "text": "Open with a number near your principal, not their total"
+   }
+  ],
+  "cue": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "end",
+  "type": "addonend"
+ }
+]

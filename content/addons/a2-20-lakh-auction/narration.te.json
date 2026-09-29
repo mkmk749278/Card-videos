@@ -1,0 +1,48 @@
+{
+ "_engine": "svara",
+ "_fx": "A",
+ "_lang": "Telugu",
+ "_styles": {
+  "drt": "clear",
+  "sarf": "clear",
+  "examples": "clear",
+  "wilful": "clear"
+ },
+ "title": [
+  "ఇరవై లక్షలు, ఇరవై ఐదు లక్షలు — ఈ రెండు numbers వెనక ఉన్న నిజం చూద్దాం."
+ ],
+ "dlg": [
+  {
+   "q": "అన్నా, మీ property auction చేస్తాం అని agent అంటున్నాడు. నిజంగా చేయగలరా?",
+   "style": "fear"
+  },
+  "Auction అనే మాట వినగానే భయం వేస్తుంది. కానీ దాని వెనక కొన్ని clear rules ఉన్నాయి."
+ ],
+ "drt": [
+  "ముందుగా ఇరవై లక్షల line.",
+  "Debts Recovery Tribunal, అంటే DRT — ఇది ఒక bank కి ఇరవై లక్షలు లేదా అంతకంటే ఎక్కువ బాకీ ఉంటేనే.",
+  "ఇది ప్రతి bank కి విడిగా లెక్క. మీ అన్ని banks మొత్తం కాదు.",
+  "ఇరవై లక్షల లోపు అయితే, civil court, arbitration, లేదా Lok Adalat మాత్రమే.",
+  "ఏ property అయినా attach చేయాలన్నా, auction చేయాలన్నా, ముందు decree గానీ recovery certificate గానీ రావాలి. Agent ఎప్పుడూ ఏదీ auction చేయలేడు."
+ ],
+ "sarf": [
+  "SARFAESI auction అనేది secured loans కి మాత్రమే. Home loan లాంటివి. అక్కడ అరవై రోజుల notice తర్వాత bank possession తీసుకోగలదు.",
+  "Credit card unsecured. దానికి SARFAESI వర్తించదు. Bank ముందు case గెలవాలి. ఆ తర్వాతే ఏదైనా."
+ ],
+ "examples": [
+  "కొన్ని examples.",
+  "ఐదు banks లో ఐదు cards, మొత్తం పన్నెండు లక్షలు. DRT కుదరదు. ఏ bank కూడా ఇరవై లక్షలు దాటలేదు.",
+  "ఒకే bank లో ఎనిమిది లక్షల card, పద్నాలుగు లక్షల personal loan. అది ఇరవై రెండు లక్షలు, DRT అవకాశం ఉంది.",
+  "ఒక card, మూడు లక్షలు. DRT కాదు, civil court లేదా arbitration route."
+ ],
+ "wilful": [
+  "ఇక ఇరవై ఐదు లక్షల line. Wilful defaulter tag.",
+  "ఇది ఇరవై ఐదు లక్షలు లేదా అంతకంటే ఎక్కువ బాకీ ఉన్నప్పుడే.",
+  "అది కూడా, కట్టే శక్తి ఉండి కావాలని కట్టకపోతే, లేదా డబ్బు దుర్వినియోగం చేస్తే.",
+  "Job పోవడం, అనారోగ్యం లాంటి నిజమైన ఇబ్బంది, wilful default కాదు.",
+  "మీ ఇబ్బందికి proof ఉంచుకోండి. అన్నీ నిజాయితీగా, written గా."
+ ],
+ "end": [
+  "పూర్తి వివరాల కోసం, main video చూడండి. ఒత్తిడిగా ఉంటే, Tele-MANAS ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి call చేయండి."
+ ]
+}

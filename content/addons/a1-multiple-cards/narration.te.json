@@ -1,0 +1,50 @@
+{
+ "_engine": "svara",
+ "_fx": "A",
+ "_lang": "Telugu",
+ "_styles": {
+  "rules": "clear",
+  "example": "clear",
+  "priority": "clear"
+ },
+ "title": [
+  "చాలా cards, చాలా banks ఉన్నప్పుడు ఏం చేయాలి? ఈ add-on లో చూద్దాం."
+ ],
+ "dlg": [
+  {
+   "q": "అన్నా, నాకు ఐదు cards ఉన్నాయి, నాలుగు banks లో. మొత్తం కలిపి ఒకటే పెద్ద అప్పా? అన్నీ ఒకేసారి settle చేయాలా?",
+   "style": "fear"
+  },
+  "లేదు. ఇది చాలామంది తప్పుగా అనుకునే విషయం. Clear గా చూద్దాం."
+ ],
+ "rules": [
+  "Bank దృష్టిలో ఎలా ఉంటుందో చూడండి.",
+  "ప్రతి card ఒక separate account. వేరు బాకీ, వేరు settlement.",
+  "వేరు వేరు banks ఎప్పుడూ కలవవు. ప్రతి bank తన బాకీ మాత్రమే settle చేస్తుంది.",
+  "ఒకే bank లో రెండు మూడు cards గానీ, loans గానీ ఉంటే, అన్నిటికీ కలిపి ఒకే settlement letter అడగండి.",
+  "ఒక్క default అయినా CIBIL లో అందరికీ కనిపిస్తుంది. వేరే banks కూడా మీ limits తగ్గించొచ్చు, cards close చేయొచ్చు."
+ ],
+ "example": [
+  "ఒక example. ఐదు cards, నాలుగు banks, మొత్తం principal ఐదు లక్షల ఇరవై వేలు.",
+  "Bank A లో రెండు cards, లక్షా ఎనభై వేలు. దానికి రెండు cards కలిపి ఒకే letter.",
+  "Bank B, C, D — ఒక్కొక్కటి వేరే settlement.",
+  "అంటే ఇది ఐదు లక్షల ఒకే అప్పు కాదు. నాలుగు వేరు వేరు negotiations."
+ ],
+ "priority": [
+  "ఇప్పుడు ముందు ఏది కాపాడుకోవాలి, ఏది settle చేయాలి.",
+  "మొదట, auto-debit లేదా cheque ఉన్న loans, EMIs. అవి bounce అయితే criminal risk.",
+  "రెండోది, మీ salary లేదా savings account ఉన్న bank. అక్కడ set-off risk ఉంటుంది.",
+  "తర్వాత, ఏ bank మంచి written offer ఇస్తే, దాన్ని పూర్తిగా close చేయండి.",
+  "తర్వాత ఇంకో bank. ఒక్కొక్కటిగా, ప్రతిదానికీ సొంత letter తో."
+ ],
+ "tips": [
+  "కొన్ని తప్పులు చేయకండి.",
+  "అన్ని banks కి కొంచెం కొంచెం, వెయ్యి రెండు వేలు కట్టడం — దానివల్ల ఏదీ close అవ్వదు.",
+  "ఒక sheet పెట్టుకోండి. Bank, card చివరి నాలుగు అంకెలు, principal, offer, status.",
+  "Settle అయిన ప్రతి card కి, సొంత letter, NOC, CIBIL check.",
+  "ఒక card తో ఇంకో card ని settle చేయడం — ఎప్పుడూ వద్దు."
+ ],
+ "end": [
+  "పూర్తి వివరాల కోసం, మా main video చూడండి. ఒత్తిడిగా ఉంటే, Tele-MANAS ఒకటి నాలుగు నాలుగు ఒకటి ఆరు కి call చేయండి."
+ ]
+}

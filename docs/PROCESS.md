@@ -154,6 +154,8 @@ version. Preset `B` is stronger.
   repeated ~9.5-minute wait loops, for example:
   `timeout 590 bash -c 'until grep -q DONE build/run_all.log; do sleep 20; done'`.
   Every script is resumable. If a run dies, just start it again.
+- Don't run a video encode (ffmpeg/x264) at the same time as voice generation: llama.cpp threads get starved.
+  One English clip took 33 minutes instead of 100 seconds.
 - Never `pkill -f <pattern>` when your own command line contains the pattern:
   it kills your own shell. Use `pgrep -f "[p]attern"` or kill by PID.
 - Large files: chat attachments are capped at 30 MB, so send a 540p/720p

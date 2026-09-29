@@ -4,3 +4,4 @@ build/
 output/*.mp4
 output/samples/
 __pycache__/
+output/**/*.mp4

@@ -198,3 +198,30 @@ version. Preset `B` is stronger.
 ```
 Models download on first use: svara-TTS GGUF (~2.7 GB), its tokenizer and the
 SNAC decoder.
+
+---
+
+## 11. Status at hand-off (29 Sep 2026)
+
+| Deliverable | State | Where |
+|---|---|---|
+| Telugu main video v2 (24:21) | ✅ Done | https://gofile.io/d/Z40avsUA |
+| Telugu add-on clips 1–6 | ✅ Done | a1 https://gofile.io/d/7jzNmK6c · a2 https://gofile.io/d/ocDPMwIE · a3 https://gofile.io/d/lhOoZli7 · a4 https://gofile.io/d/jiAQovs0 · a5 https://gofile.io/d/MKABy4xZ · a6 https://gofile.io/d/Fm1MB3ta |
+| **Telugu FULL** (main + add-ons spliced, 35:20) | ✅ Done | https://gofile.io/d/swWVCUE1 |
+| Telugu YouTube text | ✅ Done | `output/youtube-te.md` |
+| Hinglish v2 | ⏸ Script ready (`content/narration.hi.json`), voices not generated | `./run_all.sh` (Hindi half) |
+| English full video | ⏸ Script ready (`content/english/`), ~40 of 323 Svara clips generated, then **paused on purpose** | see below |
+
+Free Gofile links can expire if not downloaded; re-upload from `output/` if needed.
+
+### Next step for English: switch the voice engine
+
+Svara's English sounded robotic to the owner, since it is built for Indic
+languages. Plan for the next session:
+1. Test **Chatterbox / Chatterbox Turbo** (Resemble AI, open source, emotion
+   "exaggeration" control, 3–6× faster than real time on CPU) using a short
+   Indian-English reference clip (our own Svara output is rights-safe).
+   Also compare **Kokoro-82M** and **MeloTTS EN-IN** on the same two lines.
+2. Send the 3 samples to the owner and let them pick.
+3. Add the chosen engine as `_engine` in `src/tts.py` (same job-file pattern
+   as `src/svara_tts.py`), then run `./run_english.sh`.
